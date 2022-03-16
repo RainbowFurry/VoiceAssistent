@@ -1,0 +1,14 @@
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\bin\Debug\DWC_Messenger.exe.config
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\bin\Debug\DWC_Messenger.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\bin\Debug\DWC_Messenger.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\MainWindow.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\App.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger_MarkupCompile.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger_MarkupCompile.lref
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\MainWindow.baml
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger.g.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger.Properties.Resources.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger.csproj.GenerateResource.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Messenger\obj\Debug\DWC_Messenger.pdb

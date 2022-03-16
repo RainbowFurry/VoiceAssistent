@@ -1,0 +1,14 @@
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\bin\Debug\DWC_DarkWolf.exe.config
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\bin\Debug\DWC_DarkWolf.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\bin\Debug\DWC_DarkWolf.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\MainWindow.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\App.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf_MarkupCompile.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf_MarkupCompile.lref
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\MainWindow.baml
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf.g.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf.Properties.Resources.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf.csproj.GenerateResource.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_DarkWolf\obj\Debug\DWC_DarkWolf.pdb

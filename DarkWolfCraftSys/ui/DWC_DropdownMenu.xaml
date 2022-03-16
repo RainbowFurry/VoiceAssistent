@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="DarkWolfCraftSys.ui.DWC_DropdownMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DarkWolfCraftSys.ui"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+      <Rectangle Fill="{Binding Path=DropdownBackground, FallbackValue=#333, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" RadiusY="{Binding Path=DropdownRounding, FallbackValue=7.33, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" RadiusX="{Binding Path=DropdownRounding, FallbackValue=7.33, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" VerticalAlignment="Top" Width="256"/>
+      <Label Content="{Binding Path=DropdownContent, FallbackValue=Dropdown Menu, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" HorizontalAlignment="Left" Margin="19,14,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="195" Foreground="{Binding Path=DropdownForeground, FallbackValue=#fff, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" Height="28">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.477"/>
+                    <RotateTransform Angle="0.145"/>
+                    <TranslateTransform Y="-0.158"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+      <Rectangle Fill="{Binding Path=DropdownMenuBackground, FallbackValue=#333, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" HorizontalAlignment="Left" Height="363" Margin="10,31,0,0" RadiusY="{Binding Path=DropdownRounding, FallbackValue=7.33, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" RadiusX="{Binding Path=DropdownRounding, FallbackValue=7.33, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" VerticalAlignment="Top" Width="256" Panel.ZIndex="-1"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="128,363,0,0" VerticalAlignment="Top" Width="26" Source="../src/icons/light/arrow_white2.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.041"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Grid HorizontalAlignment="Left" Height="21" Margin="243,18,0,0" VerticalAlignment="Top" Width="11">
+            <Rectangle Fill="{Binding Path=WidgetGridName, FallbackValue=#FF0F7FEE, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" HorizontalAlignment="Left" Height="5" Margin="4,0,0,0" RadiusY="50" RadiusX="50" VerticalAlignment="Top" Width="5"/>
+            <Rectangle Fill="{Binding Path=WidgetGridName, FallbackValue=#FF0F7FEE, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" HorizontalAlignment="Left" Height="5" Margin="4,7,0,0" RadiusY="50" RadiusX="50" VerticalAlignment="Top" Width="5"/>
+            <Rectangle Fill="{Binding Path=WidgetGridName, FallbackValue=#FF0F7FEE, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" HorizontalAlignment="Left" Height="5" Margin="4,14,0,0" RadiusY="50" RadiusX="50" VerticalAlignment="Top" Width="5"/>
+        </Grid>
+      <ScrollViewer HorizontalAlignment="Left" Height="319" Margin="10,45,0,0" VerticalAlignment="Top" Width="256" VerticalScrollBarVisibility="Hidden">
+         <StackPanel Height="319" Width="254">
+            <Grid x:Name="DWC_DropDownGrid" Height="318">
+            
+            </Grid>
+         </StackPanel>
+      </ScrollViewer>
+
+   </Grid>
+</UserControl>

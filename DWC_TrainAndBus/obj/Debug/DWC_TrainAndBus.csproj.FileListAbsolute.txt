@@ -1,0 +1,17 @@
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\bin\Debug\DWC_TrainAndBus.exe.config
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\bin\Debug\DWC_TrainAndBus.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\bin\Debug\DWC_TrainAndBus.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\bin\Debug\DarkWolfCraftSys.dll
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\bin\Debug\DarkWolfCraftSys.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\MainWindow.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\App.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus_MarkupCompile.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus_MarkupCompile.lref
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\MainWindow.baml
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus.g.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus.Properties.Resources.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus.csproj.GenerateResource.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus.csproj.CopyComplete
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TrainAndBus\obj\Debug\DWC_TrainAndBus.pdb

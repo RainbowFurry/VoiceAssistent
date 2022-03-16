@@ -1,0 +1,52 @@
+﻿<Window x:Name="DWC_Window" x:Class="DWC_VoiceAssistent.projects.system.ProgrammInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.system"
+        mc:Ignorable="d"
+        Title="DarkWolfCraft VoiceAssistent - Programm Inforamation" MinWidth="825" MinHeight="475" Height="488" Width="825" Background="#FF333333" WindowStyle="None">
+
+    <!-- 
+    No Window Border:
+    https://stackoverflow.com/questions/611298/how-to-create-a-wpf-window-without-a-border-that-can-be-resized-via-a-grip-only
+    -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="4"
+        ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="BackgroundImage" Background="#FF222425">
+
+        <!-- Topbar -->
+        <Rectangle x:Name="DWC_ActionBar" Fill="#FF1C1E20" Height="31" VerticalAlignment="Top" Uid="DWC_IgnoreRounding"/>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Panel.ZIndex="1" Height="25" Margin="0,3,5,0">
+            <Image x:Name="Window_Close" Height="15" Margin="60,0,5,1" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/close_white.png"/>
+            <Image x:Name="Window_State" Height="15" Margin="32,0,30,0" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/windowstate_white.png" RenderTransformOrigin="-0.407,0.52"/>
+            <Image x:Name="Window_Minimize" Height="15" Margin="6,0,59,3" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/minimize_white.png" RenderTransformOrigin="-0.407,0.52" VerticalAlignment="Bottom"/>
+        </Grid>
+
+        <!-- Content -->
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="150" Margin="44,53,0,0" VerticalAlignment="Top" Width="150" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icon.png"/>
+        <Grid x:Name="ProgrammContent" HorizontalAlignment="Left" Height="434" Margin="208,36,0,0" VerticalAlignment="Top" Width="598">
+            <Rectangle x:Name="Product_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="35" Margin="39,37,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="510"/>
+
+            <Label x:Name="ProductName_Heading" Content="Produktname" HorizontalAlignment="Left" Margin="45,6,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+            <Rectangle x:Name="Version_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="35" Margin="39,112,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="510"/>
+            <Label x:Name="Version_Heading" Content="Version" HorizontalAlignment="Left" Margin="45,81,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+            <Rectangle x:Name="CopyRight_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="35" Margin="39,186,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="510"/>
+            <Label x:Name="CopyRight_Heading" Content="Copyright" HorizontalAlignment="Left" Margin="45,155,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+            <Rectangle x:Name="Company_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="35" Margin="39,264,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="510"/>
+            <Label x:Name="Company_Heading" Content="Firmenname" HorizontalAlignment="Left" Margin="45,233,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+            <Rectangle x:Name="Description_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="82" Margin="39,342,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="510"/>
+            <Label x:Name="Description_Heading" Content="Beschreibung" HorizontalAlignment="Left" Margin="45,311,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+            <Label x:Name="ProductName_Content" Content="Label" HorizontalAlignment="Left" Margin="45,42,0,0" VerticalAlignment="Top" Width="497" Foreground="#FFBFBFBF"/>
+            <Label x:Name="Version_Content" Content="Label" HorizontalAlignment="Left" Margin="45,117,0,0" VerticalAlignment="Top" Width="497" Foreground="#FFBFBFBF"/>
+            <Label x:Name="CopyRight_Content" Content="Label" HorizontalAlignment="Left" Margin="45,191,0,0" VerticalAlignment="Top" Width="497" Foreground="#FFBFBFBF"/>
+            <Label x:Name="Company_Content" Content="Label" HorizontalAlignment="Left" Margin="45,269,0,0" VerticalAlignment="Top" Width="497" Foreground="#FFBFBFBF"/>
+            <TextBlock x:Name="Description_Content" HorizontalAlignment="Left" Margin="45,347,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="71" Width="497" Foreground="#FFBFBFBF"/>
+        </Grid>
+
+    </Grid>
+</Window>

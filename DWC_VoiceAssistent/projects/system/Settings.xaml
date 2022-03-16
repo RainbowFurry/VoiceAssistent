@@ -1,0 +1,1308 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.system"
+        xmlns:local1="clr-namespace:ToggleSwitch;assembly=ToggleSwitch"
+        xmlns:ui="clr-namespace:DarkWolfCraftSys.ui;assembly=DarkWolfCraftSys" x:Class="DWC_VoiceAssistent.projects.system.Settings"
+        mc:Ignorable="d"
+        Title="DarkWolfCraft VoiceAssistent - Settings"  Height="900" Width="1600" x:Name="DWC_Window" WindowStyle="None" MinWidth="1050" MinHeight="800">
+
+    <!-- 
+    No Window Border:
+    https://stackoverflow.com/questions/611298/how-to-create-a-wpf-window-without-a-border-that-can-be-resized-via-a-grip-only
+    -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="4"
+        ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="BackgroundImage" Background="#FF313136">
+
+        <Grid x:Name="SettingsContentGrid" Panel.ZIndex="999" Margin="0,30,0,0">
+
+            <!-- Left Bar -->
+            <Grid HorizontalAlignment="Left" Width="229" Margin="4,0,0,0" Background="#FF313136">
+                <Grid x:Name="Save" HorizontalAlignment="Center" Height="34" Margin="30,23,37,0" VerticalAlignment="Top" Width="162" Panel.ZIndex="10">
+                    <Label x:Name="SaveText" Content="Schließen (ESC)" HorizontalAlignment="Left" Margin="41,3,-16,0" VerticalAlignment="Top" Width="101" Foreground="#FF6B6B6B"/>
+                    <Image x:Name="IDK3" HorizontalAlignment="Left" Height="32" Margin="2,1,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/menu/home.png"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="44" Margin="23,0,0,24" VerticalAlignment="Bottom" Width="186">
+                    <Rectangle Fill="#FF37363F" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="186" RadiusY="14" RadiusX="14"/>
+                    <Label Content="Scrolle, um mehr zu sehen" HorizontalAlignment="Left" Margin="9,3,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Image Height="18" Margin="84,25,84,0" VerticalAlignment="Top"/>
+                </Grid>
+            </Grid>
+
+            <!-- Menu Bar -->
+            <Grid x:Name="Menu_Grid" HorizontalAlignment="Left" Width="317" Margin="235,0,0,0" Background="#FF313136" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <Grid HorizontalAlignment="Left" Height="89" VerticalAlignment="Top" Width="317">
+                    <Label x:Name="SettingsHeading" Content="Einstellungen" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+                </Grid>
+                <Rectangle Fill="#FF51505D" HorizontalAlignment="Left" Height="2" Margin="32,75,0,0" VerticalAlignment="Top" Width="252" RenderTransformOrigin="0.5,0.5" RadiusY="0.75" RadiusX="0.75"/>
+
+                <ScrollViewer HorizontalAlignment="Left" Margin="0,89,0,0" Width="317" VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                    <StackPanel x:Name="SettingsMenu" Width="317" ScrollViewer.CanContentScroll="True">
+                        <Grid HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Account_Text" Content="Dein Account" HorizontalAlignment="Left" Margin="26,1,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317">
+                            <Rectangle Fill="{x:Null}" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_ConnectedAccount_Text" Content="Verbundene Konten" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_PaymentMethodes_Text" Content="Zahlungsmethoden" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Security_Text" Content="Sicherheit" HorizontalAlignment="Left" Margin="26,-1,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14" />
+                            <Label x:Name="DWC_Menu_Devices_Text" Content="Verbundene Geräte" HorizontalAlignment="Left" Margin="26,-1,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14" />
+                            <Label x:Name="DWC_Menu_Privacy_Text" Content="Privatsphäre" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="268"/>
+                        </Grid>
+                        <Grid Height="12">
+                            <Rectangle Fill="#FF51505D" HorizontalAlignment="Left" Height="2" Margin="28,5,0,0" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5" RadiusY="0.75" RadiusX="0.75"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14" />
+                            <Label x:Name="DWC_Menu_YourPaments_Text" Content="Deine Zahlungen" HorizontalAlignment="Left" Margin="26,-1,0,-2" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264" Height="37"/>
+                        </Grid>
+                        <Grid Height="12">
+                            <Rectangle Fill="#FF51505D" HorizontalAlignment="Left" Height="2" Margin="28,5,0,0" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5" RadiusY="0.75" RadiusX="0.75"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_UserMode_Text" Content="Nutzermodus:" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_EditorsMode_Text" Content="Editors Mode" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid Height="12">
+                            <Rectangle Fill="#FF51505D" HorizontalAlignment="Left" Height="2" Margin="28,5,0,0" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5" RadiusY="0.75" RadiusX="0.75"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_ProgrammView_Text" Content="Anwendungsoberfläche:" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Design_Text" Content="Design" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected1" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Language_Text" Content="Sprache" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy1" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected2" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Messages_Text" Content="Benachrichtigungen" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy2" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected3" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_InGameOverlay_Text" Content="In-Game Overlay" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid Height="12">
+                            <Rectangle Fill="#FF51505D" HorizontalAlignment="Left" Height="2" Margin="28,5,0,0" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5" RadiusY="0.75" RadiusX="0.75"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_ProgrammFunctions_Text" Content="Anwendungsfunktionen:" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Width="270"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy4" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected5" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_ProgrammStart_Text" Content="Anwendungsstart" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy5" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected6" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Updates_Text" Content="Updates" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy6" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected7" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_VideoAndAudio_Text" Content="Mikrofon und Video" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy7" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected8" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_HotKeys_Text" Content="Hotkeys" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid Height="12">
+                            <Rectangle Fill="#FF51505D" HorizontalAlignment="Left" Height="2" Margin="28,5,0,0" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.5,0.5" RadiusY="0.75" RadiusX="0.75"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label Content="Sonstiges:" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Width="270"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy8" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected9" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Design_Text9" Content="Datenschutzerklärung" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Reset_Text" Content="Zurücksetzen" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="24" Width="264"/>
+                        </Grid>
+                        <Grid x:Name="Menu_Design_Copy3" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="317" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <Rectangle x:Name="Selected4" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14"/>
+                            <Label x:Name="DWC_Menu_Design_Text4" Content="Sprachassistent" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="20" Width="264"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="317">
+                            <Rectangle HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="297" Margin="10,0,0,0" RadiusY="14" RadiusX="14" Fill="#FFBF3C3C"/>
+                            <Label x:Name="DWC_Settings_Menu_Logout" Content="Abmelden" HorizontalAlignment="Left" Margin="26,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Width="264"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- Menu Grids -->
+
+            <!-- Privacy -->
+            <Grid x:Name="Privacy" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <ScrollViewer HorizontalAlignment="Left" Height="862" VerticalAlignment="Top" Width="1044" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="862" Width="1044">
+                        <Grid HorizontalAlignment="Left" Height="205" VerticalAlignment="Top" Width="652">
+                            <Label x:Name="Privacy_Chat_Heading" Content="Allgemeine Privatsphäre" HorizontalAlignment="Left" Margin="88,50,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                            <TextBlock x:Name="Privacy_Chat_Content" HorizontalAlignment="Left" Margin="88,95,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FF9B9B9F" Height="100" Width="509" TextWrapping="Wrap"><Run Text="Andere können sehen, welche Anwendung du ausführst. Ob du ein Spiel spielst, Musik hörst oder anderweitig tätig bist. Diese Einstellungen haben keinen Einfluss darauf, ob angezeigt wird, dass du dich in einem Channel befindest. Lege diese Einstellungen unter "/><Run Foreground="White" Text="Mein Channel"/><Run Text=" fest."/></TextBlock>
+                            <Image x:Name="Privacy_Chat_HeadingImage" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/info_white.png" HorizontalAlignment="Left" Height="22" Margin="308,56,0,0" VerticalAlignment="Top" Width="22"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="681">
+                            <Label x:Name="Privacy_Chat_WritingPermission_Heading" Content="Wer sieht deinen Status" HorizontalAlignment="Left" Margin="88,14,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                            <Grid x:Name="Privacy_Chat_Status_Everybody_Grid" HorizontalAlignment="Left" Height="59" Margin="85,68,0,0" VerticalAlignment="Top" Width="189">
+                                <Rectangle x:Name="Privacy_Chat_Status_Everybody_Rectangle" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="169"/>
+                                <Label x:Name="Privacy_Chat_Status_Everybody_Label" Content="Jeder" Margin="68,5,54,20" Foreground="#FF9B9B9F" FontSize="20"/>
+                            </Grid>
+                            <Grid x:Name="Privacy_Chat_Status_Friends_Grid" HorizontalAlignment="Left" Height="59" Margin="279,68,0,0" VerticalAlignment="Top" Width="189">
+                                <Rectangle x:Name="Privacy_Chat_Status_Friends_Rectangle" StrokeThickness="0" Fill="#FF0F7FEE" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="169"/>
+                                <Label x:Name="Privacy_Chat_Status_Friends_Label" Content="Nur Freunde" Margin="37,5,30,20" Foreground="White" FontSize="20"/>
+                            </Grid>
+                            <Grid x:Name="Privacy_Chat_Status_Label_Grid" HorizontalAlignment="Left" Height="59" Margin="473,68,-10,0" VerticalAlignment="Top" Width="189">
+                                <Rectangle x:Name="Privacy_Chat_Status_Label_Rectangle" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="169"/>
+                                <Label x:Name="Privacy_Chat_Status_Label_Label" Content="Niemand" Margin="51,5,42,20" Foreground="#FF9B9B9F" FontSize="20"/>
+                            </Grid>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="248" VerticalAlignment="Top" Width="652">
+                            <Label x:Name="Privacy_Chat_ShowStatus_Heading" Content="Angezeigte Apps im Status" HorizontalAlignment="Left" Margin="88,16,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                            <Rectangle Fill="#FF37363F" HorizontalAlignment="Left" Height="144" Margin="88,55,0,0" RadiusY="7" RadiusX="7" Stroke="#FF2E2E36" VerticalAlignment="Top" Width="237"/>
+                            <ScrollViewer HorizontalAlignment="Left" Height="132" Margin="88,61,0,0" VerticalAlignment="Top" Width="237" VerticalScrollBarVisibility="Hidden">
+                                <StackPanel Height="132" Width="237"/>
+                            </ScrollViewer>
+                            <Label x:Name="Privacy_Status_addApp" Content="Klicke hier, um ein Programm hinzuzufügen" HorizontalAlignment="Left" Margin="88,204,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF0F7FEE"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="114" VerticalAlignment="Top" Width="681">
+                            <Label x:Name="Privacy_Chat_LastOnline_Heading" Content="Zuletzt online" HorizontalAlignment="Left" Margin="88,14,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                            <Grid x:Name="Privacy_Chat_LastOnline_Everybody_Grid" HorizontalAlignment="Left" Height="59" Margin="85,53,0,0" VerticalAlignment="Top" Width="189">
+                                <Rectangle x:Name="Privacy_Chat_LastOnline_Everybody_Rectangle" StrokeThickness="0" Fill="#FF0F7FEE" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="169"/>
+                                <Label x:Name="Privacy_Chat_LastOnline_Everybody_Label" Content="Jeder" Margin="62,5,28,20" Foreground="White" FontSize="20"/>
+                            </Grid>
+                            <Grid x:Name="Privacy_Chat_LastOnline_Friends_Grid" HorizontalAlignment="Left" Height="59" Margin="279,53,0,0" VerticalAlignment="Top" Width="189">
+                                <Rectangle x:Name="Privacy_Chat_LastOnline_Friends_Rectangle" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="169"/>
+                                <Label x:Name="Privacy_Chat_LastOnline_Friends_Label" Content="Nur Freunde" Margin="35,5,22,20" Foreground="#FF9B9B9F" FontSize="20"/>
+                            </Grid>
+                            <Grid x:Name="Privacy_Chat_LastOnline_Nobody_Grid" HorizontalAlignment="Left" Height="59" Margin="468,53,0,0" VerticalAlignment="Top" Width="189">
+                                <Rectangle x:Name="c" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="169"/>
+                                <Label x:Name="Privacy_Chat_LastOnline_Nobody_Label" Content="Niemand" Margin="51,5,17,20" Foreground="#FF9B9B9F" FontSize="20"/>
+                            </Grid>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="835">
+                            <Label x:Name="Privacy_Chat_AddFriendPermission_Heading" Content="Wer darf dich als Freund hinzufügen?" HorizontalAlignment="Left" Margin="88,14,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                            <Grid x:Name="Privacy_Chat_AddFriendPermission_Everybody_Grid" HorizontalAlignment="Left" Height="59" Margin="85,68,0,0" VerticalAlignment="Top" Width="189">
+                                <Rectangle x:Name="Privacy_Chat_AddFriendPermission_Everybody_Rectangle" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="169"/>
+                                <Label x:Name="Privacy_Chat_AddFriendPermission_Everybody_Label" Content="Jeder" Margin="64,5,27,20" Foreground="#FF9B9B9F" FontSize="20"/>
+                            </Grid>
+                            <Grid x:Name="Privacy_Chat_AddFriendPermission_Friends_Grid" HorizontalAlignment="Left" Height="59" Margin="279,68,0,-4" VerticalAlignment="Top" Width="265">
+                                <Rectangle x:Name="Privacy_Chat_AddFriendPermission_Friends_Rectangle" StrokeThickness="0" Fill="#FF0F7FEE" HorizontalAlignment="Left" Height="47" Margin="10,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="237"/>
+                                <Label x:Name="Privacy_Chat_AddFriendPermission_Friends_Label" Content="Freunde von Freunden" Margin="37,5,30,20" Foreground="White" FontSize="20"/>
+                            </Grid>
+                            <Grid x:Name="Privacy_Chat_AddFriendPermission_Request_Grid" HorizontalAlignment="Left" Height="59" Margin="544,68,-20,-4" VerticalAlignment="Top" Width="293">
+                                <Rectangle x:Name="Privacy_Chat_AddFriendPermission_Request_Rectangle" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="47" Margin="10,0,-99,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="278"/>
+                                <Label x:Name="Privacy_Chat_AddFriendPermission_Request_Label" Content="Nur gegenseitige Anfragen" Margin="33,5,5,12" Foreground="#FF9B9B9F" FontSize="20"/>
+                            </Grid>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Height="199" VerticalAlignment="Top" Width="652"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Grid HorizontalAlignment="Left" Height="142" Margin="651,94,0,0" VerticalAlignment="Top" Width="370">
+                    <Rectangle x:Name="Privacy_Rectangle_1" HorizontalAlignment="Left" Margin="21,3,0,28" Stroke="Black" StrokeThickness="0" Width="344" RadiusY="5.5" RadiusX="5.5" Fill="#FF2E2E36"/>
+                    <TextBlock x:Name="Privacy_Infotext1" Text="Wenn du deinen Status auf unsichtbar stellst, sieht niemand deine Aktivität und ob du online bist. Dein Channel wird gleichzeitig aber auch für alle unsichtbar." HorizontalAlignment="Left" Margin="30,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16" Width="324" Height="91" TextWrapping="Wrap"/>
+                </Grid>
+
+            </Grid>
+
+            <!-- Desighn -->
+            <Grid x:Name="Design" Margin="553,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" HorizontalAlignment="Left">
+                    <StackPanel Height="858" Width="1042" ScrollViewer.CanContentScroll="True">
+
+                        <Grid Height="138">
+                            <Label x:Name="Design_Heading" Content="Design" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                            <Label x:Name="Design_Description" Content="Welches Design möchtest du verwenden?" HorizontalAlignment="Left" Margin="89,81,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="804"/>
+
+                        </Grid>
+                        <Grid Height="70">
+                            <Label x:Name="Design_DarkDesign_Heading" Content="Dark Design" HorizontalAlignment="Left" Margin="141,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <Label x:Name="Design_DarkDesign_Content" Content="Das schöne angenehme dunkle Design" HorizontalAlignment="Left" Margin="141,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="752"/>
+                            <Rectangle x:Name="Design_DarkDesign_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="100,20,0,0" RadiusY="2.833" RadiusX="2.833"  VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="Design_DarkDesign_Image" HorizontalAlignment="Left" Height="26" Margin="100,20,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+
+                        </Grid>
+                        <Grid Height="70">
+                            <Label x:Name="Design_BrightDesign_Heading" Content="Bright Design" HorizontalAlignment="Left" Margin="141,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <Label x:Name="Design_BrightDesign_Content" Content="Lass dich blenden von diesem Design" HorizontalAlignment="Left" Margin="141,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="752"/>
+                            <Rectangle x:Name="Design_BrightDesign_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="100,20,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="Design_BrightDesign_Image" HorizontalAlignment="Left" Height="26" Margin="100,20,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                        </Grid>
+                        <Grid Height="70">
+                            <Label x:Name="Design_TransparentDesign_Heading" Content="Transparent Design" HorizontalAlignment="Left" Margin="141,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <Label x:Name="Design_TransparentDesign_Content" Content="Transparent, schön und garantiert einmalig" HorizontalAlignment="Left" Margin="141,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="752"/>
+                            <Rectangle x:Name="Design_TransparentDesign_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="100,20,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="Design_TransparentDesign_Image" HorizontalAlignment="Left" Height="26" Margin="100,20,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+
+                        </Grid>
+                        <Grid Height="510">
+                            <Label x:Name="Design_TransparentDesignImage_Heading" Content="Das transparente Design" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                            <TextBlock x:Name="Design_TransparentDesignImage_Description" Text="Standardmäßig sind Hintergründe vorgegeben, die du auswählen kannst. Du kannst aber auch selbst eigene Hintergründe hinzufügen. Nimm am besten Bilder, die mindestens Full HD aufgelöst sind um einen guten Kontrast zum Vordergrund zu bekommen" HorizontalAlignment="Left" Margin="89,93,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="804" TextWrapping="Wrap"/>
+                            <Rectangle x:Name="Design_Spacer_1" Fill="#FF333333" HorizontalAlignment="Left" Height="3" Margin="98,14,0,0" RadiusY="1" RadiusX="1" StrokeThickness="0" VerticalAlignment="Top" Width="849"/>
+                            <Rectangle x:Name="Design_Transparent_LargeImage" HorizontalAlignment="Left" Height="288" Margin="89,152,0,0" RadiusY="22.5" RadiusX="22.5" StrokeThickness="0" VerticalAlignment="Top" Width="661">
+                                <Rectangle.Fill>
+                                    <ImageBrush ImageSource="/DWC_VoiceAssistent;component/src/icon.png"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+
+                            <Image x:Name="Design_Gaming_Image" HorizontalAlignment="Left" Height="26" Margin="795,152,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                            <Rectangle x:Name="Design_Gaming_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="795,152,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                            <Label x:Name="Design_TransparentDesignImage_Gaming" Content="Gaming Design" HorizontalAlignment="Left" Margin="836,150,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <Image x:Name="Design_Landscape_Image" HorizontalAlignment="Left" Height="26" Margin="795,207,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                            <Rectangle x:Name="Design_Landscape_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="795,207,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                            <Label x:Name="Design_TransparentDesignImage_Landscape" Content="Landschaft Design" HorizontalAlignment="Left" Margin="836,205,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <Image x:Name="Design_City_Image" HorizontalAlignment="Left" Height="26" Margin="795,264,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                            <Rectangle x:Name="Design_City_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="795,264,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                            <Label x:Name="Design_TransparentDesignImage_City" Content="Städte Design" HorizontalAlignment="Left" Margin="836,262,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <Image x:Name="Design_Art_Image" HorizontalAlignment="Left" Height="26" Margin="795,322,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                            <Rectangle x:Name="Design_Art_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="795,322,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                            <Label x:Name="Design_TransparentDesignImage_Art" Content="Art Design" HorizontalAlignment="Left" Margin="836,320,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <Image x:Name="Design_Custom_Image" HorizontalAlignment="Left" Height="26" Margin="795,380,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                            <Rectangle x:Name="Design_Custom_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="795,380,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                            <Label x:Name="Design_TransparentDesignImage_Custom" Content="Custom Design" HorizontalAlignment="Left" Margin="836,378,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="Bold"/>
+
+                            <Grid HorizontalAlignment="Left" Height="51" Margin="89,455,0,0" VerticalAlignment="Top" Width="327">
+                                <Rectangle HorizontalAlignment="Left" Height="50" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="317" StrokeThickness="1" Stroke="#FF0F7FEE"/>
+                                <Label x:Name="Design_RatingBackground" Content="Hintergründe bewerten und einsenden" HorizontalAlignment="Left" Margin="56,15,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="51" Margin="434,455,0,0" VerticalAlignment="Top" Width="327">
+                                <Rectangle HorizontalAlignment="Left" Height="50" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="317" StrokeThickness="1" Stroke="#FF0F7FEE"/>
+                                <Label x:Name="Design_OwnBackgrouond" Content="Eigenen Hintergrund auswählen" HorizontalAlignment="Left" Margin="67,15,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Height="236">
+                            <Rectangle x:Name="Design_Spacer_5" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="3" Margin="98,14,0,0" RadiusY="1" RadiusX="1" StrokeThickness="0" VerticalAlignment="Top" Width="849"/>
+
+                            <Label x:Name="Design_Color_Heading" Content="Farbschema" HorizontalAlignment="Left" Margin="89,41,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                            <Label x:Name="Design_Color_Description" Content="Die ausgewählte Farbe, wird für bestimmte Oberflächen, Buttons und Textfelder verwendet" HorizontalAlignment="Left" Margin="89,70,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="804"/>
+                            <Grid HorizontalAlignment="Left" Height="59" Margin="0,105,0,0" VerticalAlignment="Top" Width="992">
+                                <Label x:Name="Design_Color_Default_Heading" Content="Standard Blau" HorizontalAlignment="Left" Margin="129,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+                                <Label x:Name="Design_Color_Default_Description" Content="Ein schönes Blau" HorizontalAlignment="Left" Margin="128,27,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="804"/>
+                                <Rectangle x:Name="Design_MainColor_Default_Rectangle" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                                <Image x:Name="Design_MainColor_Default_Image" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="59" Margin="4,164,0,0" VerticalAlignment="Top" Width="992">
+                                <Label x:Name="Design_Color_Custom_Heading" Content="Eigene Farbe" HorizontalAlignment="Left" Margin="129,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+                                <Label x:Name="Design_Color_Custom_Description" Content="Wähle eine eigene Farbe" HorizontalAlignment="Left" Margin="128,27,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="804"/>
+                                <Rectangle x:Name="Design_MainColor_Own_Rectangle" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                                <Image x:Name="Design_MainColor_Own_Image" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="243">
+                            <Rectangle x:Name="Design_Spacer_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="3" Margin="98,14,0,0" RadiusY="1" RadiusX="1" StrokeThickness="0" VerticalAlignment="Top" Width="849"/>
+
+                            <Label x:Name="Design_Font_Heading" Content="Verwendete Schriftart" HorizontalAlignment="Left" Margin="89,41,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                            <Label x:Name="Design_Font_Description" Content="Wir verwenden diese Schriftart für die meisten angezeigten Inhalte" HorizontalAlignment="Left" Margin="89,70,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="804"/>
+                            <Grid HorizontalAlignment="Left" Height="59" Margin="0,105,0,0" VerticalAlignment="Top" Width="992">
+                                <Label x:Name="Design_Font_Default_Heading" Content="Standard Schriftart" HorizontalAlignment="Left" Margin="129,20,0,0" VerticalAlignment="Top" Foreground="White"/>
+                                <Rectangle x:Name="Design_Font_Default_Rectangle" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                                <Image x:Name="Design_Font_Default_Image" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="59" Margin="4,164,0,0" VerticalAlignment="Top" Width="992">
+                                <Label x:Name="Design_Font_Custom_Heading" Content="Eigene Schriftart" HorizontalAlignment="Left" Margin="129,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+                                <TextBlock x:Name="Design_Font_Custom_Description" Text="Lade oder erstelle eine Eigene Schriftart (.ttf Datei), klicke zwei mal auf diese Datei und anschließend auf Installieren. Dann kannst du sie hier auswähle und verwenden" HorizontalAlignment="Left" Margin="128,27,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="804" TextWrapping="Wrap"/>
+                                <Rectangle x:Name="Design_Font_Rectangle_Image" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                                <Image x:Name="Design_Font_Own_Image" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="287">
+                            <Rectangle x:Name="Design_Spacer_3" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="3" Margin="98,14,0,0" RadiusY="1" RadiusX="1" StrokeThickness="0" VerticalAlignment="Top" Width="849"/>
+
+                            <Label x:Name="Design_Rounding_Heading" Content="Rundungen" HorizontalAlignment="Left" Margin="89,41,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                            <Label x:Name="Design_Rounding_Description" Content="Anhand dieser Einstellung runden wir Objekte ab" HorizontalAlignment="Left" Margin="89,70,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="456"/>
+                            <Grid HorizontalAlignment="Left" Height="59" Margin="0,105,0,0" VerticalAlignment="Top" Width="352">
+                                <Label x:Name="Design_Rounding_MinimalRounding" Content="Standard Leichte Rundungen" HorizontalAlignment="Left" Margin="129,18,0,0" VerticalAlignment="Top" Foreground="White"/>
+                                <Rectangle x:Name="Design_Rounding_Default_Rectangle" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                                <Image x:Name="Design_Rounding_Default_Image" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="59" Margin="4,164,0,0" VerticalAlignment="Top" Width="348">
+                                <Label x:Name="Design_Rounding_NoRounding" Content="Keine Rundungen" HorizontalAlignment="Left" Margin="129,19,0,0" VerticalAlignment="Top" Foreground="White"/>
+                                <Rectangle x:Name="Design_Rounding_NoRounding_Rectangle" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                                <Image x:Name="Design_Rounding_NoRounding_Image" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="59" Margin="4,223,0,0" VerticalAlignment="Top" Width="348">
+                                <Label x:Name="Design_Rounding_MaximalRounding" Content="Maximale Rundung" HorizontalAlignment="Left" Margin="129,19,0,0" VerticalAlignment="Top" Foreground="White"/>
+                                <Rectangle x:Name="Design_Rounding_Max_Rectangle" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26"/>
+                                <Image x:Name="Design_Rounding_Max_Image" HorizontalAlignment="Left" Height="26" Margin="89,19,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="71" Margin="378,164,0,0" VerticalAlignment="Top" Width="158">
+                                <Rectangle x:Name="Design_Rounding_Example_Default" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="158" RadiusY="9.5" RadiusX="9.5"/>
+                                <Image x:Name="Design_Rounding_Example_Default_Image" HorizontalAlignment="Left" Height="26" Margin="70,23,0,0" VerticalAlignment="Top" Width="26" Panel.ZIndex="1" Visibility="Hidden"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="71" Margin="576,164,0,0" VerticalAlignment="Top" Width="158">
+                                <Rectangle x:Name="Design_Rounding_Example_NoRounding" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="158"/>
+                                <Image x:Name="Design_Rounding_Example_NoRounding_Image" HorizontalAlignment="Left" Height="26" Margin="70,23,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Height="71" Margin="773,164,0,0" VerticalAlignment="Top" Width="158">
+                                <Rectangle x:Name="Design_Rounding_Example_Max" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="158" RadiusY="30.667" RadiusX="30.667"/>
+                                <Image x:Name="Design_Rounding_Example_Max_Image" HorizontalAlignment="Left" Height="26" Margin="70,23,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="84">
+                            <ui:DWC_Toggle x:Name="Design_Shaddow_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="82,38,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                            <Rectangle x:Name="Design_Spacer_4" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="3" Margin="98,14,0,0" RadiusY="1" RadiusX="1" StrokeThickness="0" VerticalAlignment="Top" Width="849"/>
+                            <Label x:Name="Design_Shaddow_Heading" Content="Objekten werden Schatten verliehen" HorizontalAlignment="Left" Margin="185,34,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Label x:Name="Design_Shaddow_Description" Content="Schatten verleihen Oberflächen und Objekten Tiefe" HorizontalAlignment="Left" Margin="185,56,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="544"/>
+                        </Grid>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- Assistent -->
+            <Grid x:Name="Assistent" HorizontalAlignment="Left" Height="862" Margin="560,0,0,0" VerticalAlignment="Top" Width="1032" Visibility="Hidden">
+                <ScrollViewer HorizontalAlignment="Left" Height="862" VerticalAlignment="Top" Width="1048" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="862" Width="1048">
+                        <Grid Height="100">
+                            <Label x:Name="DWC_Grid_Heading_VoiceAssistent_Text" Content="Sprachassistent" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+                            <Border BorderBrush="#FF0F7FEE" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="33,73,0,0" VerticalAlignment="Top" Width="660" RenderTransformOrigin="0.5,0.5">
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleY="0.005"/>
+                                        <RotateTransform/>
+                                        <TranslateTransform Y="0.01"/>
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                            </Border>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label x:Name="DWC_VoiceAssistent_Voice_Text" Content="Stimme" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="580,18,0,0" VerticalAlignment="Top" Width="113">
+                                <Rectangle x:Name="DWC_GenderSelection_Click" Fill="{x:Null}" HorizontalAlignment="Left" Height="30" Margin="0,1,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="113" Stroke="#FF6B6B6B"/>
+                                <Label x:Name="DWC_Gender_Selection" Content="Mann" HorizontalAlignment="Left" Margin="36,3,0,0" VerticalAlignment="Top" Width="43" Foreground="White"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label x:Name="DWC_VoiceAssistent_Age_Text" Content="Alter" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="580,18,0,0" VerticalAlignment="Top" Width="113">
+                                <Rectangle x:Name="DWC_AgeSelection_Click" Fill="{x:Null}" HorizontalAlignment="Left" Height="30" Margin="0,1,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="113" Stroke="#FF6B6B6B"/>
+                                <Label x:Name="DWC_Age_Selection" Content="Erwachsen" HorizontalAlignment="Left" Margin="21,3,0,0" VerticalAlignment="Top" Width="70" Foreground="White"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label Content="So nenne ich dich" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="438,18,0,0" VerticalAlignment="Top" Width="255">
+                                <Rectangle Fill="{x:Null}" HorizontalAlignment="Left" Height="30" Margin="1,0,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="254" Stroke="#FF6B6B6B"/>
+                                <TextBox x:Name="DWC_VoiceAssistent_UserName" BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Height="23" Margin="8,2,0,0" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="242" FontSize="18" TextAlignment="Center" Foreground="White"/>
+
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label Content="SprachAssistent aktiv" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="657,18,0,0" VerticalAlignment="Top" Width="38">
+                                <Rectangle x:Name="IDK" HorizontalAlignment="Left" Height="30" Margin="3,0,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="31" Stroke="#FF6B6B6B">
+                                    <Rectangle.Fill>
+                                        <ImageBrush />
+                                        <!--ImageSource="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/colored/checked.png"-->
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label Content="Antwortet nicht im Spiel" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="657,18,0,0" VerticalAlignment="Top" Width="38">
+                                <Rectangle x:Name="IDK2" HorizontalAlignment="Left" Height="30" Margin="3,0,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="31" Stroke="#FF6B6B6B">
+                                    <Rectangle.Fill>
+                                        <ImageBrush />
+                                        <!--ImageSource="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/colored/checked.png"-->
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67" Visibility="Hidden">
+                            <Label Content="Auf diesen Befehl höre ich" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="438,18,0,0" VerticalAlignment="Top" Width="255">
+                                <Rectangle Fill="{x:Null}" HorizontalAlignment="Left" Height="30" Margin="1,0,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="254" Stroke="#FF6B6B6B"/>
+                                <TextBox x:Name="DWC_VoiceAssistent_ReactName" BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Height="23" Margin="8,2,0,0" TextWrapping="Wrap" Text="OK PC" VerticalAlignment="Top" Width="242" FontSize="18" TextAlignment="Center" Foreground="White"/>
+
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- Account -->
+            <Grid x:Name="Account" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <Rectangle x:Name="Account_ProfilePicture" HorizontalAlignment="Left" StrokeThickness="0" Height="150" Margin="44,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="150" RadiusY="74.5" RadiusX="74.5">
+                    <Rectangle.Fill>
+                        <ImageBrush/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Label x:Name="Account_NickName" Content="UserName" HorizontalAlignment="Left" Margin="218,108,0,0" VerticalAlignment="Top" Foreground="White" FontSize="48"/>
+                <Rectangle x:Name="Account_Spacer_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="5" Margin="44,233,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="887"/>
+
+                <Label x:Name="Account_AccountID" Content="#97289231" HorizontalAlignment="Left" Margin="218,77,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="24"/>
+                <Label x:Name="Account_FirstName_Text" Content="Dein Vorname" HorizontalAlignment="Left" Margin="40,271,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="18"/>
+                <Label x:Name="Account_SecondName_Text" Content="Dein Nachname" HorizontalAlignment="Left" Margin="256,271,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="18"/>
+                <Label x:Name="Account_FirstName_Value" Content="Jason" HorizontalAlignment="Left" Margin="40,318,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                <Label x:Name="Account_SecondName_Value" Content="Hoffmann" HorizontalAlignment="Left" Margin="256,318,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                <Grid HorizontalAlignment="Left" Height="260" Margin="21,408,0,0" VerticalAlignment="Top" Width="399">
+                    <Rectangle x:Name="Account_Rectangle_1" HorizontalAlignment="Left" Height="246" Margin="22,4,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="364" RadiusY="5.5" RadiusX="5.5" Fill="#FF2E2E36"/>
+                    <Label x:Name="Account_Cuntry_Text" Content="Dein Land" HorizontalAlignment="Left" Margin="42,17,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16"/>
+                    <Label x:Name="Account_Cuntry_Value" Content="Deutschland" HorizontalAlignment="Left" Margin="243,15,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                    <Label x:Name="Account_City_Text" Content="Stadt" HorizontalAlignment="Left" Margin="42,64,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16"/>
+                    <Label x:Name="Account_City_Value" Content="Stuttgart" HorizontalAlignment="Left" Margin="272,62,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                    <Label x:Name="Account_Street_Text" Content="Straße" HorizontalAlignment="Left" Margin="42,164,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16"/>
+                    <Label x:Name="Account_Street_Value" Content="-" HorizontalAlignment="Left" Margin="335,161,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                    <Label x:Name="Account_PLZ_Text" Content="Postleitzahl" HorizontalAlignment="Left" Margin="42,112,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16"/>
+                    <Label x:Name="Account_PLZ_Value" Content="12345" HorizontalAlignment="Left" Margin="293,109,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                    <Label x:Name="Account_HouseNumber_Text" Content="Hausnummer" HorizontalAlignment="Left" Margin="42,211,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16"/>
+                    <Label x:Name="Account_HouseNumber_Value" Content="-" HorizontalAlignment="Left" Margin="335,208,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="37" Margin="44,703,0,0" VerticalAlignment="Top" Width="206">
+                    <Rectangle x:Name="Account_ButtonRectangle_1" StrokeThickness="1" Fill="{x:Null}" HorizontalAlignment="Left" Height="37" RadiusY="5.5" RadiusX="5.5" Stroke="#FF0F7FEE" VerticalAlignment="Top" Width="206"/>
+                    <Label x:Name="Account_EditAddress" Content="Adressdaten bearbeiten" HorizontalAlignment="Left" Margin="15,3,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+                </Grid>
+                <Label x:Name="Account_Gender_Text" Content="Dein Geschlecht" HorizontalAlignment="Left" Margin="500,271,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="18"/>
+                <Label x:Name="Account_Birthday_Text" Content="Dein Geburtsdatum" HorizontalAlignment="Left" Margin="716,271,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="18"/>
+                <Label x:Name="Account_Gender" Content="Männlich" HorizontalAlignment="Left" Margin="500,318,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                <Label x:Name="Account_Birthday" Content="20.09.1998" HorizontalAlignment="Left" Margin="716,318,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                <Rectangle x:Name="Account_Spacer_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="5" Margin="44,376,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="887"/>
+                <TextBlock x:Name="Account_InfoText" HorizontalAlignment="Left" Margin="447,417,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16" Width="505" Height="145"><Run Text="Niemand bekomm tpersönliche Date nwie z.B. deinen rihtigen Namen und deine Adresse zu"/><Run Text=" sehen. Angezeigt werden lediglich dein Nickname, dein Profilbild und optional ein Aktivitätsstatus."/><Run Text="                                                                                                                             "/><LineBreak/><Run/><LineBreak/><Run Text="Um deine Namertags und dein öffentlichen Profile zu bearbeiten, geh zu "/><Run Foreground="White" FontWeight="Bold" Text="%path%"/></TextBlock>
+                <Rectangle x:Name="Account_Spacer_3" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="5" Margin="44,673,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="887"/>
+                <Grid HorizontalAlignment="Left" Height="37" Margin="276,703,0,0" VerticalAlignment="Top" Width="245">
+                    <Rectangle x:Name="Account_ButtonRectangle_2" StrokeThickness="1" Fill="{x:Null}" HorizontalAlignment="Left" Height="37" RadiusY="5.5" RadiusX="5.5" Stroke="#FF0F7FEE" VerticalAlignment="Top" Width="245"/>
+                    <Label x:Name="Account_EditPersonalData" Content="Persönliche Daten bearbeiten" HorizontalAlignment="Left" Margin="15,3,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="37" Margin="548,703,0,0" VerticalAlignment="Top" Width="170">
+                    <Rectangle x:Name="Account_ButtonRectangle_3" StrokeThickness="1" Fill="{x:Null}" Height="37" RadiusY="5.5" RadiusX="5.5" Stroke="#FF0F7FEE" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170"/>
+                    <Label x:Name="Account_EditProfilePicture" Content="Profilbild ersetzen" HorizontalAlignment="Left" Margin="15,3,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="37" Margin="745,703,0,0" VerticalAlignment="Top" Width="186">
+                    <Rectangle x:Name="Account_ButtonRectangle_4" StrokeThickness="1" Fill="{x:Null}" Height="37" RadiusY="5.5" RadiusX="5.5" Stroke="#FF0F7FEE" VerticalAlignment="Top" HorizontalAlignment="Left" Width="186"/>
+                    <Label x:Name="Account_ResetProfilePicture" Content="Profilbild zurücksetzen" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="37" Margin="44,764,0,0" VerticalAlignment="Top" Width="164">
+                    <Rectangle x:Name="Account_ButtonRectangle_5" StrokeThickness="1" Fill="{x:Null}" HorizontalAlignment="Left" Height="37" RadiusY="5.5" RadiusX="5.5" Stroke="#FF0F7FEE" VerticalAlignment="Top" Width="164"/>
+                    <Label x:Name="Account_ChangeNickname" Content="Nickname ändern" HorizontalAlignment="Left" Margin="15,3,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="16"/>
+                </Grid>
+                <Label x:Name="Account_ChangeNickname_Info" Content="Du kannst dein Nickname nur ein Mal im Jahr ändern!" HorizontalAlignment="Left" Margin="235,767,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="14"/>
+                <Label x:Name="Account_PartOfUs" Content="02.04.2020" HorizontalAlignment="Left" Margin="590,108,0,0" VerticalAlignment="Top" Foreground="White" FontSize="48"/>
+                <Label x:Name="Account_PartOfUs_Text" Content="Du bist ein Teil vo nuns seit dem" HorizontalAlignment="Left" Margin="590,81,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="18"/>
+
+            </Grid>
+
+            <!-- Security -->
+            <Grid x:Name="Security" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <Grid HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="1044">
+                    <Label x:Name="Security_YourAccountActivity" Content="Deine Kontoaktivität" HorizontalAlignment="Left" Margin="88,50,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                    <Rectangle x:Name="Security_Rectangle_1" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="126" Margin="90,120,0,0" RadiusY="12" RadiusX="12" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="920"/>
+                    <Label x:Name="Security_LastActivity" Content="Letzte Kontoaktivitäten" HorizontalAlignment="Left" Margin="88,89,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                    <Label x:Name="Security_AllAktivities" Content="Alle Aktivitäten ansehen" HorizontalAlignment="Left" Margin="239,89,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+
+                    <ScrollViewer HorizontalAlignment="Left" Height="126" Margin="90,120,0,0" VerticalAlignment="Top" Width="920" VerticalScrollBarVisibility="Hidden">
+                        <StackPanel Height="126" Width="920"/>
+                    </ScrollViewer>
+
+                </Grid>
+
+                <Grid Margin="0,274,0,454">
+                    <Label x:Name="Security_ConnectedEmail_Heading" Content="Dein verknüpftes E-Mail Konto" HorizontalAlignment="Left" Margin="141,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="Security_ConnectedEmail_Check" Content="letzte Überprüfung am %date%" HorizontalAlignment="Left" Margin="98,36,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="752"/>
+                    <Image HorizontalAlignment="Left" Height="25" Margin="102,10,0,0" VerticalAlignment="Top" Width="25"/>
+
+                    <Rectangle x:Name="Security_Spacer_1" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="4" Margin="90,120,0,0" RadiusY="1.333" RadiusX="1.333" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="920"/>
+                    <Rectangle x:Name="Security_Rectangle_2" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="24" Margin="90,67,0,0" RadiusY="1.333" RadiusX="1.333" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="240"/>
+                    <Label x:Name="Security_ConnectedEmail_Email" Content="max.mustermann@mustermann.de" HorizontalAlignment="Left" Margin="98,67,0,0" VerticalAlignment="Top" FontSize="10" Width="196" Foreground="White"/>
+                    <Image x:Name="Security_ConnectedEmail_Image" HorizontalAlignment="Left" Height="20" Margin="304,69,0,0" VerticalAlignment="Top" Width="20"/>
+
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="342,68,0,0" VerticalAlignment="Top" Width="100">
+                        <Rectangle x:Name="Security_ViewProfile_Rectangle" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="100"/>
+                        <Label x:Name="Security_ConnectedEmail_ViewAccount" Content="Konto ansehen" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="10"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="450,68,0,0" VerticalAlignment="Top" Width="100">
+                        <Rectangle x:Name="Security_ChangeProfile_Rectangle" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="100"/>
+                        <Label x:Name="Security_ConnectedEmail_ChangeAccount" Content="Konto ändern" HorizontalAlignment="Left" Margin="17,0,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="10"/>
+                    </Grid>
+
+                </Grid>
+                <Grid Margin="0,408,0,320">
+                    <Label x:Name="Security_TwoFaktor_Heading" Content="2-Faktor-Authentifizierung über SMS" HorizontalAlignment="Left" Margin="141,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="Security_TwoFaktor_Check" Content="letzte Überprüfung am %date%" HorizontalAlignment="Left" Margin="98,36,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="752"/>
+                    <Image HorizontalAlignment="Left" Height="25" Margin="102,10,0,0" VerticalAlignment="Top" Width="25"/>
+
+                    <Rectangle x:Name="Security_Spacer_2" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="4" Margin="90,120,0,0" RadiusY="1.333" RadiusX="1.333" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="920"/>
+                    <Rectangle x:Name="Security_Rectangle_3" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="24" Margin="90,67,0,0" RadiusY="1.333" RadiusX="1.333" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="240"/>
+                    <Label x:Name="Security_TwoFaktor_PhoneNumber" Content="0 123 456 7890" HorizontalAlignment="Left" Margin="98,67,0,0" VerticalAlignment="Top" FontSize="10" Width="196" Foreground="White"/>
+                    <Image x:Name="Security_PhoneNumer_Image" HorizontalAlignment="Left" Height="20" Margin="304,69,0,0" VerticalAlignment="Top" Width="20"/>
+
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="342,68,0,0" VerticalAlignment="Top" Width="133">
+                        <Rectangle x:Name="Security_ChangeNumber_Rectangle" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="133"/>
+                        <Label x:Name="Security_TwoFaktor_ChangeNumber" Content="Telefonnummer ändern" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="10"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="490,68,0,0" VerticalAlignment="Top" Width="100">
+                        <Rectangle x:Name="Security_2FAStatus_Rectangle" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF9B1B1F" StrokeThickness="1" VerticalAlignment="Top" Width="100"/>
+                        <Label x:Name="Security_TwoFaktor_DisableTwoFaktor" Content="2FA deaktivieren" HorizontalAlignment="Left" Margin="9,0,0,0" VerticalAlignment="Top" Foreground="#FF9B1B1F" FontSize="10"/>
+                    </Grid>
+
+                </Grid>
+                <Grid Margin="0,542,0,186">
+                    <Label x:Name="Security_RecoveryEmail_Heading" Content="E-Mail Konto zur Kontowiederherstellung" HorizontalAlignment="Left" Margin="141,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="Security_RecoveryEmail_Check" Content="letzte Überprüfung am %date%" HorizontalAlignment="Left" Margin="98,36,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="752"/>
+                    <Image HorizontalAlignment="Left" Height="25" Margin="102,10,0,0" VerticalAlignment="Top" Width="25"/>
+
+                    <Rectangle x:Name="Security_Spacer_3" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="4" Margin="90,120,0,0" RadiusY="1.333" RadiusX="1.333" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="920"/>
+                    <Rectangle x:Name="Security_Rectangle_4" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="24" Margin="90,67,0,0" RadiusY="1.333" RadiusX="1.333" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="240"/>
+                    <Label x:Name="Security_RecoveryEmail_Email" Content="max.mustermann@mustermann.de" HorizontalAlignment="Left" Margin="98,67,0,0" VerticalAlignment="Top" FontSize="10" Width="196" Foreground="White"/>
+                    <Image x:Name="Security_RecoveryEmail_Image" HorizontalAlignment="Left" Height="20" Margin="304,69,0,0" VerticalAlignment="Top" Width="20"/>
+
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="342,68,0,0" VerticalAlignment="Top" Width="100">
+                        <Rectangle x:Name="Security_ViewProfile_Rectangle1" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="100"/>
+                        <Label x:Name="Security_RecoveryEmail_ViewAccount" Content="Konto ansehen" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="10"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="450,68,0,0" VerticalAlignment="Top" Width="100">
+                        <Rectangle x:Name="Security_ChangeProfile_Rectangle1" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="100"/>
+                        <Label x:Name="Security_RecoveryEmail_ChangeAccount" Content="Konto ändern" HorizontalAlignment="Left" Margin="17,0,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="10"/>
+                    </Grid>
+
+                </Grid>
+                <Grid Margin="0,676,0,79">
+                    <Label x:Name="Security_BackupCode_Heading" Content="Backup Codes" HorizontalAlignment="Left" Margin="141,5,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="Security_BackupCode_Description" Content="Mit jedem Backup Code kannst du dich einmalig in deinem Konto anmelden!" HorizontalAlignment="Left" Margin="98,36,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="752"/>
+                    <Image HorizontalAlignment="Left" Height="25" Margin="102,10,0,0" VerticalAlignment="Top" Width="25"/>
+
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="102,67,0,0" VerticalAlignment="Top" Width="76">
+                        <Rectangle x:Name="Security_ShowBackupCode_Rectangle" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="76"/>
+                        <Label x:Name="Security_BackupCode_View" Content="Anzeigen" HorizontalAlignment="Left" Margin="14,-1,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="10"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="200,67,0,0" VerticalAlignment="Top" Width="100">
+                        <Rectangle x:Name="Security_DownloadBackupCode_Rectangle" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="100"/>
+                        <Label x:Name="Security_BackupCode_Download" Content="Herunterladen" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="10"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Left" Height="22" Margin="322,67,0,0" VerticalAlignment="Top" Width="76">
+                        <Rectangle x:Name="Security_StatusBackupCode_Rectangle" HorizontalAlignment="Left" Height="22" RadiusY="1.333" RadiusX="1.333" Stroke="#FF9B1B1F" StrokeThickness="1" VerticalAlignment="Top" Width="76"/>
+                        <Label x:Name="Security_BackupCode_Disable" Content="Deaktivieren" HorizontalAlignment="Left" Margin="6,-1,0,0" VerticalAlignment="Top" Foreground="#FF9B1B1F" FontSize="10"/>
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+            <!-- Devices -->
+            <Grid x:Name="Devices" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <Grid HorizontalAlignment="Left" Height="169" VerticalAlignment="Top" Width="652">
+                    <Rectangle StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="59" Margin="69,90,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="562"/>
+                    <Label Content="Desktop 182AOVZ (Windows PC)" HorizontalAlignment="Left" Margin="88,102,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF0F7FEE"/>
+                    <Label x:Name="Devices_ConnectedDevicesHeading" Content="Verbundene Geräte mit deinem Konto" HorizontalAlignment="Left" Margin="88,50,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                    <Rectangle StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="4" Margin="69,169,0,-4" RadiusY="1.875" RadiusX="1.875" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="562"/>
+                    <Grid HorizontalAlignment="Left" Height="46" Margin="468,96,0,0" VerticalAlignment="Top" Width="143">
+                        <Rectangle HorizontalAlignment="Left" Height="28" Margin="13,10,0,0" RadiusY="3.5" RadiusX="3.5" VerticalAlignment="Top" Width="127" Stroke="#FF0F7FEE"/>
+                        <Label x:Name="Devices_ConnectedDevicesButton_CurrentDevice" Content="Aktuelles Gerät" Margin="31,11,17,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                    </Grid>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="142" Margin="652,87,0,0" VerticalAlignment="Top" Width="370">
+                    <Rectangle x:Name="Devices_Rectangle_1" HorizontalAlignment="Left" Margin="21,3,0,45" Stroke="Black" StrokeThickness="0" Width="344" RadiusY="5.5" RadiusX="5.5" Fill="#FF2E2E36"/>
+                    <TextBlock x:Name="Devices_ConnectedDevicesInfo" Text="Kommt dir ein Gerät unbekannt vor, klicke auf Anzeigen und entferne den Zugriff des Geräts auf dein Konto" HorizontalAlignment="Left" Margin="30,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16" Width="324" Height="72" TextWrapping="Wrap"/>
+                </Grid>
+                <ScrollViewer HorizontalAlignment="Left" Height="688" Margin="0,174,0,0" VerticalAlignment="Top" Width="652" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="686" Width="652"/>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- Language -->
+            <Grid x:Name="Language_ContentGrid" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="Language_Heading" Content="Deine Sprache" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <TextBlock x:Name="Language_Description" HorizontalAlignment="Left" Margin="89,99,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="867"><Run Text="Wähle deine Sprache aus! Bitte beachte, dass einige Sprachen zur Vervollständigung automatisch übersetzt werden und wir keine vollständige Richtigkeit derer garantieren können und keine Haftung übernehmen. Wir werden eine umfangreiche Übersetzung für viele Sprachen bald bereitstellen. Wenn deine Landessprache nicht verfügbar "/><LineBreak/><Run Text="sein sollte, kannst du uns helfen eine Musterübersetzung anzufertigen! "/><Run Foreground="#FF0F7FEE" Text="Erfahre mehr"/></TextBlock>
+                <ScrollViewer HorizontalAlignment="Left" Height="658" Margin="89,204,0,0" VerticalAlignment="Top" Width="890" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel x:Name="Language_StackPannel" Height="658" Width="890">
+                        <Grid x:Name="Language_Grid_German" Height="58">
+                            <Rectangle x:Name="Language_Spacer_1" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_German_Checked" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,19" Width="18" Visibility="Hidden"/>
+                            <Label Content="Deutsch" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Image x:Name="Language_Image_German" Margin="851,19,19,19" Source="pack://application:,,,/DarkWolfCraftSys;component/src/countries/Germany.png"/>
+                            <Rectangle x:Name="Language_Image_German_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_English" Height="58">
+                            <Rectangle x:Name="Language_Spacer_2" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_English_Checked" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="English" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_English" Margin="851,19,19,19" Source="pack://application:,,,/DarkWolfCraftSys;component/src/countries/English.png"/>
+                            <Rectangle x:Name="Language_Image_English_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_Itali" Height="58">
+                            <Rectangle x:Name="Language_Spacer_3" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_Italian_Checked" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="Italiano" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_Italian" Margin="851,19,19,19" Source="pack://application:,,,/DarkWolfCraftSys;component/src/countries/Italien.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_Italian_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_French" Height="58">
+                            <Rectangle x:Name="Language_Spacer_4" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_French_Checked" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="French" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_French" Margin="851,19,19,19" Source="/DarkWolfCraftSys;component/src/countries/French.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_French_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_Spain" Height="58">
+                            <Rectangle x:Name="Language_Spacer_5" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_Spain_Checked" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="Spanish" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_Spain" Margin="851,19,19,19" Source="/DarkWolfCraftSys;component/src/countries/spanien.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_Spain_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_Russia" Height="58">
+                            <Rectangle x:Name="Language_Spacer_6" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_Russian_Checked" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="Russia" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_Russian" Margin="851,19,19,19" Source="/DarkWolfCraftSys;component/src/countries/russia.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_Russian_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_China" Height="58">
+                            <Rectangle x:Name="Language_Spacer_7" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_China_Checked" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="China" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_China" Margin="851,19,19,19" Source="/DarkWolfCraftSys;component/src/countries/china.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_China_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_Brasil" Height="58">
+                            <Rectangle x:Name="Language_Spacer_8" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_Brasil_Checked" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="Brasilia" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_Brasil" Margin="851,19,19,19" Source="/DarkWolfCraftSys;component/src/countries/brasilien.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_Brasil_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_Portugal" Height="58">
+                            <Rectangle x:Name="Language_Spacer_9" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_Protugal_Checked" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="Portugal" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_Protugal" Margin="851,19,19,19" Source="/DarkWolfCraftSys;component/src/countries/portugal.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_Protugal_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                        <Grid x:Name="Language_Grid_Japan" Height="58">
+                            <Rectangle x:Name="Language_Spacer_10" Fill="#FF222425" HorizontalAlignment="Left" Height="2" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="890"/>
+                            <Image x:Name="Language_Image_Japan_Checked" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Margin="20,20,0,25" Width="18" Height="18" Visibility="Hidden"/>
+                            <Label Content="Japan" HorizontalAlignment="Left" Margin="759,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Image x:Name="Language_Image_Japan" Margin="851,19,19,19" Source="/DarkWolfCraftSys;component/src/countries/japan.png"/>
+                            <Label Content="(automatisch generiert)" HorizontalAlignment="Left" Margin="568,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+                            <Rectangle x:Name="Language_Image_Japan_Rectangle" Fill="#FF333333" HorizontalAlignment="Left" Height="26" Margin="16,16,0,0" RadiusY="2.833" RadiusX="2.833" VerticalAlignment="Top" Width="26" Panel.ZIndex="-1"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+
+            </Grid>
+
+            <!-- Notification -->
+            <Grid x:Name="Notification" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="Notification_Heading" Content="Benachrichtigungen" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <Label x:Name="Notification_Description" HorizontalAlignment="Left" Margin="89,93,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="867" Content="Welche Benachrichtigungen sollen wir anzeigen" FontSize="14"/>
+
+                <ScrollViewer HorizontalAlignment="Left" Height="347" Margin="89,139,0,0" VerticalAlignment="Top" Width="890" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="734" Width="890">
+                        <Grid Height="73">
+                            <Label x:Name="Notification_DesktopNotification_Heading" Content="Desktop Benachrichtigungen" HorizontalAlignment="Left" Margin="94,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <Label x:Name="Notification_DesktopNotification_Description" HorizontalAlignment="Left" Margin="94,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="462" Content="Wenn du diese Funktion deaktivierst, erhältst du keine Benachrichtigungen!" FontSize="14" Height="29"/>
+                            <ui:DWC_Toggle x:Name="Notification_DesktopNotification_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,12,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                            <Rectangle x:Name="Notification_Spacer_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="2" Margin="7,71,0,0" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="873" RadiusY="1.833" RadiusX="1.833"/>
+                        </Grid>
+                        <Grid Height="58">
+                            <Label x:Name="Notification_ShowTextNotification_Heading" Content="Textnachrichten anzeigen" HorizontalAlignment="Left" Margin="94,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <Label x:Name="Notification_ShowTextNotification_Description" HorizontalAlignment="Left" Margin="94,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="462" Content="Sehe, wer dir schreibt. Du kannst einzelne Kontakte und Gruppen stummschalten" FontSize="14" Height="29"/>
+                            <ui:DWC_Toggle x:Name="Notification_ShowTextNotification_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,12,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                        </Grid>
+                        <Grid Height="58">
+                            <Label x:Name="Notification_ShowFriendOnline_Heading" Content="Anzeigen wenn ein Freund online ist" HorizontalAlignment="Left" Margin="99,14,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <ui:DWC_Toggle x:Name="Notification_ShowFriendOnline_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,8,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                        </Grid>
+                        <Grid Height="73">
+                            <Label x:Name="Notification_SystemNotification_Heading" Content="Systembenachrichtigungen" HorizontalAlignment="Left" Margin="97,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <Label x:Name="Notification_SystemNotification_Description" HorizontalAlignment="Left" Margin="97,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="462" Content="Wenn es Probleme gibt, benachrichtigen wir dich" FontSize="14" Height="29"/>
+                            <ui:DWC_Toggle x:Name="Notification_SystemNotification_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,12,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                            <Rectangle x:Name="Notification_Spacer_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="2" Margin="7,71,0,0" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="873" RadiusY="1.833" RadiusX="1.833"/>
+                        </Grid>
+                        <Grid Height="73">
+                            <Label x:Name="Notification_DescropSecurityNotification_Heading" Content="Desktop Sicherheitsbenachrichtigungen" HorizontalAlignment="Left" Margin="99,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <TextBlock x:Name="Notification_DescropSecurityNotification_Description" HorizontalAlignment="Left" Margin="99,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="747" Text="Sicherheitsbenachrichtigungen per Desktop sind wichtig, wenn es dringend ist und jemand versucht auf z.B. deinen Account zu zu greigen" FontSize="14" Height="44" TextWrapping="Wrap"/>
+                            <ui:DWC_Toggle x:Name="Notification_DescropSecurityNotification_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF1ED760" Height="36" Width="82" ToggleRounding="15" Margin="0,12,0,0" ToggleMarkerColorOff="Red"/>
+                            <Rectangle x:Name="Notification_Spacer_3" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="2" Margin="7,71,0,0" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="873" RadiusY="1.833" RadiusX="1.833"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+                <Label x:Name="Notification_EmailNotification_Heading" Content="E-Mail Benachrichtigungen" HorizontalAlignment="Left" Margin="89,493,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <Label x:Name="Notification_EmailNotification_Description" HorizontalAlignment="Left" Margin="89,532,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="867" Content="E-Mails zur Kontosicherheit, Zahlungsbestätigungen und zu anderen wichtigen Angelegenheiten erhälst duu immer!" FontSize="14"/>
+                <ScrollViewer HorizontalAlignment="Left" Height="247" Margin="89,566,0,0" VerticalAlignment="Top" Width="890" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="245" Width="890">
+                        <Grid Height="58">
+                            <Label x:Name="Notification_EmailNotification_UpdateEmail_Heading" Content="E-Mails zu Updates" HorizontalAlignment="Left" Margin="93,12,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <ui:DWC_Toggle x:Name="Notification_EmailNotification_UpdateEmail_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,7,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                        </Grid>
+                        <Grid Height="58">
+                            <Label x:Name="Notification_EmailNotification_PrimeEmail_Heading" Content="E-Mails zu Premium und Sonderangeboten" HorizontalAlignment="Left" Margin="94,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <Label x:Name="Notification_EmailNotification_PrimeEmail_Description" HorizontalAlignment="Left" Margin="94,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="462" Content="Wir informieren dich wenn es etwas besonderes gibt" FontSize="14" Height="29"/>
+                            <ui:DWC_Toggle x:Name="Notification_EmailNotification_PrimeEmail_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,12,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                        </Grid>
+                        <Grid Height="58">
+                            <Label x:Name="Notification_EmailNotification_ShopCardEmail_Heading" Content="E-Mails zu meiner Wunschliste" HorizontalAlignment="Left" Margin="97,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <Label x:Name="Notification_EmailNotification_ShopCardEmail_Description" HorizontalAlignment="Left" Margin="97,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="703" Content="Wir informieren dich wenn Spiele und Apps im Angebot sind, die auf deiner Wunschliste sind" FontSize="14" Height="29"/>
+                            <ui:DWC_Toggle x:Name="Notification_EmailNotification_ShopCardEmail_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,12,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                        </Grid>
+                        <Grid Height="58">
+                            <Label x:Name="Notification_EmailNotification_StoreEmail_Heading" Content="E-Mails zu Store-Inhalten und Angebote" HorizontalAlignment="Left" Margin="96,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="31"/>
+                            <Label x:Name="Notification_EmailNotification_StoreEmail_Description" HorizontalAlignment="Left" Margin="96,29,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="703" Content="Wir informieren dich über Neuerscheinungen von Apps und Spielen, die dir gefallen könnten" FontSize="14" Height="29"/>
+                            <ui:DWC_Toggle x:Name="Notification_EmailNotification_StoreEmail_Slider" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,12,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+
+            </Grid>
+
+            <!-- Connected Accounts -->
+            <Grid x:Name="ConnectedAccounts" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <ScrollViewer HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="652" VerticalScrollBarVisibility="Hidden" Margin="0,89,0,0">
+                    <StackPanel Height="500" Width="652" ScrollViewer.CanContentScroll="True">
+
+                    </StackPanel>
+                </ScrollViewer>
+                <Grid HorizontalAlignment="Left" Height="313" VerticalAlignment="Top" Width="652" Margin="0,539,0,0">
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_1" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="121" Margin="69,167,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="562"/>
+                    <Label x:Name="ConnectedAccounts_AddNewAccount" Content="Füge ein neues Konto oder Dienst hinzu" HorizontalAlignment="Left" Margin="88,10,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Height="37" Margin="88,109,0,0" VerticalAlignment="Top" Width="152">
+                        <Rectangle StrokeThickness="1" Fill="{x:Null}" HorizontalAlignment="Left" Height="37" RadiusY="5.5" RadiusX="5.5" Stroke="#FF1ED760" VerticalAlignment="Top" Width="150" Margin="0,0,-5,0"/>
+                        <Label x:Name="ConnectedAccounts_AddNewAccount_ButtonText" Content="Konto hinzufügen" HorizontalAlignment="Left" Margin="9,3,-25,0" VerticalAlignment="Top" Foreground="#FF1ED760" FontSize="16" Width="138"/>
+                    </Grid>
+                    <TextBlock x:Name="ConnectedAccounts_AddAccountInfo" HorizontalAlignment="Left" Margin="88,49,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="543" FontSize="14" Height="36"><Run Text="Füge Mail Konnten, Social Meia und Spiele sowie Dienste und "/><LineBreak/><Run Text="vieles mehr hinzu"/><LineBreak/><Run/></TextBlock>
+                    <Image x:Name="ConnectedAccounts_AddAccountInfo_Image" HorizontalAlignment="Left" Height="25" Margin="385,68,0,0" VerticalAlignment="Top" Width="25"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_2" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="88,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_12" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="88,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_1" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="98,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_11" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="98,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_3" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="142,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_13" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="142,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_2" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/Twitter.png" HorizontalAlignment="Left" Height="24" Margin="152,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_12" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="152,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_4" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="194,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_14" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="194,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_3" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/YouTube.jpg" HorizontalAlignment="Left" Height="24" Margin="204,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_13" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="204,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_5" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="246,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_15" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="246,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_4" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/Twitch.jpg" HorizontalAlignment="Left" Height="24" Margin="256,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_14" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="256,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_6" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="298,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_16" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="298,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_5" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/Microsoft.png" HorizontalAlignment="Left" Height="24" Margin="308,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="308,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_7" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="349,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_17" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="349,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_6" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/Rockstar.png" HorizontalAlignment="Left" Height="24" Margin="359,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_16" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="359,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_8" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="398,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_18" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="398,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_7" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/Ubisoft.png" HorizontalAlignment="Left" Height="24" Margin="408,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_17" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="408,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_9" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="449,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_19" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="449,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_8" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="459,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_18" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="459,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_10" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="500,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_20" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="500,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_9" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="510,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_19" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="510,245,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_11" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="551,180,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Rectangle x:Name="ConnectedAccounts_Rectangle_21" Fill="#FF222425" HorizontalAlignment="Left" Height="44" Margin="551,235,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="44"/>
+                    <Image x:Name="ConnectedAccounts_Image_10" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="561,190,0,0" VerticalAlignment="Top" Width="24"/>
+                    <Image x:Name="ConnectedAccounts_Image_20" Source="pack://application:,,,/DarkWolfCraftSys;component/src/connections/steam.png" HorizontalAlignment="Left" Height="24" Margin="561,245,0,0" VerticalAlignment="Top" Width="24"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="142" Margin="649,69,0,0" VerticalAlignment="Top" Width="370">
+                    <Rectangle x:Name="ConnectedAccounts_MainEmail_Rectangle" HorizontalAlignment="Left" Margin="21,3,0,32" Stroke="Black" StrokeThickness="0" Width="344" RadiusY="5.5" RadiusX="5.5" Fill="#FF2E2E36"/>
+                    <TextBlock x:Name="ConnectedAccounts_MainEmail_Info" Text="Füge Konten anderer Dienste hinzu. Wir ermöglichen dir so die Nutzung externer Dienste in diesem Dienst!" HorizontalAlignment="Left" Margin="30,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16" Width="324" Height="87" TextWrapping="Wrap"/>
+                </Grid>
+                <Label x:Name="ConnectedAccounts_ConnectedAccounts" Content="Verbundenes E-mail Konto" HorizontalAlignment="Left" Margin="88,46,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontWeight="Bold"/>
+
+            </Grid>
+
+            <!-- Your Payments -->
+            <Grid x:Name="YourPayment" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <Grid HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="1034">
+                    <Rectangle x:Name="YourPayment_Sorting_Rectangle" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="24" Margin="68,8,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="921"/>
+                    <Label x:Name="YourPayment_Sorting_Heading" Content="Deine Zahlungen chronologisch sortiert" HorizontalAlignment="Left" Margin="73,10,0,0" VerticalAlignment="Top" FontSize="9" Foreground="White"/>
+                    <Label x:Name="lll_Copy" Content="Klick hier, um laufende Abos anzusehen" HorizontalAlignment="Left" Margin="811,10,0,0" VerticalAlignment="Top" FontSize="9" Foreground="#FF0F7FEE"/>
+                </Grid>
+                <ScrollViewer HorizontalAlignment="Left" Height="824" Margin="0,38,0,0" VerticalAlignment="Top" Width="990" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="824" Width="986">
+                        <Grid Height="474">
+                            <Rectangle x:Name="l_Copy" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="421" Margin="65,29,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="921"/>
+                            <Label x:Name="lll_Copy1" Content="Bestellbestätigung          %date% MESZ" HorizontalAlignment="Left" Margin="72,40,0,0" VerticalAlignment="Top" FontSize="11" Foreground="White"/>
+                            <Label x:Name="lll_Copy2" Content="Bestellnummer: 57923843" HorizontalAlignment="Left" Margin="817,40,0,0" VerticalAlignment="Top" FontSize="11" Foreground="White"/>
+                            <Rectangle x:Name="l_Copy1" StrokeThickness="0" Fill="#FF222425" Height="348" Margin="85,82,521,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top"/>
+                            <Rectangle x:Name="l_Copy2" StrokeThickness="0" Fill="#FF222425" Height="348" Margin="487,82,19,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top"/>
+                            <Label Content="Produkt" HorizontalAlignment="Left" Margin="94,88,0,0" VerticalAlignment="Top" Foreground="#FF5E5F61"/>
+                            <Label Content="Preis" HorizontalAlignment="Left" Margin="398,88,0,0" VerticalAlignment="Top" Foreground="#FF5E5F61"/>
+                            <Rectangle Fill="#FF5E5F61" HorizontalAlignment="Left" Height="2" Margin="98,114,0,0" RadiusY="1.417" RadiusX="1.417" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="348"/>
+                            <Label Content="Produkt Name" HorizontalAlignment="Left" Margin="98,129,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="174"/>
+                            <Label Content="9,99€" HorizontalAlignment="Left" Margin="391,129,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="55"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="105,165,0,0" TextWrapping="Wrap" Text="Here stands the Description for the billing" VerticalAlignment="Top" Foreground="White" Height="88" Width="257"/>
+                            <Rectangle Fill="#FF5E5F61" HorizontalAlignment="Left" Height="2" Margin="98,267,0,0" RadiusY="1.417" RadiusX="1.417" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="348"/>
+                            <Label Content="9,99€" HorizontalAlignment="Left" Margin="391,292,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="55"/>
+                            <Label Content="Zwischensumme:" HorizontalAlignment="Left" Margin="241,292,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="138"/>
+                            <Label Content="1,79€" HorizontalAlignment="Left" Margin="391,323,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="55"/>
+                            <Label Content="Steuer/MwSt:" HorizontalAlignment="Left" Margin="269,323,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="110"/>
+                            <Label Content="11,78€" HorizontalAlignment="Left" Margin="384,367,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="18" Width="62"/>
+                            <Label Content="Endgültig:" HorizontalAlignment="Left" Margin="284,367,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="18" Width="95"/>
+                            <Label Content="Zahlung erfolgte über %reason%" HorizontalAlignment="Left" Margin="503,88,0,0" VerticalAlignment="Top" Foreground="#FF5E5F61"/>
+                            <Rectangle Fill="#FF5E5F61" HorizontalAlignment="Left" Height="2" Margin="509,114,0,0" RadiusY="1.417" RadiusX="1.417" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="446"/>
+                            <Image HorizontalAlignment="Left" Height="32" Margin="509,129,0,0" VerticalAlignment="Top" Width="32"/>
+                            <Label Content="max.mustermann@gmail.com" HorizontalAlignment="Left" Margin="554,130,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="272"/>
+                            <Label Content="-11,78€" HorizontalAlignment="Left" Margin="883,129,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="69"/>
+                            <Rectangle Fill="#FF5E5F61" HorizontalAlignment="Left" Height="2" Margin="509,173,0,0" RadiusY="1.417" RadiusX="1.417" Stroke="#FF6B6B6B" StrokeThickness="0" VerticalAlignment="Top" Width="446"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="509,187,0,0" TextWrapping="Wrap" Text="Here stands the Description for the billing" VerticalAlignment="Top" Foreground="White" Height="158" Width="357"/>
+                            <Label Content="Vielen Dank für deinen Einkauf bei uns!" HorizontalAlignment="Left" Margin="564,370,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="288"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- Payment Methodes -->
+            <Grid x:Name="PaymentMehtodes" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+                <Grid HorizontalAlignment="Left" Height="169" VerticalAlignment="Top" Width="652">
+                    <Rectangle x:Name="Payments_YourPayments_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="59" Margin="69,90,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="562"/>
+                    <Image x:Name="Payments_YourPayments_Image" HorizontalAlignment="Left" Height="32" Margin="84,105,0,0" VerticalAlignment="Top" Width="32"/>
+                    <Label x:Name="Payments_YourPayments_Account" Content="max.mustermann@mustermann.de" HorizontalAlignment="Left" Margin="127,105,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                    <Label x:Name="Payments_YourPayments" Content="Deine Zahlungsmethoden" HorizontalAlignment="Left" Margin="88,50,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="185" Margin="713,45,-39,0" VerticalAlignment="Top" Width="370">
+                    <Rectangle x:Name="Payments_Payments_Info_Rectangle" HorizontalAlignment="Left" Margin="21,3,0,4" Stroke="Black" StrokeThickness="0" Width="349" RadiusY="5.5" RadiusX="5.5" Fill="#FF2E2E36"/>
+                    <TextBlock x:Name="Payments_Payments_Info" HorizontalAlignment="Left" Margin="30,34,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16" Width="294" Height="141" TextWrapping="Wrap"><Run Text="Füge ein Konto hinzu und zahle plattformweit einfach und sicher mit nur einem Klick. Überblicke deine Käufe bei "/><Run Foreground="White" Text="Zahlungen"/><Run Text=", kündige Abos umstandslos und lass dir Zahlungen einfach rückerstatten"/></TextBlock>
+                    <Label x:Name="Payments_Payments_InfoHeading" Content="Deine Konten und Zahlungen bei uns" HorizontalAlignment="Left" Margin="25,5,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="713" Margin="0,169,0,0">
+                    <Label x:Name="Payments_AddPayment" Content="Zahlungsmethode hinzufügen" HorizontalAlignment="Left" Margin="88,30,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                    <Grid x:Name="Payments_Payments_PayPal_Grid" Margin="69,80,480,143">
+                        <Rectangle x:Name="Payments_Payments_PayPal_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="86" Margin="1,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="163"/>
+                        <Image Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/payments/PayPal.jpg" x:Name="Payments_Payments_PayPal_Image" HorizontalAlignment="Left" Height="63" Margin="4,20,0,0" VerticalAlignment="Top" Width="157"/>
+                    </Grid>
+                    <Grid x:Name="Payments_Payments_Mastercard_Grid" Margin="250,80,298,143">
+                        <Rectangle x:Name="Payments_Payments_Mastercard_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="86" Margin="1,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="163"/>
+                        <Image Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/payments/MasterCard.png" x:Name="Payments_Payments_Mastercard_Image" HorizontalAlignment="Left" Height="80" Margin="4,3,0,0" VerticalAlignment="Top" Width="157"/>
+                    </Grid>
+                    <Grid x:Name="Payments_Payments_ECCard_Grid" Margin="436,80,184,143">
+                        <Rectangle x:Name="Payments_Payments_ECCard_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="86" Margin="1,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="90"/>
+                        <Image Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/payments/EC.png" x:Name="Payments_Payments_ECCard_Image" HorizontalAlignment="Left" Height="80" Margin="10,3,0,0" VerticalAlignment="Top" Width="81"/>
+                    </Grid>
+                    <Grid x:Name="Payments_Payments_Sepa_Grid" Margin="549,80,0,143">
+                        <Rectangle x:Name="Payments_Payments_Sepa_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="86" Margin="1,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="163"/>
+                        <Image Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/payments/Sepa.png" x:Name="Payments_Payments_Sepa_Image" HorizontalAlignment="Left" Height="73" Margin="4,10,0,0" VerticalAlignment="Top" Width="157"/>
+                    </Grid>
+                    <Grid x:Name="Payments_Payments_PaySafeCard_Grid" Margin="69,183,431,40">
+                        <Rectangle x:Name="Payments_Payments_PaySafeCard_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="86" Margin="1,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="212"/>
+                        <Image Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/payments/PSC.png" x:Name="Payments_Payments_PaySafeCard_Image" HorizontalAlignment="Left" Height="59" Margin="4,24,0,0" VerticalAlignment="Top" Width="199"/>
+                    </Grid>
+                    <Grid x:Name="Payments_Payments_DirectPayment_Grid" Margin="306,183,243,40">
+                        <Rectangle x:Name="Payments_Payments_DirectPayment_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="86" Margin="1,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="163"/>
+                        <Image Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/payments/DirectPay.png" x:Name="Payments_Payments_DirectPayment_Image" HorizontalAlignment="Left" Height="73" Margin="4,10,0,0" VerticalAlignment="Top" Width="157"/>
+                    </Grid>
+                    <Grid x:Name="Payments_Payments_Bitcoin_Grid" Margin="490,183,10,40">
+                        <Rectangle x:Name="Payments_Payments_Bitcoin_Background" StrokeThickness="0" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="86" Margin="1,0,0,0" RadiusY="7" RadiusX="7" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="212"/>
+                        <Image Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/payments/Bitcoin.png" x:Name="Payments_Payments_Bitcoin_Image" HorizontalAlignment="Left" Height="61" Margin="4,22,0,0" VerticalAlignment="Top" Width="199"/>
+                    </Grid>
+                </Grid>
+
+                <Label x:Name="Payments_QuickPay_Heading" Content="Quick Pay" HorizontalAlignment="Left" Margin="66,516,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+                <Label x:Name="Payments_QuickPay_Description" Content="Verwende Quick Pay, um schneller zahlen zu können" HorizontalAlignment="Left" Margin="66,555,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF9B9B9F"/>
+                <Label x:Name="Payments_QuickPay_QuickPayHeading" Content="Quick Pay aktivieren" HorizontalAlignment="Left" Margin="159,597,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                <Label x:Name="Payments_QuickPay_QuickPayContent" Content="Wenn Quick Pay aktiviert ist, zahlst du automatisch mit deiner bevorzugten Zahlungsmethode und überspringst den Bestätigungsvorgang" HorizontalAlignment="Left" Margin="159,626,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF9B9B9F"/>
+
+                <ui:DWC_Toggle x:Name="Payments_QuickPay_QuickPay_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="61,603,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+
+
+                <Label x:Name="Payments_SecurePay_Heading" Content="Secured Pay" HorizontalAlignment="Left" Margin="66,686,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+                <Label x:Name="Payments_SecurePay_Description" Content="Dein Kontopasswort wird vor dem Bestellvorgang abgefragt, um unautorisierte Bestellungen zu verhindern" HorizontalAlignment="Left" Margin="66,723,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF9B9B9F"/>
+                <Label x:Name="Payments_SecurePay_Content" Content="Secure Pay aktivieren" HorizontalAlignment="Left" Margin="161,771,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+
+                <ui:DWC_Toggle x:Name="Payments_SecurePay_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="61,766,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+
+
+            </Grid>
+
+            <!-- Hotkeys -->
+            <Grid x:Name="HotKeys" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="HotKeys_Heading" Content="Hot Keys" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+
+                <Label x:Name="HotKeys_EnableAllHotkeys" Content="Alle Hotkeys deaktivieren" HorizontalAlignment="Left" Margin="178,105,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                <ui:DWC_Toggle x:Name="HotKeys_EnableAllHotkeys_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="83,100,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                <ScrollViewer HorizontalAlignment="Left" Height="283" Margin="89,151,0,0" VerticalAlignment="Top" Width="864" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="283" Width="864">
+                        <Grid Height="67">
+                            <Rectangle x:Name="HotKey_Rectangle_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="54" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="834" Margin="10,0,0,0"/>
+                            <Label x:Name="HotKeys_Option_PushToTalk" Content="Push to Talk" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="14"/>
+                            <Rectangle x:Name="HotKey_Rectangle_1_1" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="95" Margin="738,7,0,0"/>
+                            <Label x:Name="HotKeys_Option_PushToTalk_Value" Content="V" HorizontalAlignment="Left" Margin="779,13,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                        </Grid>
+                        <Grid Height="67">
+                            <Rectangle x:Name="HotKey_Rectangle_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="54" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="834" Margin="10,0,0,0"/>
+                            <Label x:Name="HotKeys_Option_VoiceAssistent" Content="Voice Assistent auslösen" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="14"/>
+                            <Rectangle x:Name="HotKey_Rectangle_1_2" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="95" Margin="738,7,0,0"/>
+                            <Label x:Name="HotKeys_Option_VoiceAssistent_Value" Content="Q" HorizontalAlignment="Left" Margin="779,13,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                        </Grid>
+                        <Grid Height="67">
+                            <Rectangle x:Name="HotKey_Rectangle_3" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="54" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="834" Margin="10,0,0,0"/>
+                            <Label x:Name="HotKeys_Option_Mute" Content="Stummschalten ein/aus" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="14"/>
+                            <Rectangle x:Name="HotKey_Rectangle_1_3" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="95" Margin="738,7,0,0"/>
+                            <Label x:Name="HotKeys_Option_Mute_Value" Content="T" HorizontalAlignment="Left" Margin="779,13,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                        </Grid>
+                        <Grid Height="67">
+                            <Rectangle x:Name="HotKey_Rectangle_4" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="54" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="834" Margin="10,0,0,0"/>
+                            <Label x:Name="HotKeys_Option_Musikbot" Content="Musikbot aktivieren/deaktivieren" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="14"/>
+                            <Rectangle x:Name="HotKey_Rectangle_1_4" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="95" Margin="738,7,0,0"/>
+                            <Label x:Name="HotKeys_Option_Musikbot_Value" Content="F7" HorizontalAlignment="Left" Margin="779,13,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Rectangle x:Name="HotKey_Spacer" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="5" Margin="92,434,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="840"/>
+                <Label x:Name="HotKeys_EnableOwnHotkeys" Content="Alle Hotkeys deaktivieren" HorizontalAlignment="Left" Margin="182,452,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                <ui:DWC_Toggle x:Name="HotKeys_EnableOwnHotkeys_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="82,444,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                <ScrollViewer HorizontalAlignment="Left" Height="195" Margin="83,485,0,0" VerticalAlignment="Top" Width="864" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="195" Width="864">
+                        <Grid Height="67">
+                            <Rectangle Fill="#FF2E2E36" HorizontalAlignment="Left" Height="54" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="834" Margin="10,0,0,0"/>
+                            <Label Content="EXAMPLE" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="14"/>
+                            <Rectangle Fill="#FF37363F" HorizontalAlignment="Left" Height="39" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="95" Margin="738,7,0,0"/>
+                            <Label Content="V" HorizontalAlignment="Left" Margin="779,13,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE"/>
+                        </Grid>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Grid HorizontalAlignment="Left" Height="142" Margin="60,713,0,0" VerticalAlignment="Top" Width="370">
+                    <Rectangle x:Name="HotKey_Rectangle_5" HorizontalAlignment="Left" Margin="21,3,0,28" Stroke="Black" StrokeThickness="0" Width="344" RadiusY="5.5" RadiusX="5.5" Fill="#FF2E2E36"/>
+                    <TextBlock x:Name="HotKeys_Info" Text="Um einen Hotkey zu ändern, drücke auf die Tastenkombination und gib die neue Tastenkombination ein. Mit ESC kannst du den Vorgang abbrechen." HorizontalAlignment="Left" Margin="30,16,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" FontSize="16" Width="324" Height="91" TextWrapping="Wrap"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="53" Margin="448,713,0,0" VerticalAlignment="Top" Width="232">
+                    <Rectangle x:Name="HotKey_CreateNewHotKey_Rectangle" HorizontalAlignment="Left" Height="52" Margin="0,1,0,-1" RadiusY="5.5" RadiusX="5.5" StrokeThickness="1" VerticalAlignment="Top" Width="232" Stroke="#FF0F7FEE"/>
+                    <Label x:Name="HotKeys_CreateNewHotKey" Content="Neuen Hotkey erstellen" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="43" Margin="759,93,0,0" VerticalAlignment="Top" Width="173">
+                    <Rectangle HorizontalAlignment="Left" Height="35" Margin="0,1,0,0" RadiusY="5.5" RadiusX="5.5" StrokeThickness="1" VerticalAlignment="Top" Width="169" Stroke="#FF9B1B1F"/>
+                    <Label x:Name="HotKeys_ResetAllHotKeys" Content="Alle Hotkeys zurücksetzen" HorizontalAlignment="Left" Margin="12,6,0,0" VerticalAlignment="Top" Foreground="#FF9B1B1F"/>
+                </Grid>
+
+            </Grid>
+
+            <!-- Mikro -->
+            <Grid x:Name="Mikro" Margin="552,0,0,0" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="Microphone_Heading" Content="Mikrofonaktivierung" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+
+                <Grid Height="67" Margin="89,116,101,679" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Rectangle x:Name="Microphone_Rectangle_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="67" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="834" Margin="10,0,0,0"/>
+                    <Rectangle Fill="#FF1ED760" HorizontalAlignment="Left" Height="4" RadiusY="2.125" RadiusX="2.125" StrokeThickness="0" VerticalAlignment="Top" Width="757" Margin="48,33,0,0"/>
+                </Grid>
+
+                <Label x:Name="Microphone_InputText" Content="Eingabelautstärke" HorizontalAlignment="Left" Margin="97,290,0,0" VerticalAlignment="Top" Foreground="#FF7A7A80" FontSize="18"/>
+                <Label x:Name="Microphone_OutputText" Content="Ausgabelautstärke" HorizontalAlignment="Left" Margin="524,290,0,0" VerticalAlignment="Top" Foreground="#FF7A7A80" FontSize="18"/>
+                <Grid HorizontalAlignment="Left" Height="71" Margin="97,199,0,0" VerticalAlignment="Top" Width="410">
+                    <Rectangle x:Name="Microphone_Rectangle_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="66" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="410" Margin="0,5,0,0"/>
+                    <Image x:Name="Microphone_Image_1" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/arrow_white2.png" HorizontalAlignment="Left" Height="26" Margin="363,25,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="91.167"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Label x:Name="Microphone_MicrophoneName" Content="Mikrofon (NAME)" HorizontalAlignment="Left" Margin="24,22,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="66" Margin="527,204,0,0" VerticalAlignment="Top" Width="407">
+                    <Rectangle x:Name="Microphone_Rectangle_3" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="66" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="410" Margin="0,0,-3,0"/>
+                    <Image x:Name="Microphone_Image_2" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/arrow_white2.png" HorizontalAlignment="Left" Height="26" Margin="360,22,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="91.167"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Label x:Name="Microphone_HeadsetName" Content="Lautsprächer (NAME)" HorizontalAlignment="Left" Margin="14,17,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="66" Margin="97,333,0,0" VerticalAlignment="Top" Width="410">
+                    <Rectangle x:Name="Microphone_Rectangle_4" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="66" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="410"/>
+                    <Image x:Name="Microphone_Image_3" HorizontalAlignment="Left" Height="26" Margin="26,20,0,0" VerticalAlignment="Top" Width="26"/>
+                    <Label x:Name="Microphone_InputValue" Content="36 %" HorizontalAlignment="Left" Margin="356,19,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="14"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="66" Margin="524,333,0,0" VerticalAlignment="Top" Width="410">
+                    <Rectangle x:Name="Microphone_Rectangle_5" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="66" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="410"/>
+                    <Image x:Name="Microphone_Image_4" HorizontalAlignment="Left" Height="26" Margin="20,20,0,0" VerticalAlignment="Top" Width="26"/>
+                    <Label x:Name="Microphone_OutputValue" Content="47 %" HorizontalAlignment="Left" Margin="350,20,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="14"/>
+
+                </Grid>
+
+                <Label x:Name="Microphone_VoiceActivation_Heading" Content="Sprachaktivierung" HorizontalAlignment="Left" Margin="185,417,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                <TextBlock x:Name="Microphone_VoiceActivation_Description" HorizontalAlignment="Left" Margin="185,446,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF9B9B9F"><Run Text="Ist die Sprachaktivierung deaktiviert verwendest du Push to Talk (unter "/><Run Foreground="White" Text="Hotkeys"/><Run Text=" bearbeitbar)"/></TextBlock>
+
+                <ui:DWC_Toggle x:Name="Microphone_VoiceActivation_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="89,424,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                <Label x:Name="Microphone_AutomaticVoiceDetection_Heading" Content="Mikrofonempfindlichkeit automatisch ermitteln" HorizontalAlignment="Left" Margin="185,475,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                <TextBlock x:Name="Microphone_AutomaticVoiceDetection_Description" HorizontalAlignment="Left" Margin="185,504,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF9B9B9F" Text="Du siehst oben, wenn dein Mikrofon aktiviert wird"/>
+                <ui:DWC_Toggle x:Name="Microphone_AutomaticVoiceDetection_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="89,475,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                <Grid HorizontalAlignment="Left" Height="66" Margin="97,552,0,0" VerticalAlignment="Top" Width="410">
+                    <Rectangle x:Name="Microphone_Rectangle_6" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="66" RadiusY="5.5" RadiusX="5.5" StrokeThickness="0" VerticalAlignment="Top" Width="410"/>
+                    <Image x:Name="Microphone_Image_5" HorizontalAlignment="Left" Height="26" Margin="26,20,0,0" VerticalAlignment="Top" Width="26"/>
+                    <Label x:Name="Microphone_AutomaticVoiceDetection_Value" Content="35 Dzb" HorizontalAlignment="Left" Margin="348,19,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="14"/>
+                </Grid>
+                <Label x:Name="Microphone_AudioHelp_Heading" Content="Audio Hilfe" HorizontalAlignment="Left" Margin="186,640,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                <TextBlock x:Name="Microphone_AudioHelp_Description" HorizontalAlignment="Left" Margin="186,669,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF9B9B9F" Text="Wenn du diese Funktion aktivierst, benachrichtigen wir dich, wenn wir kein Mikrofon erkennen können, du sprichst, obwohl du stummgeschalten bist oder deine Stimme absgeschnitten wird." TextWrapping="Wrap"/>
+                <ui:DWC_Toggle x:Name="Microphone_AudioHelp_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="89,656,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                <Label x:Name="Microphone_AudioOptimisation_Heading" Content="Audio Optimierungssoftware" HorizontalAlignment="Left" Margin="185,720,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+                <TextBlock x:Name="Microphone_AudioOptimisation_Content" HorizontalAlignment="Left" Margin="185,749,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#FF9B9B9F" Text="Hintergrundgeräusche und Rauschen werden unterdrückt, um eine gute Audioqualität zu liefern."/>
+                <ui:DWC_Toggle x:Name="Microphone_AudioOptimisation_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="89,728,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+
+                <Rectangle x:Name="Microphone_Spacer" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="4" RadiusY="2.75" RadiusX="2.75" StrokeThickness="0" VerticalAlignment="Top" Width="834" Margin="103,794,0,0"/>
+
+            </Grid>
+
+            <!-- EditrosMode -->
+            <Grid x:Name="EditrosMode" Margin="556,0,0,0" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="EditorsMode_Heading" Content="Die Nutzermodi" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <TextBlock x:Name="EditorsMode_Description" Text="Einige möge nes ausführlicher andere mögen es schlicht. Dein Auswahl hat keine Ausswirkung auf die Funktionen des Programms. Je nachdem werden zusätzliche Informationen oder Anpassungsmöglichkeiten gegeben!" HorizontalAlignment="Left" Margin="89,99,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="867"/>
+
+                <Label x:Name="EditorsMode_InfoHeading" Content="Anpassungsfähigkeit" HorizontalAlignment="Left" Margin="89,614,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="18" FontWeight="Bold"/>
+                <TextBlock x:Name="EditorsMode_InfoDescription" Text="Wir versuchen es allen Nutzern recht zu machen, auch wenn diese komplett verschiedene Interessen verfolgen. Mit unseren Optimierungsmodulen versuchen wir den Dienst so gut wie möglich auf jeden einzelnen Nutzer zu schneiden zu können. Je mehr Informationen du uns gibst, desto besser können wir deine Interessen einstufen!" HorizontalAlignment="Left" Margin="89,659,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="867"/>
+
+                <Grid HorizontalAlignment="Left" Height="108" Margin="0,159,0,0" VerticalAlignment="Top" Width="1036">
+                    <Rectangle x:Name="EditorsMode_NormalMode_Rectangle" StrokeThickness="0" Fill="#FF313136" HorizontalAlignment="Left" Height="108" Margin="91,0,0,0" RadiusY="1.875" RadiusX="1.875" Stroke="#FF2E2E36" VerticalAlignment="Top" Width="888"/>
+                    <TextBlock x:Name="EditorsMode_NormalMode_Description" Text="Dich erwarten alle Funktionen in vollem Umfang, Wir nehmen dir die meiste Arbeit ab, was Design und die Oberflächengestaltung betrifft und du musst dich darum nicht kümmern." HorizontalAlignment="Left" Margin="187,50,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="766"/>
+                    <Label x:Name="EditorsMode_NormalMode_Heading" Content="Normal Mode" HorizontalAlignment="Left" Margin="184,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold" Height="31"/>
+                    <Image x:Name="EditorsMode_NormalMode_Image" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Height="50" Margin="119,26,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="108" Margin="0,291,0,0" VerticalAlignment="Top" Width="1036">
+                    <Rectangle x:Name="EditorsMode_EditorsMode_Rectangle" StrokeThickness="0" Fill="#FF313136" HorizontalAlignment="Left" Height="108" Margin="91,0,0,0" RadiusY="1.875" RadiusX="1.875" Stroke="#FF2E2E36" VerticalAlignment="Top" Width="888"/>
+                    <TextBlock x:Name="EditorsMode_EditorsMode_Description" Text="Du hast erweiterte Funktionen was das Design und die Oberflächengestaltung angeht. Passe das Programm individuellan und lass deiner Kreativität freien lauf." HorizontalAlignment="Left" Margin="187,50,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="766"/>
+                    <Label x:Name="EditorsMode_EditorsMode_Heading" Content="Editors Mode" HorizontalAlignment="Left" Margin="184,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold" Height="31"/>
+                    <Image x:Name="EditorsMode_EditorMode_Image" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Height="50" Margin="119,26,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="152" Margin="0,421,0,0" VerticalAlignment="Top" Width="1036">
+                    <Rectangle x:Name="EditorsMode_DeveloperMode_Rectangle" StrokeThickness="0" Fill="#FF313136" HorizontalAlignment="Left" Height="152" Margin="91,0,0,0" RadiusY="1.875" RadiusX="1.875" Stroke="#FF2E2E36" VerticalAlignment="Top" Width="888"/>
+                    <TextBlock x:Name="EditorsMode_DeveloperMode_Description" Text="Du bist Entwickler? Wir zeigen dir zusätzliche Informationen an und liefern dir Einblicke in die Entwicklung des Dienstes. Lass dich inspirieren und hilf uns Sicherheitslücken und Fehler zu finden." HorizontalAlignment="Left" Margin="187,50,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="766"/>
+                    <Label x:Name="EditorsMode_DeveloperMode_Heading" Content="Developers Mode" HorizontalAlignment="Left" Margin="184,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold" Height="31"/>
+                    <Image x:Name="EditorsMode_DeveloperMode_Image" Source="/DarkWolfCraftSys;component/src/old/icons/menu/home.png" HorizontalAlignment="Left" Height="50" Margin="119,26,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+
+                    <Grid HorizontalAlignment="Left" Height="34" Margin="187,102,0,0" VerticalAlignment="Top" Width="182">
+                        <Rectangle x:Name="EditorsMode_MoreInfoButton_Rectangle" HorizontalAlignment="Left" Height="34" RadiusY="1.875" RadiusX="1.875" Stroke="#FF0F7FEE" StrokeThickness="1" VerticalAlignment="Top" Width="182"/>
+                        <Label Content="Erfahre mehr darüber" HorizontalAlignment="Left" Margin="15,2,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" Width="153" FontSize="14" Height="30"/>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+            <!-- Reset Settings -->
+            <Grid x:Name="ResetSettings" Margin="552,0,0,-2" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="ResetSettings_Heading" Content="Einstellungen zurücksetzen" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <TextBlock x:Name="ResetSettings_Description" HorizontalAlignment="Left" Margin="89,99,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="867"><Run Text="Hier kannst du einzelne Bereiche oder gleich die gesamten Einstellungen auf Werkseinstellungen zurück setzen"/><LineBreak/><InlineUIContainer>
+                </InlineUIContainer></TextBlock>
+
+                <ScrollViewer HorizontalAlignment="Left" Height="716" Margin="89,146,0,0" VerticalAlignment="Top" Width="867" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="716" Width="867">
+                        <Grid Width="867">
+                            <Label x:Name="ResetSettings_Options_AllSettings" Content="Alle Einstellungen" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Rectangle x:Name="ResetSettings_Rectangle_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" RadiusY="2.833" RadiusX="2.833" StrokeThickness="0" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="ResetSettings_Image_1" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" VerticalAlignment="Top" Width="26"/>
+                            <Rectangle x:Name="ResetSettings_Spacer_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="42,49,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="807"/>
+                        </Grid>
+                        <Grid Width="867">
+                            <Label x:Name="ResetSettings_Options_Design" Content="Design" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Rectangle x:Name="ResetSettings_Rectangle_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" RadiusY="2.833" RadiusX="2.833" StrokeThickness="0" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="ResetSettings_Image_2" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" VerticalAlignment="Top" Width="26"/>
+                            <Rectangle x:Name="ResetSettings_Spacer_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="42,49,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="807"/>
+                        </Grid>
+                        <Grid Width="867">
+                            <Label x:Name="ResetSettings_Options_Language" Content="Sprache" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Rectangle x:Name="ResetSettings_Rectangle_3" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" RadiusY="2.833" RadiusX="2.833" StrokeThickness="0" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="ResetSettings_Image_3" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" VerticalAlignment="Top" Width="26"/>
+                            <Rectangle x:Name="ResetSettings_Spacer_3" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="42,49,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="807"/>
+                        </Grid>
+                        <Grid Width="867">
+                            <Label x:Name="ResetSettings_Options_Notification" Content="Benachrichtigungen" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Rectangle x:Name="ResetSettings_Rectangle_4" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" RadiusY="2.833" RadiusX="2.833" StrokeThickness="0" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="ResetSettings_Image_4" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" VerticalAlignment="Top" Width="26"/>
+                            <Rectangle x:Name="ResetSettings_Spacer_4" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="42,49,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="807"/>
+                        </Grid>
+                        <Grid Width="867">
+                            <Label x:Name="ResetSettings_Options_InGameOverlay" Content="In-Game-Overlay" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Rectangle x:Name="ResetSettings_Rectangle_5" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" RadiusY="2.833" RadiusX="2.833" StrokeThickness="0" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="ResetSettings_Image_5" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" VerticalAlignment="Top" Width="26"/>
+                            <Rectangle x:Name="ResetSettings_Spacer_5" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="42,49,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="807"/>
+                        </Grid>
+                        <Grid Width="867">
+                            <Label x:Name="ResetSettings_Options_ClientStart" Content="Anwendungsstart" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Rectangle x:Name="ResetSettings_Rectangle_6" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" RadiusY="2.833" RadiusX="2.833" StrokeThickness="0" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="ResetSettings_Image_6" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" VerticalAlignment="Top" Width="26"/>
+                            <Rectangle x:Name="ResetSettings_Spacer_6" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="42,49,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="807"/>
+                        </Grid>
+                        <Grid Width="867">
+                            <Label x:Name="ResetSettings_Options_Updates" Content="Updates" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                            <Rectangle x:Name="ResetSettings_Rectangle_7" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" RadiusY="2.833" RadiusX="2.833" StrokeThickness="0" VerticalAlignment="Top" Width="26"/>
+                            <Image x:Name="ResetSettings_Image_7" HorizontalAlignment="Left" Height="26" Margin="43,10,0,0" VerticalAlignment="Top" Width="26"/>
+                            <Rectangle x:Name="ResetSettings_Spacer_7" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="42,49,0,0" RadiusY="0.333" RadiusX="0.333" StrokeThickness="0" VerticalAlignment="Top" Width="807"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+
+
+
+            </Grid>
+
+            <!-- Client Start -->
+            <Grid x:Name="ClientStart" Margin="556,0,0,0" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="ClientStart_Heading" Content="Anwendungsstart" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+
+                <ScrollViewer HorizontalAlignment="Left" Height="688" Margin="79,127,0,0" VerticalAlignment="Top" Width="882" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="690" Width="880">
+                        <Grid Height="46">
+                            <ui:DWC_Toggle x:Name="ClientStart_Autostart_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" ToggleMarkerColorOff="#FF6B6B6B" Margin="0,2,0,0"/>
+                            <Label x:Name="ClientStart_Autostart" Content="Die Anwendung wird automatisch gestartet, sobald du deinen Pc hochfährst" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                            <Rectangle Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="14,44,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="856"/>
+
+                        </Grid>
+                        <Grid Height="46">
+                            <ui:DWC_Toggle x:Name="ClientStart_MinimizedStart_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,3,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                            <Label x:Name="ClientStart_MinimizedStart" Content="Anwendung minimiert starten" HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                            <Rectangle Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="14,44,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="856"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Grid>
+
+            <!-- Updates -->
+            <Grid x:Name="Updates" Margin="556,0,0,-2" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="Updates_Heading" Content="Updates" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <Label x:Name="Updates_Description_1" Content="Updates werden immer automatisch heruntergeladen, wenn du die Anwendung neu startest" HorizontalAlignment="Left" Margin="89,88,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F"/>
+
+                <Grid Height="52" Margin="78,140,0,670" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                    <ui:DWC_Toggle x:Name="Updates_AutoUpdate_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,5,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                    <Label x:Name="Updates_AutoUpdate_Heading" Content="Automatische Updates" HorizontalAlignment="Left" Margin="88,3,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                    <Rectangle x:Name="Updates_Spacer_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="14,50,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="856"/>
+                    <Label x:Name="Updates_AutoUpdate_Description" Content="Wenn das programm geöffnet ist, werden Updates automatsch gestartet" HorizontalAlignment="Left" Margin="88,22,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Height="29" FontSize="10"/>
+
+                </Grid>
+
+                <Grid Height="52" Margin="78,194,0,618" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <ui:DWC_Toggle x:Name="Updates_AutoUpdateBlock_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,4,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                    <Label x:Name="Updates_AutoUpdateBlock_Heading" Content="Automatische Updates verhindern, wenn ich beschäftigt bin" HorizontalAlignment="Left" Margin="90,3,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                    <Rectangle x:Name="Updates_Spacer_2" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="14,50,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="856"/>
+                    <Label x:Name="Updates_AutoUpdateBlock_Description" Content="Du erhältst eine Benachrichtigung und kannst entscheiden, ob du das Update sofort oder später installierst" HorizontalAlignment="Left" Margin="90,22,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Height="29" FontSize="10"/>
+
+                </Grid>
+
+                <TextBlock x:Name="Updates_Description_2" Text="Je nachdem wie wichtig ein Update ist geben wir dir die Möglichkeit, es zu einem späteren Zeitpunkt zu installieren. Wenn wir mit Hilfe eines Updates beispielsweise dringend eine Sicherheitslücke schließen müssen. wird das Update zur Sicherheit sofort installiert, auch wenn es deine Aktivität unterbrechen sollte." Foreground="#FF9B9B9F" TextWrapping="Wrap" Width="775" Margin="89,276,176,522" HorizontalAlignment="Left" VerticalAlignment="Top" Height="48"/>
+
+            </Grid>
+
+            <!-- In Game Overlay -->
+            <Grid x:Name="InGameOverlay" Margin="558,0,0,0" Background="#FF37363F" Visibility="Hidden">
+
+                <Label x:Name="InGameOverlay_Heading" Content="In Game Overlay" HorizontalAlignment="Left" Margin="89,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <Label x:Name="InGameOverlay_Description" Content="Bereit miteinander zu spielen?" HorizontalAlignment="Left" Margin="89,81,0,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Width="867"/>
+
+                <Grid Height="52" Margin="78,117,0,693" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <ui:DWC_Toggle x:Name="InGameOverlay_AktivateIngameOverlay_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,3,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                    <Label x:Name="InGameOverlay_AktivateIngameOverlay" Content="In Game Overlay aktivieren" HorizontalAlignment="Left" Margin="93,12,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                    <Rectangle x:Name="InGameOverlay_Spacer_1" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="1" Margin="14,50,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="856"/>
+
+                </Grid>
+                <Grid Margin="78,169,0,412">
+                    <Label x:Name="InGameOverlay_Show_Heading" Content="An wellcher Stelle soll das Overlay angezeigt werden" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top" Foreground="White" Height="29" FontSize="14"/>
+                    <Rectangle x:Name="InGameOverlay_MainRectangle" Fill="#FF2E2E36" HorizontalAlignment="Left" Height="217" Margin="10,54,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="355" RadiusY="10" RadiusX="10"/>
+                    <Rectangle x:Name="InGameOverlay_ShownPosition_Left_Top" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" Margin="19,63,0,0" RadiusY="10" RadiusX="10" StrokeThickness="0" VerticalAlignment="Top" Width="81"/>
+                    <Rectangle x:Name="InGameOverlay_ShownPosition_Right_Top" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" Margin="274,63,0,0" RadiusY="10" RadiusX="10" StrokeThickness="0" VerticalAlignment="Top" Width="81"/>
+                    <Rectangle x:Name="InGameOverlay_ShownPosition_Right_Bottom" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" Margin="274,224,0,0" RadiusY="10" RadiusX="10" StrokeThickness="0" VerticalAlignment="Top" Width="81"/>
+                    <Rectangle x:Name="InGameOverlay_ShownPosition_Left_Bottom" Fill="#FF37363F" HorizontalAlignment="Left" Height="39" Margin="19,224,0,0" RadiusY="10" RadiusX="10" StrokeThickness="0" VerticalAlignment="Top" Width="81"/>
+                    <Image x:Name="InGameOverlay_ShownPosition_Left_Top_Image" Source="/DarkWolfCraftSys;component/src/old/icons/colored/checked_dark.png" HorizontalAlignment="Left" Height="26" Margin="46,70,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                    <Image x:Name="InGameOverlay_ShownPosition_Left_Bottom_Image" Source="/DarkWolfCraftSys;component/src/old/icons/colored/checked_dark.png" HorizontalAlignment="Left" Height="26" Margin="46,230,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                    <Image x:Name="InGameOverlay_ShownPosition_Right_Top_Image" Source="/DarkWolfCraftSys;component/src/old/icons/colored/checked_dark.png" HorizontalAlignment="Left" Height="26" Margin="302,70,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+                    <Image x:Name="InGameOverlay_ShownPosition_Right_Bottom_Image" Source="/DarkWolfCraftSys;component/src/old/icons/colored/checked_dark.png" HorizontalAlignment="Left" Height="26" Margin="302,230,0,0" VerticalAlignment="Top" Width="26" Visibility="Hidden" Panel.ZIndex="1"/>
+
+                </Grid>
+                <Grid Height="52" Margin="78,467,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="554">
+                    <ui:DWC_Toggle x:Name="InGameOverlay_ShowWhileTalking_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,7,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                    <Label x:Name="InGameOverlay_ShowWhileTalking_Heading" Content="Overlay nur anzeigen, sobald jemand spricht" HorizontalAlignment="Left" Margin="91,3,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                    <Label x:Name="InGameOverlay_ShowWhileTalking_Content"  Content="Ist diese Funktion aktiviert, wird das Overlay ausgeblendet wenn niemand spricht" HorizontalAlignment="Left" Margin="91,22,-40,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Height="29" FontSize="10"/>
+
+                </Grid>
+                <Grid Height="52" Margin="78,519,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="554">
+                    <ui:DWC_Toggle x:Name="InGameOverlay_ShowProfilePicture_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,6,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                    <Label x:Name="InGameOverlay_ShowProfilePicture_Heading" Content="Profilbilder ausblenden" HorizontalAlignment="Left" Margin="92,3,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                    <Label x:Name="InGameOverlay_ShowProfilePicture_Content"  Content="Ist diese Funktion aktiviert, siehst du nur die Namen der Anderen" HorizontalAlignment="Left" Margin="92,22,-41,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Height="29" FontSize="10"/>
+
+                </Grid>
+                <Grid Height="52" Margin="78,571,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="554">
+                    <ui:DWC_Toggle x:Name="InGameOverlay_ShowMusik_Toggle" HorizontalAlignment="Left" VerticalAlignment="Top" ToggleBackGround="#FF2E2E36" ToggleBorderBrush="#FFD6DE27" ToggleMarkerColor="#FF0F7FEE" Height="36" Width="82" ToggleRounding="15" Margin="0,4,0,0" ToggleMarkerColorOff="#FF6B6B6B"/>
+                    <Label x:Name="InGameOverlay_ShowMusik_Heading" Content="Musikbot anzeigen" HorizontalAlignment="Left" Margin="93,3,0,0" VerticalAlignment="Top" Foreground="White" Height="29"/>
+                    <Label x:Name="InGameOverlay_ShowMusik_Content"  Content="Der Musikbot wird mit  angezeigt und du siehst, welches Lied ihr hört" HorizontalAlignment="Left" Margin="93,22,-42,0" VerticalAlignment="Top" Foreground="#FF9B9B9F" Height="29" FontSize="10"/>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+
+        <!-- Top Bar -->
+        <Rectangle x:Name="DWC_ActionBar" Fill="#FF1C1E20" Height="30" VerticalAlignment="Top" Uid="DWC_IgnoreRounding"/>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Panel.ZIndex="1" Height="25" Margin="0,3,5,0">
+            <Image x:Name="Window_Close" Height="15" Margin="60,0,5,1" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/close_white.png"/>
+            <Image x:Name="Window_State" Height="15" Margin="32,0,30,0" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/windowstate_white.png" RenderTransformOrigin="-0.407,0.52"/>
+            <Image x:Name="Window_Minimize" Height="15" Margin="6,0,59,3" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/minimize_white.png" RenderTransformOrigin="-0.407,0.52" VerticalAlignment="Bottom"/>
+        </Grid>
+
+    </Grid>
+
+</Window>
+    

@@ -1,0 +1,32 @@
+﻿Assembly C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe wird installiert.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.InstallLog
+   assemblypath = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe
+Dienst DarkWolfCraft.net wird installiert...
+Die EventLog-Quelle DarkWolfCraft.net im Protokoll Application wird erstellt...
+Assembly C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe wird zurückgesetzt.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.InstallLog
+   assemblypath = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe
+Der vorherige Zustand des Ereignisprotokolls für die Quelle DarkWolfCraft.net wird wiederhergestellt.
+Während der Rollbackphase des Installers System.Diagnostics.EventLogInstaller ist eine Ausnahme aufgetreten.
+System.Security.SecurityException: Die Quelle wurde nicht gefunden, aber einige oder alle Ereignisprotokolle konnten nicht durchsucht werden. Protokolle, auf die kein Zugriff möglich war: Security, State.
+Während der Rollbackphase der Installation ist eine Ausnahme aufgetreten. Diese Ausnahme wird ignoriert, und der Rollback wird fortgesetzt. Der ursprüngliche Zustand des Computers wird jedoch möglicherweise nicht vollständig wiederhergestellt, nachdem der Rollback beendet ist.
+Assembly C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe wird installiert.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.InstallLog
+   assemblypath = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe
+Dienst DarkWolfCraft.net wird installiert...
+Die EventLog-Quelle DarkWolfCraft.net im Protokoll Application wird erstellt...
+Assembly C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe wird zurückgesetzt.
+Betroffene Parameter:
+   logtoconsole = 
+   logfile = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.InstallLog
+   assemblypath = C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_TEST\bin\Debug\DWC_TEST.exe
+Der vorherige Zustand des Ereignisprotokolls für die Quelle DarkWolfCraft.net wird wiederhergestellt.
+Während der Rollbackphase des Installers System.Diagnostics.EventLogInstaller ist eine Ausnahme aufgetreten.
+System.Security.SecurityException: Die Quelle wurde nicht gefunden, aber einige oder alle Ereignisprotokolle konnten nicht durchsucht werden. Protokolle, auf die kein Zugriff möglich war: Security, State.
+Während der Rollbackphase der Installation ist eine Ausnahme aufgetreten. Diese Ausnahme wird ignoriert, und der Rollback wird fortgesetzt. Der ursprüngliche Zustand des Computers wird jedoch möglicherweise nicht vollständig wiederhergestellt, nachdem der Rollback beendet ist.

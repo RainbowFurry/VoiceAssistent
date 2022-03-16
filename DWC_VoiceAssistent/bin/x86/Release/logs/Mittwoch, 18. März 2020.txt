@@ -1,0 +1,11 @@
+[Mittwoch, 18. März 2020][20:57:14] Programm DWC_VoiceAssistent is starting up...
+[Mittwoch, 18. März 2020][20:57:14] Web Connection was found
+[Mittwoch, 18. März 2020][20:57:14] Config File has been successfully created!
+[Mittwoch, 18. März 2020][20:57:14] Config File has been loaded and initialized successfull
+[Mittwoch, 18. März 2020][20:57:14] Color Codes has been loaded and initialized successfull
+[Mittwoch, 18. März 2020][20:57:20] [ERROR]
+[ERROR][Message] - Die Datei "C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_VoiceAssistent\bin\x86\Release\icon.ico" konnte nicht gefunden werden.
+[ERROR][Message] - mscorlib
+[ERROR][Message] - 
+[ERROR][Message] - System.Collections.ListDictionaryInternal
+

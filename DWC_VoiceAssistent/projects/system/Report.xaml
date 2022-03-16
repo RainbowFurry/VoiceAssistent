@@ -1,0 +1,98 @@
+﻿<Window x:Name="DWC_Window" x:Class="DWC_VoiceAssistent.projects.system.Report"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.system"
+        mc:Ignorable="d"
+        Title="DarkWolfCraft VoiceAssistent - Report" MinWidth="825" MinHeight="475" Height="488" Width="825" Background="#FF333333" WindowStyle="None">
+
+    <!-- 
+    No Window Border:
+    https://stackoverflow.com/questions/611298/how-to-create-a-wpf-window-without-a-border-that-can-be-resized-via-a-grip-only
+    -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="4"
+        ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="BackgroundImage" Background="#FF222425">
+
+        <!-- Heading -->
+        <Grid HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="792" Margin="0,29,0,0">
+            <Label Content="Wo liegt das Problem?" HorizontalAlignment="Left" Margin="134,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="48"/>
+            <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="224,77,0,0" VerticalAlignment="Top" Width="301"/>
+        </Grid>
+
+        <!-- Content -->
+        <Grid Margin="10,114,0,0">
+            <!-- Report Options -->
+            <Grid HorizontalAlignment="Left" Height="244" Margin="10,4,0,0" VerticalAlignment="Top" Width="772">
+                <Rectangle Fill="{x:Null}" HorizontalAlignment="Left" Height="230" Margin="8,4,0,0" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="761" RadiusY="14.833" RadiusX="14.833"/>
+                <Label x:Name="DWC_ReportWinow_Question1" Content="Das Programm ist abgestürzt?" HorizontalAlignment="Left" Margin="33,14,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="14"/>
+                <Label x:Name="DWC_ReportWinow_Question2" Content="Tritt der Fehler öfters auf?" HorizontalAlignment="Left" Margin="33,48,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="14"/>
+                <Label x:Name="DWC_ReportWinow_Question3" Content="Wo ist das Problem?" HorizontalAlignment="Left" Margin="33,82,0,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="14"/>
+                <TextBox x:Name="DWC_MailContent" BorderBrush="{x:Null}" BorderThickness="0" HorizontalScrollBarVisibility="Visible" Margin="20,117,13,38" TextWrapping="Wrap" Text="Tippe zum beschreiben des Problems ..." Foreground="#FF6B6B6B" Background="{x:Null}" IsReadOnlyCaretVisible="True" ScrollViewer.CanContentScroll="True" Grid.IsSharedSizeScope="True" RenderTransformOrigin="0.5,0.5"/>
+                <CheckBox x:Name="DWC_Report_AddLatestLog_CheckBox" Content="Add Latest Log" HorizontalAlignment="Left" Margin="649,213,0,0" VerticalAlignment="Top" Width="110" Foreground="#FF0F7FEE"/>
+                <Grid x:Name="DWC_Report_CrashAnswer_Yes" HorizontalAlignment="Left" Height="30" Margin="268,15,0,0" VerticalAlignment="Top" Width="78">
+                    <Rectangle x:Name="DWC_Report_CrashAnswer_Yes_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" Margin="1,-1,-1,0" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="76"/>
+                    <Label x:Name="DWC_Report_CrashAnswer_Yes_Text" Content="Ja" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B" Width="22"/>
+                </Grid>
+                <Grid x:Name="DWC_Report_CrashAnswer_No" HorizontalAlignment="Left" Height="31" Margin="369,14,0,0" VerticalAlignment="Top" Width="76">
+                    <Rectangle x:Name="DWC_Report_CrashAnswer_No_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="76"/>
+                    <Label x:Name="DWC_Report_CrashAnswer_No_Text" Content="Nein" HorizontalAlignment="Left" Margin="22,1,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B"/>
+                </Grid>
+                <Grid x:Name="DWC_Report_CrashsOften_Yes" HorizontalAlignment="Left" Height="29" Margin="272,50,0,0" VerticalAlignment="Top" Width="75">
+                    <Rectangle x:Name="DWC_Report_CrashsOften_Yes_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" Margin="-3,-1,0,0" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="76"/>
+                    <Label x:Name="DWC_Report_CrashsOften_Yes_Text" Content="Ja" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B" Width="22"/>
+                </Grid>
+                <Grid x:Name="DWC_Report_CrashsOften_No" HorizontalAlignment="Left" Height="27" Margin="369,48,0,0" VerticalAlignment="Top" Width="76">
+                    <Rectangle x:Name="DWC_Report_CrashsOften_No_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" Margin="-1,0,0,-1" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="76"/>
+                    <Label x:Name="DWC_Report_CrashsOften_No_Text" Content="Nein" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B"/>
+                </Grid>
+                <Grid x:Name="DWC_Report_Plugin_Button" HorizontalAlignment="Left" Height="26" Margin="265,84,0,0" VerticalAlignment="Top" Width="104">
+                    <Rectangle x:Name="DWC_Report_Plugin_Button_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" Margin="3,-1,0,-1" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="101"/>
+                    <Label x:Name="DWC_Report_Plugin_Button_Text" Content="Plugin" HorizontalAlignment="Left" Margin="31,0,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B" Width="48" Height="26"/>
+                </Grid>
+                <Grid x:Name="DWC_Report_Assistent_Button" HorizontalAlignment="Left" Height="29" Margin="384,84,0,0" VerticalAlignment="Top" Width="101">
+                    <Rectangle x:Name="DWC_Report_Assistent_Button_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" Margin="-1,-1,-1,0" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="103"/>
+                    <Label x:Name="DWC_Report_Assistent_Button_Text" Content="Assistent" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B" Width="64" Height="26"/>
+                </Grid>
+                <Grid x:Name="DWC_Report_Chat_Button" HorizontalAlignment="Left" Height="30" Margin="504,81,0,0" VerticalAlignment="Top" Width="101">
+                    <Rectangle x:Name="DWC_Report_Chat_Button_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" Margin="0,2,-1,-1" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="101"/>
+                    <Label x:Name="DWC_Report_Chat_Button_Text" Content="Chat" HorizontalAlignment="Left" Margin="31,3,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B" Width="37" Height="26"/>
+                </Grid>
+                <Grid x:Name="DWC_Report_Other_Button" HorizontalAlignment="Left" Height="30" Margin="628,82,0,0" VerticalAlignment="Top" Width="100">
+                    <Rectangle x:Name="DWC_Report_Other_Button_Rectangle" Fill="{x:Null}" HorizontalAlignment="Left" Height="28" RadiusY="6.833" RadiusX="6.833" Stroke="#FF6B6B6B" VerticalAlignment="Top" Width="100" Margin="0,2,0,0"/>
+                    <Label x:Name="DWC_Report_Other_Button_Text" Content="Andere" HorizontalAlignment="Left" Margin="26,3,0,0" VerticalAlignment="Top" Foreground="#FF6B6B6B" Width="50" Height="26"/>
+                </Grid>
+
+            </Grid>
+            <Grid HorizontalAlignment="Left" Margin="10,273,0,4" Width="152">
+                <Rectangle x:Name="Support_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="49" Margin="8,0,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="138"/>
+                <Label x:Name="DWC_SupportButton_Text" Content="Support" HorizontalAlignment="Center" Margin="33,4,31,0" VerticalAlignment="Top" Foreground="#FF0F7FEE" FontSize="22"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Margin="596,273,0,4" Width="186">
+                <Rectangle x:Name="Send_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="49" Margin="8,0,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="166"/>
+                <Label x:Name="DWC_SendButton_Text" Content="Absenden" HorizontalAlignment="Center" Margin="35,4,44,0" VerticalAlignment="Top" Foreground="White" FontSize="22"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Margin="417,273,0,4" Width="186">
+                <Rectangle x:Name="Cancel_Background" Fill="#FF37363F" HorizontalAlignment="Left" Height="49" Margin="8,0,0,0" RadiusY="6.833" RadiusX="6.833" VerticalAlignment="Top" Width="166"/>
+                <Label x:Name="DWC_CancelButton_Text" Content="Abbruch" HorizontalAlignment="Center" Margin="44,4,49,0" VerticalAlignment="Top" Foreground="#FF6B6B6B" FontSize="22"/>
+            </Grid>
+            <Label x:Name="DWC_AlertText" Content="Bitte gebe mindestens 100 Zeichen ein." HorizontalAlignment="Left" Margin="20,242,0,0" VerticalAlignment="Top" Width="753" Foreground="Red" Visibility="Hidden"/>
+
+        </Grid>
+
+        <!-- Top Bar -->
+        <Rectangle x:Name="DWC_ActionBar" Fill="#FF1C1E20" Height="31" VerticalAlignment="Top" Uid="DWC_IgnoreRounding"/>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Panel.ZIndex="1" Height="25" Margin="0,3,5,0">
+            <Image x:Name="Window_Close" Height="15" Margin="60,0,5,1" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/close_white.png"/>
+            <Image x:Name="Window_State" Height="15" Margin="32,0,30,0" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/windowstate_white.png" RenderTransformOrigin="-0.407,0.52"/>
+            <Image x:Name="Window_Minimize" Height="15" Margin="6,0,59,3" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/minimize_white.png" RenderTransformOrigin="-0.407,0.52" VerticalAlignment="Bottom"/>
+        </Grid>
+
+    </Grid>
+    
+</Window>

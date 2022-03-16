@@ -1,0 +1,17 @@
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\bin\Debug\DWC_ServerTerminal.exe.config
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\bin\Debug\DWC_ServerTerminal.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\bin\Debug\DWC_ServerTerminal.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\bin\Debug\DarkWolfCraftSys.dll
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\bin\Debug\DarkWolfCraftSys.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\MainWindow.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\App.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal_MarkupCompile.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal_MarkupCompile.lref
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\MainWindow.baml
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal.g.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal.Properties.Resources.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal.csproj.GenerateResource.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal.csproj.CopyComplete
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_ServerTerminal\obj\Debug\DWC_ServerTerminal.pdb

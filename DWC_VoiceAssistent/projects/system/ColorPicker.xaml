@@ -1,0 +1,149 @@
+﻿<Window x:Name="DWC_Window" x:Class="DWC_VoiceAssistent.projects.system.ColorPicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.system"
+        mc:Ignorable="d"
+        Title="DarkWolfCraft VoiceAssistent - ColorPicker" Height="450" Width="800" WindowStyle="None" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
+
+    <!-- 
+    No Window Border:
+    https://stackoverflow.com/questions/611298/how-to-create-a-wpf-window-without-a-border-that-can-be-resized-via-a-grip-only
+    -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="4"
+        ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+
+        <!-- Top Bar -->
+        <Rectangle x:Name="DWC_ActionBar" Fill="#FF1C1E20" Height="30" VerticalAlignment="Top" Uid="DWC_IgnoreRounding"/>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Panel.ZIndex="1" Height="25" Margin="0,3,5,0">
+            <Image x:Name="Window_Close" Height="15" Margin="60,0,5,1" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/close_white.png"/>
+            <Image x:Name="Window_State" Height="15" Margin="32,0,30,0" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/windowstate_white.png" RenderTransformOrigin="-0.407,0.52"/>
+            <Image x:Name="Window_Minimize" Height="15" Margin="6,0,59,3" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/minimize_white.png" RenderTransformOrigin="-0.407,0.52" VerticalAlignment="Bottom"/>
+        </Grid>
+
+        <Grid x:Name="ColorPickerContentGrid" Margin="0,30,0,-1" Background="#FF2B2B2B">
+            
+            <Grid x:Name="ColorPickerCusomContentGrid" HorizontalAlignment="Left" Height="295" VerticalAlignment="Top" Width="792" Margin="0,117,0,0" Background="#FF2B2B2B">
+                <Grid Margin="0,0,437,0">
+
+                    <Rectangle x:Name="ColorSelection" Stroke="{x:Null}" StrokeThickness="3" Margin="10,10,10,127" RadiusY="35.5" RadiusX="35.5">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Red" Offset="0.0"/>
+                                <GradientStop Color="Orange" Offset="0.17"/>
+                                <GradientStop Color="Yellow" Offset="0.33"/>
+                                <GradientStop Color="Green" Offset="0.5"/>
+                                <GradientStop Color="Blue" Offset="0.67"/>
+                                <GradientStop Color="Indigo" Offset="0.83"/>
+                                <GradientStop Color="Violet" Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                    <Rectangle x:Name="ShownSelectedColor" Fill="#FF7F7F7F" HorizontalAlignment="Left" Height="40" Margin="10,189,0,0" VerticalAlignment="Top" Width="335" RadiusY="14" RadiusX="14"/>
+                    <ComboBox x:Name="AllWindowsColors" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="335" Background="#FF7F7F7F" Visibility="Hidden"/>
+                </Grid>
+
+                <Grid Margin="355,-55,0,0">
+
+                    <Grid x:Name="RGB_Grid_R" Margin="0,1,0,245">
+                        <Slider x:Name="RGB_Slider_R" Maximum="255" TickPlacement="BottomRight" TickFrequency="5" Margin="43,12,101,10" Value="127" Foreground="#FFF70000" />
+                        <TextBox Background="{x:Null}" BorderThickness="0" x:Name="RGB_TextBox_R" HorizontalAlignment="Left" Height="19" Margin="349,17,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="74" Foreground="White" Panel.ZIndex="1"/>
+                        <Label x:Name="RGB_Label_R" Content="R" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Foreground="#FFF70000" FontSize="22" Width="28"/>
+                        <Rectangle x:Name="RGB_Rectangle_R" Fill="#FF37363F" HorizontalAlignment="Left" Height="26" Margin="345,13,0,0" RadiusY="8.333" RadiusX="8.333" VerticalAlignment="Top" Width="82"/>
+                    </Grid>
+                    <Grid x:Name="RGB_Grid_G" Margin="0,50,0,196">
+                        <Slider x:Name="RGB_Slider_G" Maximum="255" TickPlacement="BottomRight" TickFrequency="5" Margin="43,12,101,13" Value="127" Foreground="#FF00F12C" />
+                        <TextBox Background="{x:Null}" BorderThickness="0" x:Name="RGB_TextBox_G" HorizontalAlignment="Left" Height="19" Margin="349,17,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="74" Foreground="White" Panel.ZIndex="1"/>
+                        <Label x:Name="RGB_Label_G" Content="G" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Foreground="#FF00F12C" FontSize="22" Width="28"/>
+                        <Rectangle x:Name="RGB_Rectangle_G" Fill="#FF37363F" HorizontalAlignment="Left" Height="26" Margin="345,13,0,0" RadiusY="8.333" RadiusX="8.333" VerticalAlignment="Top" Width="82"/>
+                    </Grid>
+                    <Grid x:Name="RGB_Grid_B" Margin="0,99,0,147">
+                        <Slider x:Name="RGB_Slider_B" Maximum="255" TickPlacement="BottomRight" TickFrequency="5" Margin="43,12,101,13" Value="127" Foreground="#FF018EDE" />
+                        <TextBox Background="{x:Null}" BorderThickness="0" x:Name="RGB_TextBox_B" HorizontalAlignment="Left" Height="19" Margin="349,17,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="74" Foreground="White" Panel.ZIndex="1"/>
+                        <Label x:Name="RGB_Label_B" Content="B" HorizontalAlignment="Left" Margin="11,5,0,0" VerticalAlignment="Top" Foreground="#FF018EDE" FontSize="22" Width="28"/>
+                        <Rectangle x:Name="RGB_Rectangle_B" Fill="#FF37363F" HorizontalAlignment="Left" Height="26" Margin="345,13,0,0" RadiusY="8.333" RadiusX="8.333" VerticalAlignment="Top" Width="82"/>
+                    </Grid>
+                    <Grid x:Name="RGB_Grid_Hexa" Margin="0,197,0,64">
+                        <TextBox Background="{x:Null}" BorderThickness="0" x:Name="RGB_TextBox_Hexa" HorizontalAlignment="Left" Height="19" Margin="349,10,0,0" TextWrapping="Wrap" Text="#" VerticalAlignment="Top" Width="74" Foreground="White" Panel.ZIndex="1"/>
+                        <Label x:Name="RGB_Label_Hexa" Content="Hexa Decimal" HorizontalAlignment="Left" Margin="222,6,0,0" VerticalAlignment="Top" Foreground="#FF898989" FontSize="14" Width="118"/>
+                        <Rectangle x:Name="RGB_Rectangle_Hexa" Fill="#FF37363F" HorizontalAlignment="Left" Height="26" Margin="345,6,0,0" RadiusY="8.333" RadiusX="8.333" VerticalAlignment="Top" Width="82"/>
+                    </Grid>
+                    <Grid x:Name="RGB_Grid_A" Margin="0,148,0,98">
+                        <Slider x:Name="RGB_Slider_A" Maximum="255" TickPlacement="BottomRight" TickFrequency="5" Margin="43,12,101,13" Value="255" Foreground="#FFA4A4A4" />
+                        <TextBox Background="{x:Null}" BorderThickness="0" x:Name="RGB_TextBox_A" HorizontalAlignment="Left" Height="19" Margin="349,17,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="74" Foreground="White" Panel.ZIndex="1"/>
+                        <Label x:Name="RGB_Label_A" Content="A" HorizontalAlignment="Left" Margin="11,5,0,0" VerticalAlignment="Top" Foreground="#FFA4A4A4" FontSize="22" Width="28"/>
+                        <Rectangle x:Name="RGB_Rectangle_A" Fill="#FF37363F" HorizontalAlignment="Left" Height="26" Margin="345,13,0,0" RadiusY="8.333" RadiusX="8.333" VerticalAlignment="Top" Width="82"/>
+                    </Grid>
+
+                </Grid>
+
+                <Grid x:Name="Accept_Button_Grid" HorizontalAlignment="Left" Height="43" Margin="569,239,0,0" VerticalAlignment="Top" Width="100">
+                    <Rectangle x:Name="Accept_Button_Rectangle" Fill="#FF37363F" HorizontalAlignment="Left" Height="38" Margin="0,2,0,0" RadiusY="8.333" RadiusX="8.333" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="Accept_Button_Text" Content="Bestätigen" HorizontalAlignment="Left" Margin="18,8,0,0" VerticalAlignment="Top" Foreground="White"/>
+                </Grid>
+                <Grid x:Name="Cancel_Button_Grid" HorizontalAlignment="Left" Height="43" Margin="677,239,0,0" VerticalAlignment="Top" Width="100">
+                    <Rectangle x:Name="Cancel_Button_Rectangle" Fill="#FF37363F" HorizontalAlignment="Left" Height="38" Margin="0,2,0,0" RadiusY="8.333" RadiusX="8.333" VerticalAlignment="Top" Width="100"/>
+                    <Label x:Name="Cancel_Button_Text" Content="Abbruch" HorizontalAlignment="Left" Margin="22,8,0,0" VerticalAlignment="Top" Foreground="White"/>
+                </Grid>
+
+            </Grid>
+            <Grid x:Name="Defined_Colors_Grid" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="355" Background="#FF2B2B2B" Margin="7,8,0,0">
+                <Rectangle x:Name="Definied_Color_1" Fill="White" HorizontalAlignment="Left" Height="16" Margin="10,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_2" Fill="#FFC3C3C3" HorizontalAlignment="Left" Height="16" Margin="31,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_3" Fill="#FF585858" HorizontalAlignment="Left" Height="16" Margin="52,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_4" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="73,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_5" Fill="#FF88001B" HorizontalAlignment="Left" Height="16" Margin="94,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_6" Fill="#FFEC1C24" HorizontalAlignment="Left" Height="16" Margin="115,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_7" Fill="#FFD84D53" HorizontalAlignment="Left" Height="16" Margin="136,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_8" Fill="#FFFF6800" HorizontalAlignment="Left" Height="16" Margin="157,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_9" Fill="#FFFF7F27" HorizontalAlignment="Left" Height="16" Margin="178,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_10" Fill="#FFF08136" HorizontalAlignment="Left" Height="16" Margin="199,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_11" Fill="#FFFFCA18" HorizontalAlignment="Left" Height="16" Margin="220,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_12" Fill="#FFFFF200" HorizontalAlignment="Left" Height="16" Margin="241,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_13" Fill="#FFFFF75D" HorizontalAlignment="Left" Height="16" Margin="262,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_14" Fill="#FF0ED145" HorizontalAlignment="Left" Height="16" Margin="283,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_15" Fill="#FF00FF48" HorizontalAlignment="Left" Height="16" Margin="304,10,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_16" Fill="#FF37FF6F" HorizontalAlignment="Left" Height="16" Margin="10,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_17" Fill="#FF1AD6D0" HorizontalAlignment="Left" Height="16" Margin="31,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_18" Fill="#FF00FFF6" HorizontalAlignment="Left" Height="16" Margin="52,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_19" Fill="#FF8CFFFB" HorizontalAlignment="Left" Height="16" Margin="73,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_20" Fill="#FF3F48CC" HorizontalAlignment="Left" Height="16" Margin="94,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_21" Fill="#FF00A8F3" HorizontalAlignment="Left" Height="16" Margin="115,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_22" Fill="#FF51C9FF" HorizontalAlignment="Left" Height="16" Margin="136,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_23" Fill="#FFB83DBA" HorizontalAlignment="Left" Height="16" Margin="157,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_24" Fill="#FFFB00FF" HorizontalAlignment="Left" Height="16" Margin="178,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_25" Fill="#FFFC5FFF" HorizontalAlignment="Left" Height="16" Margin="199,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_26" Fill="#FFBB4169" HorizontalAlignment="Left" Height="16" Margin="220,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_27" Fill="#FFE61C5D" HorizontalAlignment="Left" Height="16" Margin="241,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_28" Fill="#FFFFAEC8" HorizontalAlignment="Left" Height="16" Margin="262,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_29" Fill="#FFB95F2C" HorizontalAlignment="Left" Height="16" Margin="283,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_30" Fill="#FFDE5F17" HorizontalAlignment="Left" Height="16" Margin="304,31,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_31" Fill="#FFFBA675" HorizontalAlignment="Left" Height="16" Margin="10,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_32" Fill="White" HorizontalAlignment="Left" Height="16" Margin="31,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_33" Fill="White" HorizontalAlignment="Left" Height="16" Margin="52,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_34" Fill="White" HorizontalAlignment="Left" Height="16" Margin="73,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_35" Fill="White" HorizontalAlignment="Left" Height="16" Margin="94,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_36" Fill="White" HorizontalAlignment="Left" Height="16" Margin="115,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_37" Fill="White" HorizontalAlignment="Left" Height="16" Margin="136,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_38" Fill="White" HorizontalAlignment="Left" Height="16" Margin="157,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_39" Fill="White" HorizontalAlignment="Left" Height="16" Margin="178,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_40" Fill="White" HorizontalAlignment="Left" Height="16" Margin="199,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_41" Fill="White" HorizontalAlignment="Left" Height="16" Margin="220,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_42" Fill="White" HorizontalAlignment="Left" Height="16" Margin="241,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_43" Fill="White" HorizontalAlignment="Left" Height="16" Margin="262,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_44" Fill="White" HorizontalAlignment="Left" Height="16" Margin="283,52,0,0" VerticalAlignment="Top" Width="16"/>
+                <Rectangle x:Name="Definied_Color_45" Fill="White" HorizontalAlignment="Left" Height="16" Margin="304,52,0,0" VerticalAlignment="Top" Width="16"/>
+            </Grid>
+        </Grid>
+
+        <Image x:Name="BackgroundImage" HorizontalAlignment="Left" Height="412" Margin="0,30,0,0" VerticalAlignment="Top" Width="792" Panel.ZIndex="-1"/>
+
+    </Grid>
+</Window>

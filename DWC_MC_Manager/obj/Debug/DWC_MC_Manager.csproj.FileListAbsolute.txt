@@ -1,0 +1,17 @@
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\bin\Debug\DWC_MC_Manager.exe.config
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\bin\Debug\DWC_MC_Manager.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\bin\Debug\DWC_MC_Manager.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\bin\Debug\DarkWolfCraftSys.dll
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\bin\Debug\DarkWolfCraftSys.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\MainWindow.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\App.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager_MarkupCompile.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager_MarkupCompile.lref
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\MainWindow.baml
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager.g.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager.Properties.Resources.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager.csproj.GenerateResource.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager.csproj.CopyComplete
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_MC_Manager\obj\Debug\DWC_MC_Manager.pdb

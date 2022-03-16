@@ -1,0 +1,972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_Birthday_Text" xml:space="preserve">
+    <value>Твоя дата рождения</value>
+  </data>
+  <data name="Account_ChangeNickname" xml:space="preserve">
+    <value>Изменить псевдоним</value>
+  </data>
+  <data name="Account_ChangeNickname_Info" xml:space="preserve">
+    <value>Вы можете менять псевдоним только раз в год!</value>
+  </data>
+  <data name="Account_City_Text" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="Account_Cuntry_Text" xml:space="preserve">
+    <value>Ваша страна</value>
+  </data>
+  <data name="Account_DataInfo_Text" xml:space="preserve">
+    <value>Никто не сможет увидеть личную информацию, такую как ваше настоящее имя и адрес. Отображается только псевдоним, фотография профиля и, по желанию, статус активности.</value>
+  </data>
+  <data name="Account_EditAddress" xml:space="preserve">
+    <value>Редактировать адресные данные</value>
+  </data>
+  <data name="Account_EditPersonalData" xml:space="preserve">
+    <value>Редактирование личных данных</value>
+  </data>
+  <data name="Account_EditProfilePicture" xml:space="preserve">
+    <value>Заменить фотографию профиля</value>
+  </data>
+  <data name="Account_Email_Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Account_FirstName_Text" xml:space="preserve">
+    <value>Ваше имя</value>
+  </data>
+  <data name="Account_Gender_Text" xml:space="preserve">
+    <value>Ваш пол</value>
+  </data>
+  <data name="Account_HouseNumber_Text" xml:space="preserve">
+    <value>Номер дома</value>
+  </data>
+  <data name="Account_InfoText" xml:space="preserve">
+    <value>Никто не сможет увидеть личную информацию, такую как ваше настоящее имя и адрес. Отображается только псевдоним, фотография профиля и, по желанию, статус активности.                                                                                                                             
+Чтобы отредактировать свои именные теги и свой публичный профиль, перейдите в %path%.</value>
+  </data>
+  <data name="Account_PartOfUs_Text" xml:space="preserve">
+    <value>Ты был частью нас с тех пор, как</value>
+  </data>
+  <data name="Account_PersonalData_Text" xml:space="preserve">
+    <value>Ваши личные данные</value>
+  </data>
+  <data name="Account_PhoneNumber_Text" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="Account_PLZ_Text" xml:space="preserve">
+    <value>Почтовый индекс</value>
+  </data>
+  <data name="Account_ResetProfilePicture" xml:space="preserve">
+    <value>Сброс изображения профиля</value>
+  </data>
+  <data name="Account_SecondName_Text" xml:space="preserve">
+    <value>Твоя фамилия</value>
+  </data>
+  <data name="Account_Street_Text" xml:space="preserve">
+    <value>Улица</value>
+  </data>
+  <data name="ButtonText_AddAcount" xml:space="preserve">
+    <value>Добавить аккаунт</value>
+  </data>
+  <data name="ButtonText_Change" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="ButtonText_Show" xml:space="preserve">
+    <value>показать</value>
+  </data>
+  <data name="ClientStart_Autostart" xml:space="preserve">
+    <value>Приложение запускается автоматически при запуске компьютера.</value>
+  </data>
+  <data name="ClientStart_Heading" xml:space="preserve">
+    <value>Запуск приложения</value>
+  </data>
+  <data name="ClientStart_MinimizedStart" xml:space="preserve">
+    <value>Запуск приложения сведен к минимуму</value>
+  </data>
+  <data name="ConnectedAccounts_AddAccountInfo" xml:space="preserve">
+    <value>Добавить почтовые аккаунты, социальные сети и игровые сервисы</value>
+  </data>
+  <data name="ConnectedAccounts_AddAccounts_Info" xml:space="preserve">
+    <value>Добавить учетные записи других сервисов. Это позволит Вам использовать внешние сервисы и управлять ими всеми в одной программе.</value>
+  </data>
+  <data name="ConnectedAccounts_AddNewAccount" xml:space="preserve">
+    <value>Добавить новую учетную запись</value>
+  </data>
+  <data name="ConnectedAccounts_ConnectedAccounts" xml:space="preserve">
+    <value>Сопутствующие счета</value>
+  </data>
+  <data name="ConnectedAccounts_ConnectedMainEmail" xml:space="preserve">
+    <value>Подключенная электронная почта</value>
+  </data>
+  <data name="ConnectedAccounts_MainEmail_Info" xml:space="preserve">
+    <value>Ваш подключенный электронный почтовый ящик имеет наивысший приоритет. Кто имеет доступ к этой учетной записи, может получить доступ и к другим учетным записям.</value>
+  </data>
+  <data name="Design_BrightDesign_Content" xml:space="preserve">
+    <value>Позвольте себе быть ослеплённой этим дизайном</value>
+  </data>
+  <data name="Design_BrightDesign_Heading" xml:space="preserve">
+    <value>Яркий дизайн</value>
+  </data>
+  <data name="Design_Color_Custom_Description" xml:space="preserve">
+    <value>Выберите свой собственный цвет</value>
+  </data>
+  <data name="Design_Color_Custom_Heading" xml:space="preserve">
+    <value>Собственный цвет</value>
+  </data>
+  <data name="Design_Color_Default_Description" xml:space="preserve">
+    <value>Красивый голубой</value>
+  </data>
+  <data name="Design_Color_Default_Heading" xml:space="preserve">
+    <value>Стандартный синий</value>
+  </data>
+  <data name="Design_Color_Description" xml:space="preserve">
+    <value>Выбранный цвет используется для определенных поверхностей, кнопок и текстовых полей.</value>
+  </data>
+  <data name="Design_Color_Heading" xml:space="preserve">
+    <value>Цветовая схема</value>
+  </data>
+  <data name="Design_DarkDesign_Content" xml:space="preserve">
+    <value>Красивый приятный темный дизайн</value>
+  </data>
+  <data name="Design_DarkDesign_Heading" xml:space="preserve">
+    <value>Темный дизайн</value>
+  </data>
+  <data name="Design_Description" xml:space="preserve">
+    <value>Какой дизайн вы хотите использовать?</value>
+  </data>
+  <data name="Design_Font_Custom_Description" xml:space="preserve">
+    <value>Загрузите или создайте пользовательский шрифт (.ttf файл), дважды щелкните по этому файлу и нажмите кнопку Install. Тогда вы можете выбрать и использовать его здесь</value>
+  </data>
+  <data name="Design_Font_Custom_Heading" xml:space="preserve">
+    <value>Собственный шрифт</value>
+  </data>
+  <data name="Design_Font_Default_Heading" xml:space="preserve">
+    <value>Стандартный шрифт</value>
+  </data>
+  <data name="Design_Font_Description" xml:space="preserve">
+    <value>Мы используем этот шрифт для большей части отображаемого содержимого</value>
+  </data>
+  <data name="Design_Font_Heading" xml:space="preserve">
+    <value>Использованный шрифт</value>
+  </data>
+  <data name="Design_OwnBackgrouond" xml:space="preserve">
+    <value>Дизайн</value>
+  </data>
+  <data name="Design_RatingBackground" xml:space="preserve">
+    <value>Оценить и отправить в фоновом режиме</value>
+  </data>
+  <data name="Design_Rounding_Description" xml:space="preserve">
+    <value>Мы используем эту настройку для округления объектов</value>
+  </data>
+  <data name="Design_Rounding_Heading" xml:space="preserve">
+    <value>Округления</value>
+  </data>
+  <data name="Design_Rounding_MaximalRounding" xml:space="preserve">
+    <value>Максимальное округление</value>
+  </data>
+  <data name="Design_Rounding_MinimalRounding" xml:space="preserve">
+    <value>Кривые стандартного освещения</value>
+  </data>
+  <data name="Design_Rounding_NoRounding" xml:space="preserve">
+    <value>Нет округления</value>
+  </data>
+  <data name="Design_Shaddow_Description" xml:space="preserve">
+    <value>Тени придают глубину поверхностям и объектам</value>
+  </data>
+  <data name="Design_Shaddow_Heading" xml:space="preserve">
+    <value>Тени даются объектам</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Art" xml:space="preserve">
+    <value>художественное оформление</value>
+  </data>
+  <data name="Design_TransparentDesignImage_City" xml:space="preserve">
+    <value>Градостроительное проектирование</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Custom" xml:space="preserve">
+    <value>нестандартная конструкция</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Description" xml:space="preserve">
+    <value>По умолчанию, фон предопределен, и вы можете выбирать из них. Но вы также можете добавить свой собственный опыт. Лучше всего использовать снимки хотя бы с разрешением Full HD, чтобы получить хороший контраст с передним планом.</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Gaming" xml:space="preserve">
+    <value>игровой дизайн</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Heading" xml:space="preserve">
+    <value>Прозрачная конструкция</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Landscape" xml:space="preserve">
+    <value>Ландшафтный дизайн</value>
+  </data>
+  <data name="Design_TransparentDesign_Content" xml:space="preserve">
+    <value>Прозрачный, красивый и гарантированно уникальный</value>
+  </data>
+  <data name="Design_TransparentDesign_Heading" xml:space="preserve">
+    <value>Прозрачная конструкция</value>
+  </data>
+  <data name="Devices_ConnectedDevicesButton_CurrentDevice" xml:space="preserve">
+    <value>текущее устройство</value>
+  </data>
+  <data name="Devices_ConnectedDevicesHeading" xml:space="preserve">
+    <value>Устройства, подключенные к вашей учетной записи</value>
+  </data>
+  <data name="Devices_ConnectedDevicesInfo" xml:space="preserve">
+    <value>Если устройство кажется незнакомым, нажмите Просмотр и извлеките устройство из учетной записи.</value>
+  </data>
+  <data name="DWC_Menu_Account_Text" xml:space="preserve">
+    <value>Ваш аккаунт</value>
+  </data>
+  <data name="DWC_Menu_ConnectedAccount_Text" xml:space="preserve">
+    <value>Сопутствующие счета</value>
+  </data>
+  <data name="DWC_Menu_Design_Text" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="DWC_Menu_Devices_Text" xml:space="preserve">
+    <value>Подключенные устройства</value>
+  </data>
+  <data name="DWC_Menu_EditorsMode_Text" xml:space="preserve">
+    <value>Режим разработчика</value>
+  </data>
+  <data name="DWC_Menu_HotKeys_Text" xml:space="preserve">
+    <value>Горячие клавиши</value>
+  </data>
+  <data name="DWC_Menu_InGameOverlay_Text" xml:space="preserve">
+    <value>игровая накладка</value>
+  </data>
+  <data name="DWC_Menu_Language_Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="DWC_Menu_Messages_Text" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+  <data name="DWC_Menu_PaymentMethodes_Text" xml:space="preserve">
+    <value>Методы оплаты</value>
+  </data>
+  <data name="DWC_Menu_Privacy_Text" xml:space="preserve">
+    <value>Конфиденциальность</value>
+  </data>
+  <data name="DWC_Menu_ProgrammFunctions_Text" xml:space="preserve">
+    <value>Функции приложения:</value>
+  </data>
+  <data name="DWC_Menu_ProgrammStart_Text" xml:space="preserve">
+    <value>Запуск приложения</value>
+  </data>
+  <data name="DWC_Menu_ProgrammView_Text" xml:space="preserve">
+    <value>пользовательский интерфейс</value>
+  </data>
+  <data name="DWC_Menu_Security_Text" xml:space="preserve">
+    <value>Безопасность</value>
+  </data>
+  <data name="DWC_Menu_Updates_Text" xml:space="preserve">
+    <value>Обновления</value>
+  </data>
+  <data name="DWC_Menu_UserMode_Text" xml:space="preserve">
+    <value>режим пользователя</value>
+  </data>
+  <data name="DWC_Menu_VideoAndAudio_Text" xml:space="preserve">
+    <value>Микрофон и видео</value>
+  </data>
+  <data name="DWC_Menu_YourPaments_Text" xml:space="preserve">
+    <value>Ваши платежи</value>
+  </data>
+  <data name="DWC_Settings_Age_Selection_Adult" xml:space="preserve">
+    <value>Взрослый</value>
+  </data>
+  <data name="DWC_Settings_Age_Selection_Child" xml:space="preserve">
+    <value>Ребенок</value>
+  </data>
+  <data name="DWC_Settings_Buttons_Active" xml:space="preserve">
+    <value>Активирован</value>
+  </data>
+  <data name="DWC_Settings_Buttons_EveryOne" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="DWC_Settings_Buttons_InActive" xml:space="preserve">
+    <value>Инвалид</value>
+  </data>
+  <data name="DWC_Settings_Buttons_OnlyFriends" xml:space="preserve">
+    <value>Только друзья</value>
+  </data>
+  <data name="DWC_Settings_Button_OnlyVerifyUsers" xml:space="preserve">
+    <value>Только проверенные пользователи</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Color" xml:space="preserve">
+    <value>Выбор цвета</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Design_BackgroundImage_Path" xml:space="preserve">
+    <value>Путь</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Design_BackgroundImage_Text" xml:space="preserve">
+    <value>Обои</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_AutoStart_Text" xml:space="preserve">
+    <value>Автостарт</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_KeepWindowAlife_Text" xml:space="preserve">
+    <value>Минимизировать окна при закрытии</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_Message_Text" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_RoundedDesighn_Text" xml:space="preserve">
+    <value>Круглый дизайн</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_WelcomeMessage_Text" xml:space="preserve">
+    <value>Приветственное сообщение</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System" xml:space="preserve">
+    <value>Системные настройки</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_Language_Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_ListenName_Text" xml:space="preserve">
+    <value>Команда голосового ответа</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_UserName_Text" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Theme" xml:space="preserve">
+    <value>Выбор темы</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice" xml:space="preserve">
+    <value>Голосовые параметры</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Age_Text" xml:space="preserve">
+    <value>Возраст</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Gender_Text" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Volum_Text" xml:space="preserve">
+    <value>Том</value>
+  </data>
+  <data name="DWC_Settings_Menu_Accounts" xml:space="preserve">
+    <value>Сопутствующие счета</value>
+  </data>
+  <data name="DWC_Settings_Menu_Assistent" xml:space="preserve">
+    <value>ассистент языка</value>
+  </data>
+  <data name="DWC_Settings_Menu_Desighn" xml:space="preserve">
+    <value>Внешний вид</value>
+  </data>
+  <data name="DWC_Settings_Menu_Eula" xml:space="preserve">
+    <value>Политика конфиденциальности</value>
+  </data>
+  <data name="DWC_Settings_Menu_Extention" xml:space="preserve">
+    <value>Расширения</value>
+  </data>
+  <data name="DWC_Settings_Menu_Friends" xml:space="preserve">
+    <value>Настройки друга</value>
+  </data>
+  <data name="DWC_Settings_Menu_Heading" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="DWC_Settings_Menu_HotKey" xml:space="preserve">
+    <value>Сочетания клавиш</value>
+  </data>
+  <data name="DWC_Settings_Menu_Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="DWC_Settings_Menu_Logout" xml:space="preserve">
+    <value>Выходить из системы</value>
+  </data>
+  <data name="DWC_Settings_Menu_Microphone" xml:space="preserve">
+    <value>Аудио</value>
+  </data>
+  <data name="DWC_Settings_Menu_Privacy" xml:space="preserve">
+    <value>Установка конфиденциальности</value>
+  </data>
+  <data name="DWC_Settings_Menu_Program" xml:space="preserve">
+    <value>Приложение</value>
+  </data>
+  <data name="DWC_Settings_Menu_Reset" xml:space="preserve">
+    <value>Сброс</value>
+  </data>
+  <data name="DWC_Settings_Menu_Security" xml:space="preserve">
+    <value>Безопасность</value>
+  </data>
+  <data name="DWC_Settings_SaveButton_SaveDescription_Text" xml:space="preserve">
+    <value>и закрыть (Побег)</value>
+  </data>
+  <data name="DWC_Settings_SaveButton_Save_Text" xml:space="preserve">
+    <value>Сохранить настройки</value>
+  </data>
+  <data name="DWC_Settings_SaveMessage" xml:space="preserve">
+    <value>Ваши настройки были успешно применены</value>
+  </data>
+  <data name="DWC_Settings_SaveMessageHeading" xml:space="preserve">
+    <value>DarkWolfCraft - Настройки</value>
+  </data>
+  <data name="DWC_Settings_Voice_Selection_Female" xml:space="preserve">
+    <value>Г-жа</value>
+  </data>
+  <data name="DWC_Settings_Voice_Selection_Male" xml:space="preserve">
+    <value>Человек</value>
+  </data>
+  <data name="EditorsMode_Description" xml:space="preserve">
+    <value>Некоторым нравится более подробная информация, другим - простая. Ваш выбор не влияет на функции программы. В зависимости от этого, будет предоставлена дополнительная информация или возможности настройки!</value>
+  </data>
+  <data name="EditorsMode_DeveloperMode_Description" xml:space="preserve">
+    <value>Вы застройщик? Мы покажем вам дополнительную информацию и дадим представление о развитии сервиса. Позвольте себе быть вдохновленным и помогите нам найти дыры в безопасности и жучки.</value>
+  </data>
+  <data name="EditorsMode_DeveloperMode_Heading" xml:space="preserve">
+    <value>Разработчики Мода</value>
+  </data>
+  <data name="EditorsMode_EditorsMode_Description" xml:space="preserve">
+    <value>У вас есть расширенные возможности в плане дизайна и дизайна интерфейсов. Настройте программу и дайте волю вашему творчеству.</value>
+  </data>
+  <data name="EditorsMode_EditorsMode_Heading" xml:space="preserve">
+    <value>Режим редактирования</value>
+  </data>
+  <data name="EditorsMode_Heading" xml:space="preserve">
+    <value>Пользовательские режимы</value>
+  </data>
+  <data name="EditorsMode_InfoDescription" xml:space="preserve">
+    <value>Мы стараемся угодить всем пользователям, даже если у них совершенно разные интересы. С помощью наших модулей оптимизации мы стараемся адаптировать сервис как можно лучше для каждого отдельного пользователя. Чем больше информации вы нам дадите, тем лучше мы сможем классифицировать ваши интересы!</value>
+  </data>
+  <data name="EditorsMode_InfoHeading" xml:space="preserve">
+    <value>Адаптируемость</value>
+  </data>
+  <data name="EditorsMode_NormalMode_Description" xml:space="preserve">
+    <value>Вы можете рассчитывать на все функции в полном объеме, мы делаем большую часть работы за вас в плане дизайна и дизайна интерфейсов, и вам не нужно беспокоиться об этом.</value>
+  </data>
+  <data name="EditorsMode_NormalMode_Heading" xml:space="preserve">
+    <value>Нормальный режим</value>
+  </data>
+  <data name="HotKeys_CreateNewHotKey" xml:space="preserve">
+    <value>Создание новой горячей клавиши</value>
+  </data>
+  <data name="HotKeys_EnableAllHotkeys" xml:space="preserve">
+    <value>Выключить все горячие клавиши</value>
+  </data>
+  <data name="HotKeys_EnableOwnHotkeys" xml:space="preserve">
+    <value>Выключить все горячие клавиши</value>
+  </data>
+  <data name="HotKeys_Heading" xml:space="preserve">
+    <value>горячие клавиши</value>
+  </data>
+  <data name="HotKeys_Info" xml:space="preserve">
+    <value>Чтобы изменить горячую клавишу, нажмите комбинацию клавиш и введите новую комбинацию клавиш. Нажмите ESC, чтобы отменить операцию.</value>
+  </data>
+  <data name="HotKeys_Option_Musikbot" xml:space="preserve">
+    <value>Активировать/деактивировать musicbot</value>
+  </data>
+  <data name="HotKeys_Option_Mute" xml:space="preserve">
+    <value>Включение/выключение звука</value>
+  </data>
+  <data name="HotKeys_Option_PushToTalk" xml:space="preserve">
+    <value>Толчок к разговору</value>
+  </data>
+  <data name="HotKeys_Option_VoiceAssistent" xml:space="preserve">
+    <value>Помощник Голоса Триггера</value>
+  </data>
+  <data name="HotKeys_ResetAllHotKeys" xml:space="preserve">
+    <value>Сбросить все горячие клавиши</value>
+  </data>
+  <data name="InGameOverlay_AktivateIngameOverlay" xml:space="preserve">
+    <value>Активировать в игре</value>
+  </data>
+  <data name="InGameOverlay_Description" xml:space="preserve">
+    <value>Готовы играть вместе?</value>
+  </data>
+  <data name="InGameOverlay_Heading" xml:space="preserve">
+    <value>В игровом оверлее</value>
+  </data>
+  <data name="InGameOverlay_ShowMusik_Content" xml:space="preserve">
+    <value>Отобразится музыкальный робот, и вы сможете увидеть, какую песню вы слушаете.</value>
+  </data>
+  <data name="InGameOverlay_ShowMusik_Heading" xml:space="preserve">
+    <value>Показать нотбота</value>
+  </data>
+  <data name="InGameOverlay_ShowProfilePicture_Content" xml:space="preserve">
+    <value>Если эта функция активирована, то отображаются только имена остальных.</value>
+  </data>
+  <data name="InGameOverlay_ShowProfilePicture_Heading" xml:space="preserve">
+    <value>Скрыть фотографии профиля</value>
+  </data>
+  <data name="InGameOverlay_ShowWhileTalking_Content" xml:space="preserve">
+    <value>Если эта функция активирована, оверлей скрывается, когда никто не говорит.</value>
+  </data>
+  <data name="InGameOverlay_ShowWhileTalking_Heading" xml:space="preserve">
+    <value>Показывать наложение только тогда, когда кто-то говорит</value>
+  </data>
+  <data name="InGameOverlay_Show_Heading" xml:space="preserve">
+    <value>Накладка должна отображаться в определенном месте.</value>
+  </data>
+  <data name="Landschaft Design" xml:space="preserve">
+    <value>Выберите свой собственный фон</value>
+  </data>
+  <data name="Language_AutogeneratedInfo" xml:space="preserve">
+    <value>(автоматически генерируется)</value>
+  </data>
+  <data name="Language_Description" xml:space="preserve">
+    <value>Выберите свой язык! Пожалуйста, обратите внимание, что некоторые языки переводятся автоматически, и мы не можем гарантировать и не несем никакой ответственности за их полную точность. В ближайшее время мы обеспечим комплексный перевод на многие языки. Если ваш местный язык недоступен 
+Вы можете помочь нам сделать пробный перевод! Узнать больше</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>Ваш язык</value>
+  </data>
+  <data name="Microphone_AudioHelp_Description" xml:space="preserve">
+    <value>Если вы включите эту функцию, мы уведомим вас, если мы не сможем обнаружить микрофон, вы будете говорить, даже если вы приглушены или ваш голос отключен.</value>
+  </data>
+  <data name="Microphone_AudioHelp_Heading" xml:space="preserve">
+    <value>Справка по аудио</value>
+  </data>
+  <data name="Microphone_AudioOptimisation_Content" xml:space="preserve">
+    <value>Фоновый шум и шипение подавляются для обеспечения хорошего качества звука.</value>
+  </data>
+  <data name="Microphone_AudioOptimisation_Heading" xml:space="preserve">
+    <value>Программное обеспечение для оптимизации звука</value>
+  </data>
+  <data name="Microphone_AutomaticVoiceDetection_Description" xml:space="preserve">
+    <value>Вы видите выше, когда ваш микрофон активирован.</value>
+  </data>
+  <data name="Microphone_AutomaticVoiceDetection_Heading" xml:space="preserve">
+    <value>Автоматически определять чувствительность микрофона</value>
+  </data>
+  <data name="Microphone_Heading" xml:space="preserve">
+    <value>Активация микрофона</value>
+  </data>
+  <data name="Microphone_HeadsetName" xml:space="preserve">
+    <value>Спикер (ФАМИЛИЯ)</value>
+  </data>
+  <data name="Microphone_InputText" xml:space="preserve">
+    <value>Входная громкость</value>
+  </data>
+  <data name="Microphone_MicrophoneName" xml:space="preserve">
+    <value>Микрофон (ФАМИЛИЯ)</value>
+  </data>
+  <data name="Microphone_OutputText" xml:space="preserve">
+    <value>Выходная громкость</value>
+  </data>
+  <data name="Microphone_VoiceActivation_Description" xml:space="preserve">
+    <value>Если голосовая активация отключена, используйте функцию Push to Talk (редактируемую в разделе "Горячие клавиши").</value>
+  </data>
+  <data name="Microphone_VoiceActivation_Heading" xml:space="preserve">
+    <value>Голосовая активация</value>
+  </data>
+  <data name="Notification_Description" xml:space="preserve">
+    <value>Какие уведомления мы должны отображать</value>
+  </data>
+  <data name="Notification_DescropSecurityNotification_Description" xml:space="preserve">
+    <value>Уведомления о безопасности через настольный компьютер важны, если это срочно и кто-то пытается получить доступ к вашей учетной записи, например</value>
+  </data>
+  <data name="Notification_DescropSecurityNotification_Heading" xml:space="preserve">
+    <value>Настольные уведомления о безопасности</value>
+  </data>
+  <data name="Notification_DesktopNotification_Description" xml:space="preserve">
+    <value>Если вы отключите эту функцию, вы не будете получать никаких уведомлений!</value>
+  </data>
+  <data name="Notification_DesktopNotification_Heading" xml:space="preserve">
+    <value>Уведомления рабочего стола</value>
+  </data>
+  <data name="Notification_EmailNotification_Description" xml:space="preserve">
+    <value>Вы всегда будете получать электронную почту о безопасности счета, подтверждения платежей и другие важные вопросы!</value>
+  </data>
+  <data name="Notification_EmailNotification_Heading" xml:space="preserve">
+    <value>Уведомления по электронной почте</value>
+  </data>
+  <data name="Notification_EmailNotification_PrimeEmail_Description" xml:space="preserve">
+    <value>Мы сообщим вам, если есть что-то особенное</value>
+  </data>
+  <data name="Notification_EmailNotification_PrimeEmail_Heading" xml:space="preserve">
+    <value>Электронная почта о Премиуме и специальных предложениях</value>
+  </data>
+  <data name="Notification_EmailNotification_ShopCardEmail_Description" xml:space="preserve">
+    <value>Мы сообщим вам, когда будут доступны игры и приложения, основанные на вашем Список желаний</value>
+  </data>
+  <data name="Notification_EmailNotification_ShopCardEmail_Heading" xml:space="preserve">
+    <value>Электронная почта в список моих пожеланий</value>
+  </data>
+  <data name="Notification_EmailNotification_StoreEmail_Description" xml:space="preserve">
+    <value>Мы информируем вас о новых приложениях и играх, которые могут вам понравиться.</value>
+  </data>
+  <data name="Notification_EmailNotification_StoreEmail_Heading" xml:space="preserve">
+    <value>Электронная почта о содержании магазина и предложениях</value>
+  </data>
+  <data name="Notification_EmailNotification_UpdateEmail_Heading" xml:space="preserve">
+    <value>Письма об обновлениях</value>
+  </data>
+  <data name="Notification_Heading" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+  <data name="Notification_ShowFriendOnline_Heading" xml:space="preserve">
+    <value>Показать, когда друг находится в сети</value>
+  </data>
+  <data name="Notification_ShowTextNotification_Description" xml:space="preserve">
+    <value>Посмотрим, кто тебе напишет. Вы можете отключить звук отдельных контактов и групп</value>
+  </data>
+  <data name="Notification_ShowTextNotification_Heading" xml:space="preserve">
+    <value>Показывать текстовые сообщения</value>
+  </data>
+  <data name="Notification_SystemNotification_Description" xml:space="preserve">
+    <value>Если возникнут проблемы, мы уведомим вас.</value>
+  </data>
+  <data name="Notification_SystemNotification_Heading" xml:space="preserve">
+    <value>Системные уведомления</value>
+  </data>
+  <data name="Payments_AddPayment" xml:space="preserve">
+    <value>Добавить способ оплаты</value>
+  </data>
+  <data name="Payments_Payments_Info" xml:space="preserve">
+    <value>Добавьте аккаунт и делайте платежи по всей платформе легко и безопасно всего одним щелчком мыши. Отслеживайте покупки с помощью платежей, мгновенно отменяйте подписки и легко получайте возврат денег.</value>
+  </data>
+  <data name="Payments_Payments_InfoHeading" xml:space="preserve">
+    <value>Ваши счета и платежи у нас</value>
+  </data>
+  <data name="Payments_QuickPay_Description" xml:space="preserve">
+    <value>Используйте быструю оплату, чтобы иметь возможность платить быстрее</value>
+  </data>
+  <data name="Payments_QuickPay_Heading" xml:space="preserve">
+    <value>Быстрая оплата</value>
+  </data>
+  <data name="Payments_QuickPay_QuickPayContent" xml:space="preserve">
+    <value>Когда активирована функция быстрой оплаты, Вы автоматически производите оплату предпочтительным для Вас способом и пропускаете процесс подтверждения.</value>
+  </data>
+  <data name="Payments_QuickPay_QuickPayHeading" xml:space="preserve">
+    <value>Активировать быструю оплату</value>
+  </data>
+  <data name="Payments_SecurePay_Content" xml:space="preserve">
+    <value>Активировать безопасную оплату</value>
+  </data>
+  <data name="Payments_SecurePay_Description" xml:space="preserve">
+    <value>Пароль учетной записи запрашивается перед оформлением заказа для предотвращения несанкционированных заказов.</value>
+  </data>
+  <data name="Payments_SecurePay_Heading" xml:space="preserve">
+    <value>Безопасная оплата</value>
+  </data>
+  <data name="Payments_YourPayments" xml:space="preserve">
+    <value>Ваши методы оплаты</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Everybody_Label" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Friends_Label" xml:space="preserve">
+    <value>Друзья друзей</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Heading" xml:space="preserve">
+    <value>Кто может добавить тебя в друзья?</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Request_Label" xml:space="preserve">
+    <value>Только взаимные запросы</value>
+  </data>
+  <data name="Privacy_Chat_Content" xml:space="preserve">
+    <value>Другие могут увидеть, какое приложение вы запускаете. Играете ли вы в игру, слушаете ли музыку или занимаетесь чем-нибудь другим. Эти настройки не влияют на то, показано ли вам, что вы находитесь в канале. Установите эти настройки в разделе Мой канал.</value>
+  </data>
+  <data name="Privacy_Chat_Heading" xml:space="preserve">
+    <value>Общая конфиденциальность</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Everybody_Label" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Friends_Label" xml:space="preserve">
+    <value>Только друзья</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Heading" xml:space="preserve">
+    <value>Последний раз онлайн</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Nobody_Label" xml:space="preserve">
+    <value>Никто</value>
+  </data>
+  <data name="Privacy_Chat_Privacy_Content" xml:space="preserve">
+    <value>Люди, которым не разрешено связываться с вами напрямую, отправят вам запрос с первым сообщением, с которым вы должны согласиться. Никто не видит, какие настройки вы установили.</value>
+  </data>
+  <data name="Privacy_Chat_Privacy_Heading" xml:space="preserve">
+    <value>Конфиденциальность в Чате</value>
+  </data>
+  <data name="Privacy_Chat_ShowStatus_Heading" xml:space="preserve">
+    <value>Отображаемые приложения в состоянии</value>
+  </data>
+  <data name="Privacy_Chat_Status_Everybody_Label" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Privacy_Chat_Status_Friends_Label" xml:space="preserve">
+    <value>Только друзья</value>
+  </data>
+  <data name="Privacy_Chat_Status_Label_Label" xml:space="preserve">
+    <value>Никто</value>
+  </data>
+  <data name="Privacy_Chat_WritingPermission_Heading" xml:space="preserve">
+    <value>Кто видит твой статус</value>
+  </data>
+  <data name="Privacy_Infotext1" xml:space="preserve">
+    <value>Если вы установите свой статус "невидимка", никто не увидит вашу деятельность и то, находитесь ли вы в сети. Ваш канал также будет невидим для всех.</value>
+  </data>
+  <data name="Privacy_Infotext2" xml:space="preserve">
+    <value>В случае взаимных запросов оба человека должны отправить запрос другу. В этом случае вы автоматически становитесь друзьями.</value>
+  </data>
+  <data name="Privacy_Status_addApp" xml:space="preserve">
+    <value>Нажмите здесь, чтобы добавить программу</value>
+  </data>
+  <data name="ResetSettings_Description" xml:space="preserve">
+    <value>Здесь вы можете изменить отдельные области или все настройки на 
+Сброс заводских настроек</value>
+  </data>
+  <data name="ResetSettings_Heading" xml:space="preserve">
+    <value>Сброс настроек</value>
+  </data>
+  <data name="ResetSettings_Options_AllSettings" xml:space="preserve">
+    <value>Все настройки</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>Закрыть (ESC)</value>
+  </data>
+  <data name="Security_AccountRecoveryHeading" xml:space="preserve">
+    <value>Электронная почта для восстановления аккаунта</value>
+  </data>
+  <data name="Security_AllAktivities" xml:space="preserve">
+    <value>Просмотреть все действия</value>
+  </data>
+  <data name="Security_BackupCode_Description" xml:space="preserve">
+    <value>С каждым резервным кодом вы можете войти в свой аккаунт один раз!</value>
+  </data>
+  <data name="Security_BackupCode_Disable" xml:space="preserve">
+    <value>Отключить</value>
+  </data>
+  <data name="Security_BackupCode_Download" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="Security_BackupCode_Enable" xml:space="preserve">
+    <value>Активировать</value>
+  </data>
+  <data name="Security_BackupCode_Heading" xml:space="preserve">
+    <value>резервные коды</value>
+  </data>
+  <data name="Security_BackupCode_View" xml:space="preserve">
+    <value>Показать</value>
+  </data>
+  <data name="Security_ConnectedEmailHeading" xml:space="preserve">
+    <value>Подключенная электронная почта</value>
+  </data>
+  <data name="Security_ConnectedEmailInfo" xml:space="preserve">
+    <value>идентификатору пользователя</value>
+  </data>
+  <data name="Security_ConnectedEmail_ChangeAccount" xml:space="preserve">
+    <value>Сменный счёт</value>
+  </data>
+  <data name="Security_ConnectedEmail_Check" xml:space="preserve">
+    <value>последняя проверка %date%</value>
+  </data>
+  <data name="Security_ConnectedEmail_Heading" xml:space="preserve">
+    <value>Ваш связанный почтовый ящик</value>
+  </data>
+  <data name="Security_ConnectedEmail_ViewAccount" xml:space="preserve">
+    <value>Просмотр аккаунта</value>
+  </data>
+  <data name="Security_LastActivity" xml:space="preserve">
+    <value>Последние действия по счёту</value>
+  </data>
+  <data name="Security_NotSecure" xml:space="preserve">
+    <value>Плохо защищённый</value>
+  </data>
+  <data name="Security_RecoveryEmail_ChangeAccount" xml:space="preserve">
+    <value>Сменный счёт</value>
+  </data>
+  <data name="Security_RecoveryEmail_Check" xml:space="preserve">
+    <value>последняя проверка %date%</value>
+  </data>
+  <data name="Security_RecoveryEmail_Heading" xml:space="preserve">
+    <value>Электронная почта для восстановления аккаунта</value>
+  </data>
+  <data name="Security_RecoveryEmail_ViewAccount" xml:space="preserve">
+    <value>Просмотр аккаунта</value>
+  </data>
+  <data name="Security_Secure" xml:space="preserve">
+    <value>Хорошо защищённый</value>
+  </data>
+  <data name="Security_SecureBoxInfo_1" xml:space="preserve">
+    <value>Посмотри на свой индекс безопасности. Если мы определим, что ваш аккаунт недостаточно защищен, мы немедленно уведомим вас об этом.</value>
+  </data>
+  <data name="Security_SecureBoxInfo_2" xml:space="preserve">
+    <value>Ваш подключенный электронный почтовый ящик имеет наивысший приоритет. Тот, кто имеет доступ к этой учетной записи, может иметь доступ и к другим вашим учетным записям.</value>
+  </data>
+  <data name="Security_TwoFactorHeading" xml:space="preserve">
+    <value>2 Коэффициент подлинности</value>
+  </data>
+  <data name="Security_TwoFaktor_ChangeNumber" xml:space="preserve">
+    <value>Изменить номер телефона</value>
+  </data>
+  <data name="Security_TwoFaktor_Check" xml:space="preserve">
+    <value>последняя проверка %date%</value>
+  </data>
+  <data name="Security_TwoFaktor_DisableTwoFaktor" xml:space="preserve">
+    <value>2FA деактивировать</value>
+  </data>
+  <data name="Security_TwoFaktor_EnambleTwoFaktor" xml:space="preserve">
+    <value>Активировать 2FA</value>
+  </data>
+  <data name="Security_TwoFaktor_Heading" xml:space="preserve">
+    <value>2-факторная аутентификация по SMS</value>
+  </data>
+  <data name="Security_YourAccountActivity" xml:space="preserve">
+    <value>Ваша активность счёта</value>
+  </data>
+  <data name="Security_YourSecurityStatusHeading" xml:space="preserve">
+    <value>Ваш индекс безопасности</value>
+  </data>
+  <data name="Security_YourSecurityStatusInfo" xml:space="preserve">
+    <value>Установите уровни приоритета для устройств! Активируйте ограничения для новых устройств!</value>
+  </data>
+  <data name="SettingsHeading" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Description" xml:space="preserve">
+    <value>Вы получите уведомление и сможете принять решение об установке обновления немедленно или позже.</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Description1" xml:space="preserve">
+    <value>Вы получите уведомление и сможете принять решение об установке обновления немедленно или позже.</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Heading" xml:space="preserve">
+    <value>Предотвращать автоматические обновления, когда я занят</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Heading1" xml:space="preserve">
+    <value>Предотвращать автоматические обновления, когда я занят</value>
+  </data>
+  <data name="Updates_AutoUpdate_Description" xml:space="preserve">
+    <value>Когда программа открыта, обновления запускаются автоматически.</value>
+  </data>
+  <data name="Updates_AutoUpdate_Description1" xml:space="preserve">
+    <value>Когда программа открыта, обновления запускаются автоматически.</value>
+  </data>
+  <data name="Updates_AutoUpdate_Heading" xml:space="preserve">
+    <value>Автоматические обновления</value>
+  </data>
+  <data name="Updates_AutoUpdate_Heading1" xml:space="preserve">
+    <value>Автоматические обновления</value>
+  </data>
+  <data name="Updates_Description_1" xml:space="preserve">
+    <value>Обновления всегда загружаются автоматически при перезапуске приложения.</value>
+  </data>
+  <data name="Updates_Description_11" xml:space="preserve">
+    <value>Обновления всегда загружаются автоматически при перезапуске приложения.</value>
+  </data>
+  <data name="Updates_Description_2" xml:space="preserve">
+    <value>возможность установить его позже. Например, если нам нужно срочно закрыть дыру в безопасности с помощью обновления, обновление будет установлено немедленно из соображений безопасности, даже если оно прервет вашу деятельность.</value>
+  </data>
+  <data name="Updates_Description_21" xml:space="preserve">
+    <value>В зависимости от того, насколько важно обновление, мы дадим вам возможность установить его позже. Например, если нам нужно срочно закрыть дыру в безопасности с помощью обновления, обновление будет установлено немедленно из соображений безопасности, даже если оно прервет вашу деятельность.</value>
+  </data>
+  <data name="Updates_Heading" xml:space="preserve">
+    <value>Обновления</value>
+  </data>
+  <data name="Updates_Heading1" xml:space="preserve">
+    <value>Обновления</value>
+  </data>
+</root>

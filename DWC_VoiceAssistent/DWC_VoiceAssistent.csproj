@@ -1,0 +1,1437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE22C4F5-DABB-40B2-A634-339E3CE4F1B1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DWC_VoiceAssistent</RootNamespace>
+    <AssemblyName>DWC_VoiceAssistent</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DWC_VoiceAssistent.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DWC_VoiceAssistent.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Crc32C.NET, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crc32C.NET.1.0.5.0\lib\net20\Crc32C.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.3.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.3.1\lib\net471\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4ebff4844e382110, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fizzler.1.2.0\lib\netstandard2.0\Fizzler.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts">
+      <HintPath>..\DWC_TEST_Chart\bin\Debug\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf">
+      <HintPath>..\DWC_TEST_Chart\bin\Debug\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Meziantou.Framework.Win32.CredentialManager, Version=1.3.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meziantou.Framework.Win32.CredentialManager.1.3.5\lib\net461\Meziantou.Framework.Win32.CredentialManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CognitiveServices.Speech.csharp, Version=1.11.0.28, Culture=neutral, PublicKeyToken=d2e6dcccb609e663, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CognitiveServices.Speech.1.11.0\lib\net461\Microsoft.CognitiveServices.Speech.csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.10.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.10.3\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.10.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.10.3\lib\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.10.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.10.3\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Libmongocrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Libmongocrypt.1.0.0\lib\net452\MongoDB.Libmongocrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Plugin.Permissions.3.0.0.12\lib\netstandard2.0\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.23.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.23.0\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="Snappy.NET, Version=1.1.1.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Snappy.NET.1.1.1.8\lib\net45\Snappy.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.PowerShell.5.ReferenceAssemblies.1.1.0\lib\net4\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive, Version=4.4.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.4.4.1\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ToggleSwitch, Version=1.1.2.0, Culture=neutral, PublicKeyToken=8637099990568f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\ToggleSwitch.1.1.2\lib\net40-client\ToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="db\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="db\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="db\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="db\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="db\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="functions\ForceAdmin.cs" />
+    <Compile Include="functions\GenerateQRCode.cs" />
+    <Compile Include="functions\MailManager.cs" />
+    <Compile Include="handler\backgroundtasks\AutostartManager.cs" />
+    <Compile Include="handler\backgroundtasks\CreateCertificate.cs" />
+    <Compile Include="handler\backgroundtasks\ExplorerQuickAccess.cs" />
+    <Compile Include="handler\backgroundtasks\LoadImages.cs" />
+    <Compile Include="handler\backgroundtasks\messenging\SendSMSMessage.cs" />
+    <Compile Include="handler\backgroundtasks\messenging\SendWhatsappMessage.cs" />
+    <Compile Include="handler\backgroundtasks\PrinterContoller.cs" />
+    <Compile Include="handler\backgroundtasks\programmstartparametercontroler\WindowsProgrammStartParameterControler.cs" />
+    <Compile Include="handler\backgroundtasks\RightClickMenu.cs" />
+    <Compile Include="functions\ScreenCapture.cs" />
+    <Compile Include="handler\backgroundtasks\eventtime\CheckForEventTime.cs" />
+    <Compile Include="handler\backgroundtasks\infoicon\InfoIcon.cs" />
+    <Compile Include="handler\backgroundtasks\ShortCut.cs" />
+    <Compile Include="functions\ShowDevelopers.cs" />
+    <Compile Include="handler\backgroundtasks\CheckForInternetConnection.cs" />
+    <Compile Include="handler\backgroundtasks\LoadProgramm.cs" />
+    <Compile Include="handler\backgroundtasks\TranslateLocalLanguageDB.cs" />
+    <Compile Include="handler\commands\CommandController.cs" />
+    <Compile Include="handler\commands\computercontrole\Restart.cs" />
+    <Compile Include="handler\commands\computercontrole\Shutdown.cs" />
+    <Compile Include="handler\commands\db\computercontrole\ComputerControle_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComputerControle_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\db\computercontrole\ComputerControle_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComputerControle_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\db\DatabaseManager.cs" />
+    <Compile Include="handler\commands\db\information\Information_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Information_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\db\information\Information_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Information_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\db\interncontrole\InternControle_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternControle_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\db\interncontrole\InternControle_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternControle_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\db\smaltalk\SmalTalk_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmalTalk_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\db\smaltalk\SmalTalk_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmalTalk_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\commands\information\DailyInfo.cs" />
+    <Compile Include="handler\commands\information\GetCurrentDate.cs" />
+    <Compile Include="handler\commands\information\GetCurrentTime.cs" />
+    <Compile Include="handler\commands\interncontrol\OpenSettings.cs" />
+    <Compile Include="handler\commands\smaltalk\DoYouLikeMe.cs" />
+    <Compile Include="handler\commands\smaltalk\Hellow.cs" />
+    <Compile Include="handler\commands\smaltalk\HowAreYou.cs" />
+    <Compile Include="handler\commands\smaltalk\HowOldAreYou.cs" />
+    <Compile Include="handler\commands\smaltalk\ShutUp.cs" />
+    <Compile Include="handler\commands\smaltalk\TellMeAJoke.cs" />
+    <Compile Include="handler\commands\smaltalk\WhatsMyName.cs" />
+    <Compile Include="handler\commands\smaltalk\WhatsYourName.cs" />
+    <Compile Include="handler\commands\smaltalk\WhereDoYouComeFrom.cs" />
+    <Compile Include="handler\commands\smaltalk\WhereDoYouLive.cs" />
+    <Compile Include="handler\commands\smaltalk\WhoCreatedYou.cs" />
+    <Compile Include="handler\commands\smaltalk\YouArentFunny.cs" />
+    <Compile Include="handler\commands\sub\HelpCommand.cs" />
+    <Compile Include="handler\commands\ICommand.cs" />
+    <Compile Include="handler\menu\module\OftenUsedProgramms.cs" />
+    <Compile Include="handler\menu\taskbar\db\DBManager.cs" />
+    <Compile Include="handler\menu\taskbar\db\ThumbnailJumplist_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThumbnailJumplist_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\menu\taskbar\db\ThumbnailJumplist_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThumbnailJumplist_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\menu\taskbar\db\ThumbnailToolbar_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThumbnailToolbar_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\menu\taskbar\db\ThumbnailToolbar_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThumbnailToolbar_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\menu\taskbar\TaskbarJumpList.cs" />
+    <Compile Include="handler\menu\taskbar\ThumbnailToolbar.cs" />
+    <Compile Include="handler\menu\topbar\db\DBManager.cs" />
+    <Compile Include="handler\menu\topbar\db\TopBar_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopBar_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\menu\topbar\db\TopBar_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopBar_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\menu\topbar\TopBarHandler.cs" />
+    <Compile Include="handler\menu\userquickview\OnlineState.cs" />
+    <Compile Include="handler\menu\WindowControle.cs" />
+    <Compile Include="handler\music\menu\WindowControle.cs" />
+    <Compile Include="handler\notificationwindow\db\DBManager.cs" />
+    <Compile Include="handler\notificationwindow\db\NoWebConnection_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoWebConnection_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\notificationwindow\db\NoWebConnection_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoWebConnection_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\notificationwindow\db\WrongLogin_English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrongLogin_English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\notificationwindow\db\WrongLogin_German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrongLogin_German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\notificationwindow\handler\NoWebConnectionHandler.cs" />
+    <Compile Include="handler\notificationwindow\handler\WrongLoginHandler.cs" />
+    <Compile Include="handler\notificationwindow\windows\NoWebConnection.xaml.cs">
+      <DependentUpon>NoWebConnection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="handler\notificationwindow\windows\WrongLogin.xaml.cs">
+      <DependentUpon>WrongLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="handler\projects\colorpicker\WindowControler.cs" />
+    <Compile Include="handler\projects\hudoverlay\WindowControler.cs" />
+    <Compile Include="handler\projects\login\CredentialHandler.cs" />
+    <Compile Include="handler\projects\login\WindowControlerLogin.cs" />
+    <Compile Include="handler\projects\login\WindowControlerRegister.cs" />
+    <Compile Include="handler\projects\login\WindowControlerRegisterConfirm.cs" />
+    <Compile Include="handler\projects\pluginstore\WindowControler.cs" />
+    <Compile Include="handler\projects\programminformation\WindowControler.cs" />
+    <Compile Include="handler\projects\reports\WindowControler.cs" />
+    <Compile Include="handler\projects\settings\categories\Account.cs" />
+    <Compile Include="handler\projects\settings\categories\ClientStart.cs" />
+    <Compile Include="handler\projects\settings\categories\ConnectedAccounts.cs" />
+    <Compile Include="handler\projects\settings\categories\Desighn.cs" />
+    <Compile Include="handler\projects\settings\categories\Devices.cs" />
+    <Compile Include="handler\projects\settings\categories\HotKey.cs" />
+    <Compile Include="handler\projects\settings\categories\InGameOverlay.cs" />
+    <Compile Include="handler\projects\settings\categories\Language.cs" />
+    <Compile Include="handler\projects\settings\categories\Microphone.cs" />
+    <Compile Include="handler\projects\settings\categories\Notification.cs" />
+    <Compile Include="handler\projects\settings\categories\Payments.cs" />
+    <Compile Include="handler\projects\settings\categories\Privacy.cs" />
+    <Compile Include="handler\projects\settings\categories\ResetSettings.cs" />
+    <Compile Include="handler\projects\settings\categories\Security.cs" />
+    <Compile Include="handler\projects\settings\categories\Updates.cs" />
+    <Compile Include="handler\projects\settings\categories\UserMode.cs" />
+    <Compile Include="handler\projects\settings\categories\VoiceAssistent.cs" />
+    <Compile Include="handler\projects\settings\categories\YourPayments.cs" />
+    <Compile Include="handler\projects\settings\WindowControler.cs" />
+    <Compile Include="handler\projects\store\WindowControler.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\Graphicscard.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\Mainboard.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\Microphone.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\Printer.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\Processor.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\Ram.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\Storage.cs" />
+    <Compile Include="handler\projects\systeminformation\hardware\USB.cs" />
+    <Compile Include="handler\projects\systeminformation\software\Ad.cs" />
+    <Compile Include="handler\projects\systeminformation\software\Dhcp.cs" />
+    <Compile Include="handler\projects\systeminformation\software\Firewall.cs" />
+    <Compile Include="handler\projects\systeminformation\software\Network.cs" />
+    <Compile Include="handler\projects\systeminformation\software\SystemProcesse.cs" />
+    <Compile Include="handler\projects\systeminformation\software\System.cs" />
+    <Compile Include="handler\projects\systeminformation\WindowControler.cs" />
+    <Compile Include="handler\projects\windows\rating\WindowControler.cs" />
+    <Compile Include="handler\voice\menu\WindowControle.cs" />
+    <Compile Include="handler\voice\VoiceAssistentSpeechSynthesizer.cs" />
+    <Compile Include="handler\voice\VoiceAssistentSpeechRecognition.cs" />
+    <Compile Include="handler\voice\VoiceAssistentTranslater.cs" />
+    <Compile Include="handler\voice\VoiceControler.cs" />
+    <Compile Include="handler\voice\VoiceRecognitionListeningAnimation.cs" />
+    <Compile Include="installation\CreateWindowsCertificate.cs" />
+    <Compile Include="lib\FileAssociation.cs" />
+    <Compile Include="manager\PluginManager.cs" />
+    <Compile Include="manager\PluginObject.cs" />
+    <Compile Include="manager\socketmanagement\pluginstore\DownloadPluginJson.cs" />
+    <Compile Include="manager\socketmanagement\pluginstore\HandleRequestedPlugins.cs" />
+    <Compile Include="manager\SocketManager.cs" />
+    <Compile Include="manager\socketmanagement\login\AccountNotVerified.cs" />
+    <Compile Include="manager\socketmanagement\login\LoginNotSuccessful.cs" />
+    <Compile Include="manager\socketmanagement\login\LoginSuccessful.cs" />
+    <Compile Include="manager\socketmanagement\register\AccountAlreadyVerified.cs" />
+    <Compile Include="manager\socketmanagement\register\AccountNotExists.cs" />
+    <Compile Include="manager\socketmanagement\register\RegisterCodeAlreadyUsed.cs" />
+    <Compile Include="manager\socketmanagement\register\RegisterRequestSuccess.cs" />
+    <Compile Include="manager\socketmanagement\register\RegisterSuccess.cs" />
+    <Compile Include="manager\socketmanagement\register\WrongRegisterCode.cs" />
+    <Compile Include="projects\db\colorpicker\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\colorpicker\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\colorpicker\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\colorpicker\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\colorpicker\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\colorpicker\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\colorpicker\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\confirmregistration\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\confirmregistration\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\confirmregistration\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\confirmregistration\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\confirmregistration\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\login\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\login\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\login\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\login\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\confirmregistration\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\confirmregistration\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\login\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\login\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\login\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\registration\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\registration\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\registration\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\registration\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\registration\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\registration\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\login\registration\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\pluginstore\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\pluginstore\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\pluginstore\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\pluginstore\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\pluginstore\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\pluginstore\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\pluginstore\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\programminformation\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\programminformation\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\programminformation\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\programminformation\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\programminformation\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\programminformation\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\programminformation\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\ProjectDBManager.cs" />
+    <Compile Include="projects\db\rating\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\rating\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\rating\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\rating\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\rating\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\rating\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\rating\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\report\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\report\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\report\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\report\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\report\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\report\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\report\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\settings\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\settings\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\settings\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\settings\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\settings\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\settings\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\settings\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\systeminfo\Chinese.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chinese.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\systeminfo\French.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>French.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\systeminfo\Italian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Italian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\systeminfo\Russian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Russian.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\systeminfo\Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\systeminfo\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\db\systeminfo\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\ColorPicker.xaml.cs">
+      <DependentUpon>ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\HudOverlay.xaml.cs">
+      <DependentUpon>HudOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\PluginStore.xaml.cs">
+      <DependentUpon>PluginStore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\ProgrammInformation.xaml.cs">
+      <DependentUpon>ProgrammInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\Store.xaml.cs">
+      <DependentUpon>Store.xaml</DependentUpon>
+    </Compile>
+    <Page Include="handler\notificationwindow\windows\NoWebConnection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="handler\notificationwindow\windows\WrongLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="db\DBManager.cs" />
+    <Compile Include="db\English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="db\German.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>German.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="projects\system\Alert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\HudOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\PluginStore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\ProgrammInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\Store.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\system\SystemInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\windows\Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="projects\windows\Rating.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="projects\ProgramInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projects\ProgramInfo.Designer.cs">
+      <DependentUpon>ProgramInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\Alert.xaml.cs">
+      <DependentUpon>Alert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\system\SystemInformation.xaml.cs">
+      <DependentUpon>SystemInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\windows\Info.xaml.cs">
+      <DependentUpon>Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="projects\windows\Rating.xaml.cs">
+      <DependentUpon>Rating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="db\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="db\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="db\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="db\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="db\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="db\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="db\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\computercontrole\ComputerControle_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ComputerControle_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\computercontrole\ComputerControle_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ComputerControle_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\information\Information_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Information_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\information\Information_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Information_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\interncontrole\InternControle_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InternControle_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\interncontrole\InternControle_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InternControle_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\smaltalk\SmalTalk_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SmalTalk_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\commands\db\smaltalk\SmalTalk_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SmalTalk_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\menu\taskbar\db\ThumbnailJumplist_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ThumbnailJumplist_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\menu\taskbar\db\ThumbnailJumplist_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ThumbnailJumplist_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\menu\taskbar\db\ThumbnailToolbar_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ThumbnailToolbar_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\menu\taskbar\db\ThumbnailToolbar_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ThumbnailToolbar_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\menu\topbar\db\TopBar_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TopBar_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\menu\topbar\db\TopBar_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TopBar_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\notificationwindow\db\NoWebConnection_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NoWebConnection_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\notificationwindow\db\NoWebConnection_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NoWebConnection_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\notificationwindow\db\WrongLogin_English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrongLogin_English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="handler\notificationwindow\db\WrongLogin_German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrongLogin_German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\colorpicker\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\colorpicker\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\colorpicker\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\colorpicker\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\colorpicker\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\colorpicker\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\colorpicker\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\confirmregistration\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\confirmregistration\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\confirmregistration\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\confirmregistration\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\confirmregistration\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\login\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\login\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\login\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\login\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\confirmregistration\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\confirmregistration\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\login\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\login\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\login\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\registration\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\registration\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\registration\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\registration\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\registration\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\registration\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\login\registration\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\pluginstore\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\pluginstore\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\pluginstore\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\pluginstore\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\pluginstore\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\pluginstore\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\pluginstore\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\programminformation\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\programminformation\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\programminformation\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\programminformation\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\programminformation\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\programminformation\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\programminformation\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\rating\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\rating\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\rating\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\rating\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\rating\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\rating\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\rating\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\report\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\report\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\report\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\report\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\report\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\report\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\report\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\settings\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\settings\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\settings\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\settings\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\settings\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\settings\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\settings\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\systeminfo\Chinese.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chinese.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\systeminfo\French.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>French.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\systeminfo\Italian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Italian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\systeminfo\Russian.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Russian.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\systeminfo\Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\systeminfo\English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\db\systeminfo\German.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>German.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projects\ProgramInfo.resx">
+      <DependentUpon>ProgramInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="DWC_VoiceAssistent.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <EmbeddedResource Include="Hey_PC.table">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="installation\DarkWolfCraft.cer" />
+    <None Include="installation\DarkWolfCraft.pfx" />
+    <None Include="installation\DWC_AGB.docx" />
+    <None Include="installation\DWC_AGB_PLStore.docx" />
+    <None Include="installation\DWC_Datenschutz.docx" />
+    <None Include="installation\eula.rtf" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="installation\icon.ico" />
+    <Resource Include="installation\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="src\icon.ico" />
+    <Resource Include="src\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dienste\" />
+    <Folder Include="handler\apps\" />
+    <Folder Include="handler\ratings\db\" />
+    <Folder Include="handler\ratings\handler\" />
+    <Folder Include="handler\ratings\windows\" />
+    <Folder Include="handler\startuptutorial\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DarkWolfCraftSys\DarkWolfCraftSys.csproj">
+      <Project>{329a7dfc-8f6d-4f0c-923d-c4ec7df78247}</Project>
+      <Name>DarkWolfCraftSys</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.CognitiveServices.Speech.1.11.0\build\net461\Microsoft.CognitiveServices.Speech.targets" Condition="Exists('..\packages\Microsoft.CognitiveServices.Speech.1.11.0\build\net461\Microsoft.CognitiveServices.Speech.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CognitiveServices.Speech.1.11.0\build\net461\Microsoft.CognitiveServices.Speech.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CognitiveServices.Speech.1.11.0\build\net461\Microsoft.CognitiveServices.Speech.targets'))" />
+    <Error Condition="!Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets'))" />
+  </Target>
+  <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />
+</Project>

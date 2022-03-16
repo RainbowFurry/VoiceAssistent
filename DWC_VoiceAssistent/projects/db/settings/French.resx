@@ -1,0 +1,976 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_Birthday_Text" xml:space="preserve">
+    <value>Votre date de naissance</value>
+  </data>
+  <data name="Account_ChangeNickname" xml:space="preserve">
+    <value>Changer de surnom</value>
+  </data>
+  <data name="Account_ChangeNickname_Info" xml:space="preserve">
+    <value>Vous ne pouvez changer votre surnom qu'une fois par an !</value>
+  </data>
+  <data name="Account_City_Text" xml:space="preserve">
+    <value>StadtVille</value>
+  </data>
+  <data name="Account_Cuntry_Text" xml:space="preserve">
+    <value>Votre pays</value>
+  </data>
+  <data name="Account_DataInfo_Text" xml:space="preserve">
+    <value>Personne ne peut voir les informations personnelles telles que votre vrai nom et votre adresse. Seuls votre surnom, votre photo de profil et, éventuellement, un statut d'activité seront affichés</value>
+  </data>
+  <data name="Account_EditAddress" xml:space="preserve">
+    <value>Modifier les données d'adresse</value>
+  </data>
+  <data name="Account_EditPersonalData" xml:space="preserve">
+    <value>Modifier les données personnelles</value>
+  </data>
+  <data name="Account_EditProfilePicture" xml:space="preserve">
+    <value>Remplacer la photo de profil</value>
+  </data>
+  <data name="Account_Email_Text" xml:space="preserve">
+    <value>Courriel</value>
+  </data>
+  <data name="Account_FirstName_Text" xml:space="preserve">
+    <value>Votre prénom</value>
+  </data>
+  <data name="Account_Gender_Text" xml:space="preserve">
+    <value>Votre sexe</value>
+  </data>
+  <data name="Account_HouseNumber_Text" xml:space="preserve">
+    <value>Numéro de la maison</value>
+  </data>
+  <data name="Account_InfoText" xml:space="preserve">
+    <value>Personne ne peut voir les informations personnelles telles que votre vrai nom et votre adresse. Seuls votre surnom, votre photo de profil et, éventuellement, un statut d'activité seront affichés.                                                                                                                             
+Pour modifier vos Namertags et votre profil public, allez sur %path%.</value>
+  </data>
+  <data name="Account_PartOfUs_Text" xml:space="preserve">
+    <value>Vous faites partie de nous depuis</value>
+  </data>
+  <data name="Account_PersonalData_Text" xml:space="preserve">
+    <value>Vos données personnelles</value>
+  </data>
+  <data name="Account_PhoneNumber_Text" xml:space="preserve">
+    <value>Numéro de téléphone</value>
+  </data>
+  <data name="Account_PLZ_Text" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="Account_ResetProfilePicture" xml:space="preserve">
+    <value>Réinitialisation de la photo de profil</value>
+  </data>
+  <data name="Account_SecondName_Text" xml:space="preserve">
+    <value>Votre nom de famille</value>
+  </data>
+  <data name="Account_Street_Text" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="ButtonText_AddAcount" xml:space="preserve">
+    <value>Ajouter un compte</value>
+  </data>
+  <data name="ButtonText_Change" xml:space="preserve">
+    <value>Changer</value>
+  </data>
+  <data name="ButtonText_Show" xml:space="preserve">
+    <value>montrer</value>
+  </data>
+  <data name="ClientStart_Autostart" xml:space="preserve">
+    <value>L'application est lancée automatiquement au démarrage de votre PC</value>
+  </data>
+  <data name="ClientStart_Heading" xml:space="preserve">
+    <value>Lancement de l'application</value>
+  </data>
+  <data name="ClientStart_MinimizedStart" xml:space="preserve">
+    <value>Démarrage de la demande réduit au minimum</value>
+  </data>
+  <data name="ConnectedAccounts_AddAccountInfo" xml:space="preserve">
+    <value>Ajouter des comptes de courrier, des médias sociaux et des services de jeux</value>
+  </data>
+  <data name="ConnectedAccounts_AddAccounts_Info" xml:space="preserve">
+    <value>Ajoutez les comptes d'autres services. Cela vous permettra d'utiliser des services externes et de les gérer tous dans un seul programme.</value>
+  </data>
+  <data name="ConnectedAccounts_AddNewAccount" xml:space="preserve">
+    <value>Ajouter un nouveau compte</value>
+  </data>
+  <data name="ConnectedAccounts_ConnectedAccounts" xml:space="preserve">
+    <value>Comptes connexes</value>
+  </data>
+  <data name="ConnectedAccounts_ConnectedMainEmail" xml:space="preserve">
+    <value>Compte de courrier électronique connecté</value>
+  </data>
+  <data name="ConnectedAccounts_MainEmail_Info" xml:space="preserve">
+    <value>Votre compte de messagerie électronique connecté a la plus haute priorité. Toute personne ayant accès à ce compte peut également accéder à d'autres comptes.</value>
+  </data>
+  <data name="Design_BrightDesign_Content" xml:space="preserve">
+    <value>Laissez-vous éblouir par ce design</value>
+  </data>
+  <data name="Design_BrightDesign_Heading" xml:space="preserve">
+    <value>Un design lumineux</value>
+  </data>
+  <data name="Design_Color_Custom_Description" xml:space="preserve">
+    <value>Choisissez votre propre couleur</value>
+  </data>
+  <data name="Design_Color_Custom_Heading" xml:space="preserve">
+    <value>Couleur propre</value>
+  </data>
+  <data name="Design_Color_Default_Description" xml:space="preserve">
+    <value>Un beau bleu</value>
+  </data>
+  <data name="Design_Color_Default_Heading" xml:space="preserve">
+    <value>Bleu standard</value>
+  </data>
+  <data name="Design_Color_Description" xml:space="preserve">
+    <value>La couleur sélectionnée est utilisée pour certaines surfaces, boutons et champs de texte</value>
+  </data>
+  <data name="Design_Color_Heading" xml:space="preserve">
+    <value>Couleurs</value>
+  </data>
+  <data name="Design_DarkDesign_Content" xml:space="preserve">
+    <value>Le beau et agréable design sombre</value>
+  </data>
+  <data name="Design_DarkDesign_Heading" xml:space="preserve">
+    <value>Dessin foncé</value>
+  </data>
+  <data name="Design_Description" xml:space="preserve">
+    <value>Quel modèle souhaitez-vous utiliser ?</value>
+  </data>
+  <data name="Design_Font_Custom_Description" xml:space="preserve">
+    <value>Chargez ou créez une police personnalisée (fichier .ttf), cliquez deux fois sur ce fichier, puis cliquez sur Installer. Vous pouvez ensuite le sélectionner et l'utiliser ici</value>
+  </data>
+  <data name="Design_Font_Custom_Heading" xml:space="preserve">
+    <value>Propre police</value>
+  </data>
+  <data name="Design_Font_Default_Heading" xml:space="preserve">
+    <value>Police standard</value>
+  </data>
+  <data name="Design_Font_Description" xml:space="preserve">
+    <value>Nous utilisons cette police pour la plupart des contenus affichés</value>
+  </data>
+  <data name="Design_Font_Heading" xml:space="preserve">
+    <value>Police utilisée</value>
+  </data>
+  <data name="Design_OwnBackgrouond" xml:space="preserve">
+    <value>Conception</value>
+  </data>
+  <data name="Design_RatingBackground" xml:space="preserve">
+    <value>Évaluer et envoyer les antécédents</value>
+  </data>
+  <data name="Design_Rounding_Description" xml:space="preserve">
+    <value>Nous utilisons ce cadre pour arrondir les objets</value>
+  </data>
+  <data name="Design_Rounding_Heading" xml:space="preserve">
+    <value>Arrondissements</value>
+  </data>
+  <data name="Design_Rounding_MaximalRounding" xml:space="preserve">
+    <value>Arrondissement maximum</value>
+  </data>
+  <data name="Design_Rounding_MinimalRounding" xml:space="preserve">
+    <value>Courbes de lumière standard</value>
+  </data>
+  <data name="Design_Rounding_NoRounding" xml:space="preserve">
+    <value>Pas d'arrondi</value>
+  </data>
+  <data name="Design_Shaddow_Description" xml:space="preserve">
+    <value>Les ombres donnent de la profondeur aux surfaces et aux objets</value>
+  </data>
+  <data name="Design_Shaddow_Heading" xml:space="preserve">
+    <value>Des ombres sont données aux objets</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Art" xml:space="preserve">
+    <value>conception artistique</value>
+  </data>
+  <data name="Design_TransparentDesignImage_City" xml:space="preserve">
+    <value>Aménagement urbain</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Custom" xml:space="preserve">
+    <value>conception sur mesure</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Description" xml:space="preserve">
+    <value>Par défaut, les arrière-plans sont prédéfinis et vous pouvez choisir parmi eux. Mais vous pouvez également ajouter vos propres antécédents. Il est préférable d'utiliser des images ayant au moins une résolution Full HD pour obtenir un bon contraste avec le premier plan.</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Gaming" xml:space="preserve">
+    <value>conception de jeux</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Heading" xml:space="preserve">
+    <value>Le design transparent</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Landscape" xml:space="preserve">
+    <value>Aménagement du paysage</value>
+  </data>
+  <data name="Design_TransparentDesign_Content" xml:space="preserve">
+    <value>Transparent, beau et garanti unique</value>
+  </data>
+  <data name="Design_TransparentDesign_Heading" xml:space="preserve">
+    <value>Un design transparent</value>
+  </data>
+  <data name="Devices_ConnectedDevicesButton_CurrentDevice" xml:space="preserve">
+    <value>Dispositif actuel</value>
+  </data>
+  <data name="Devices_ConnectedDevicesHeading" xml:space="preserve">
+    <value>Dispositifs connectés à votre compte</value>
+  </data>
+  <data name="Devices_ConnectedDevicesInfo" xml:space="preserve">
+    <value>Si un appareil vous semble peu familier, cliquez sur Afficher et supprimez l'appareil de votre compte</value>
+  </data>
+  <data name="DWC_Menu_Account_Text" xml:space="preserve">
+    <value>Votre compte</value>
+  </data>
+  <data name="DWC_Menu_ConnectedAccount_Text" xml:space="preserve">
+    <value>Comptes connexes</value>
+  </data>
+  <data name="DWC_Menu_Design_Text" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="DWC_Menu_Devices_Text" xml:space="preserve">
+    <value>Dispositifs connectés</value>
+  </data>
+  <data name="DWC_Menu_EditorsMode_Text" xml:space="preserve">
+    <value>Mode développeur</value>
+  </data>
+  <data name="DWC_Menu_HotKeys_Text" xml:space="preserve">
+    <value>Hotkeys</value>
+  </data>
+  <data name="DWC_Menu_InGameOverlay_Text" xml:space="preserve">
+    <value>superposition dans le jeu</value>
+  </data>
+  <data name="DWC_Menu_Language_Text" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="DWC_Menu_Messages_Text" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="DWC_Menu_PaymentMethodes_Text" xml:space="preserve">
+    <value>Modes de paiement</value>
+  </data>
+  <data name="DWC_Menu_Privacy_Text" xml:space="preserve">
+    <value>Vie privée</value>
+  </data>
+  <data name="DWC_Menu_ProgrammFunctions_Text" xml:space="preserve">
+    <value>Fonctions d'application:</value>
+  </data>
+  <data name="DWC_Menu_ProgrammStart_Text" xml:space="preserve">
+    <value>Lancement de l'application</value>
+  </data>
+  <data name="DWC_Menu_ProgrammView_Text" xml:space="preserve">
+    <value>Interface utilisateur</value>
+  </data>
+  <data name="DWC_Menu_Security_Text" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="DWC_Menu_Updates_Text" xml:space="preserve">
+    <value>Mises à jour</value>
+  </data>
+  <data name="DWC_Menu_UserMode_Text" xml:space="preserve">
+    <value>Mode utilisateur</value>
+  </data>
+  <data name="DWC_Menu_VideoAndAudio_Text" xml:space="preserve">
+    <value>Microphone et vidéo</value>
+  </data>
+  <data name="DWC_Menu_YourPaments_Text" xml:space="preserve">
+    <value>Vos paiements</value>
+  </data>
+  <data name="DWC_Settings_Age_Selection_Adult" xml:space="preserve">
+    <value>Adulte</value>
+  </data>
+  <data name="DWC_Settings_Age_Selection_Child" xml:space="preserve">
+    <value>Enfant</value>
+  </data>
+  <data name="DWC_Settings_Buttons_Active" xml:space="preserve">
+    <value>Activé</value>
+  </data>
+  <data name="DWC_Settings_Buttons_EveryOne" xml:space="preserve">
+    <value>Tout le monde</value>
+  </data>
+  <data name="DWC_Settings_Buttons_InActive" xml:space="preserve">
+    <value>Handicapés</value>
+  </data>
+  <data name="DWC_Settings_Buttons_OnlyFriends" xml:space="preserve">
+    <value>Seulement des amis</value>
+  </data>
+  <data name="DWC_Settings_Button_OnlyVerifyUsers" xml:space="preserve">
+    <value>Utilisateurs vérifiés uniquement</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Color" xml:space="preserve">
+    <value>Sélection des couleurs</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Design_BackgroundImage_Path" xml:space="preserve">
+    <value>Cheminement</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Design_BackgroundImage_Text" xml:space="preserve">
+    <value>Fond d'écran</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_AutoStart_Text" xml:space="preserve">
+    <value>Autostart</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_KeepWindowAlife_Text" xml:space="preserve">
+    <value>Réduire au minimum les fenêtres à la fermeture</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_Message_Text" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_RoundedDesighn_Text" xml:space="preserve">
+    <value>Conception de la ronde</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_WelcomeMessage_Text" xml:space="preserve">
+    <value>Message de bienvenue</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System" xml:space="preserve">
+    <value>Paramètres du système</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_Language_Text" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_ListenName_Text" xml:space="preserve">
+    <value>Commande de réponse vocale</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_UserName_Text" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Theme" xml:space="preserve">
+    <value>Sélection du thème</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice" xml:space="preserve">
+    <value>Options vocales</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Age_Text" xml:space="preserve">
+    <value>Âge</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Gender_Text" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Volum_Text" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="DWC_Settings_Menu_Accounts" xml:space="preserve">
+    <value>Comptes connexes</value>
+  </data>
+  <data name="DWC_Settings_Menu_Assistent" xml:space="preserve">
+    <value>Assistant linguistique</value>
+  </data>
+  <data name="DWC_Settings_Menu_Desighn" xml:space="preserve">
+    <value>Comparution</value>
+  </data>
+  <data name="DWC_Settings_Menu_Eula" xml:space="preserve">
+    <value>Politique de confidentialité</value>
+  </data>
+  <data name="DWC_Settings_Menu_Extention" xml:space="preserve">
+    <value>Extensions</value>
+  </data>
+  <data name="DWC_Settings_Menu_Friends" xml:space="preserve">
+    <value>Paramètres des amis</value>
+  </data>
+  <data name="DWC_Settings_Menu_Heading" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="DWC_Settings_Menu_HotKey" xml:space="preserve">
+    <value>Combinaisons de boutons</value>
+  </data>
+  <data name="DWC_Settings_Menu_Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="DWC_Settings_Menu_Logout" xml:space="preserve">
+    <value>Déconnexion</value>
+  </data>
+  <data name="DWC_Settings_Menu_Microphone" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="DWC_Settings_Menu_Privacy" xml:space="preserve">
+    <value>Paramètres de confidentialité</value>
+  </data>
+  <data name="DWC_Settings_Menu_Program" xml:space="preserve">
+    <value>Candidature</value>
+  </data>
+  <data name="DWC_Settings_Menu_Reset" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="DWC_Settings_Menu_Security" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="DWC_Settings_SaveButton_SaveDescription_Text" xml:space="preserve">
+    <value>et fermer (Escape)</value>
+  </data>
+  <data name="DWC_Settings_SaveButton_Save_Text" xml:space="preserve">
+    <value>Sauvegarder les paramètres</value>
+  </data>
+  <data name="DWC_Settings_SaveMessage" xml:space="preserve">
+    <value>Vos paramètres ont été appliqués avec succès</value>
+  </data>
+  <data name="DWC_Settings_SaveMessageHeading" xml:space="preserve">
+    <value>DarkWolfCraft - Paramètres</value>
+  </data>
+  <data name="DWC_Settings_Voice_Selection_Female" xml:space="preserve">
+    <value>Mme</value>
+  </data>
+  <data name="DWC_Settings_Voice_Selection_Male" xml:space="preserve">
+    <value>Homme</value>
+  </data>
+  <data name="EditorsMode_Description" xml:space="preserve">
+    <value>Certains l'aiment plus détaillé, d'autres l'aiment simple. Votre choix n'a aucune incidence sur les fonctions du programme. En fonction de cela, des informations complémentaires ou des possibilités de personnalisation seront données !</value>
+  </data>
+  <data name="EditorsMode_DeveloperMode_Description" xml:space="preserve">
+    <value>Vous êtes un promoteur ? Nous vous montrerons des informations supplémentaires et vous donnerons un aperçu du développement du service. Laissez-vous inspirer et aidez-nous à trouver les failles de sécurité et les bugs.</value>
+  </data>
+  <data name="EditorsMode_DeveloperMode_Heading" xml:space="preserve">
+    <value>Développeurs Mode</value>
+  </data>
+  <data name="EditorsMode_EditorsMode_Description" xml:space="preserve">
+    <value>Vous disposez de fonctionnalités avancées en termes de conception et de design d'interface. Personnalisez le programme et laissez libre cours à votre créativité.</value>
+  </data>
+  <data name="EditorsMode_EditorsMode_Heading" xml:space="preserve">
+    <value>Mode éditeur</value>
+  </data>
+  <data name="EditorsMode_Heading" xml:space="preserve">
+    <value>Les modes d'utilisation</value>
+  </data>
+  <data name="EditorsMode_InfoDescription" xml:space="preserve">
+    <value>Nous essayons de satisfaire tous les utilisateurs, même s'ils ont des intérêts complètement différents. Grâce à nos modules d'optimisation, nous essayons d'adapter au mieux le service à chaque utilisateur individuel. Plus vous nous donnez d'informations, mieux nous pouvons classer vos intérêts !</value>
+  </data>
+  <data name="EditorsMode_InfoHeading" xml:space="preserve">
+    <value>Adaptabilité</value>
+  </data>
+  <data name="EditorsMode_NormalMode_Description" xml:space="preserve">
+    <value>Vous pouvez vous attendre à ce que toutes les fonctions soient complètes, nous faisons la majeure partie du travail pour vous en termes de conception et de design d'interface et vous n'avez pas à vous en soucier.</value>
+  </data>
+  <data name="EditorsMode_NormalMode_Heading" xml:space="preserve">
+    <value>Mode normal</value>
+  </data>
+  <data name="HotKeys_CreateNewHotKey" xml:space="preserve">
+    <value>Créer un nouveau raccourci clavier</value>
+  </data>
+  <data name="HotKeys_EnableAllHotkeys" xml:space="preserve">
+    <value>Désactiver tous les raccourcis clavier</value>
+  </data>
+  <data name="HotKeys_EnableOwnHotkeys" xml:space="preserve">
+    <value>Désactiver tous les raccourcis clavier</value>
+  </data>
+  <data name="HotKeys_Heading" xml:space="preserve">
+    <value>touches de raccourci</value>
+  </data>
+  <data name="HotKeys_Info" xml:space="preserve">
+    <value>Pour modifier un raccourci clavier, appuyez sur la combinaison de touches et entrez la nouvelle combinaison de touches. Appuyez sur ESC pour annuler l'opération.</value>
+  </data>
+  <data name="HotKeys_Option_Musikbot" xml:space="preserve">
+    <value>Activer/désactiver le musicbot</value>
+  </data>
+  <data name="HotKeys_Option_Mute" xml:space="preserve">
+    <value>Activation/désactivation de la sourdine</value>
+  </data>
+  <data name="HotKeys_Option_PushToTalk" xml:space="preserve">
+    <value>Push to Talk</value>
+  </data>
+  <data name="HotKeys_Option_VoiceAssistent" xml:space="preserve">
+    <value>Assistant vocal de déclenchement</value>
+  </data>
+  <data name="HotKeys_ResetAllHotKeys" xml:space="preserve">
+    <value>Réinitialisation de toutes les touches de raccourcis</value>
+  </data>
+  <data name="InGameOverlay_AktivateIngameOverlay" xml:space="preserve">
+    <value>Activer en superposition de jeu</value>
+  </data>
+  <data name="InGameOverlay_Description" xml:space="preserve">
+    <value>Prêts à jouer ensemble ?</value>
+  </data>
+  <data name="InGameOverlay_Heading" xml:space="preserve">
+    <value>En superposition de jeu</value>
+  </data>
+  <data name="InGameOverlay_ShowMusik_Content" xml:space="preserve">
+    <value>Le musicbot sera affiché et vous pourrez voir quelle chanson vous écoutez</value>
+  </data>
+  <data name="InGameOverlay_ShowMusik_Heading" xml:space="preserve">
+    <value>Afficher le musicbot</value>
+  </data>
+  <data name="InGameOverlay_ShowProfilePicture_Content" xml:space="preserve">
+    <value>Si cette fonction est activée, vous ne voyez que les noms des autres</value>
+  </data>
+  <data name="InGameOverlay_ShowProfilePicture_Heading" xml:space="preserve">
+    <value>Cacher les photos de profil</value>
+  </data>
+  <data name="InGameOverlay_ShowWhileTalking_Content" xml:space="preserve">
+    <value>Ist diese Funktion aktiviert, wird das Overlay ausgeblendet wenn niemand spricht</value>
+  </data>
+  <data name="InGameOverlay_ShowWhileTalking_Heading" xml:space="preserve">
+    <value>Afficher la superposition uniquement lorsque quelqu'un parle</value>
+  </data>
+  <data name="InGameOverlay_Show_Heading" xml:space="preserve">
+    <value>La superposition doit être affichée à un certain moment</value>
+  </data>
+  <data name="Landschaft Design" xml:space="preserve">
+    <value>Sélectionnez votre propre parcours</value>
+  </data>
+  <data name="Language_AutogeneratedInfo" xml:space="preserve">
+    <value>(généré automatiquement)</value>
+  </data>
+  <data name="Language_Description" xml:space="preserve">
+    <value>Choisissez votre langue ! Veuillez noter que certaines langues sont automatiquement traduites pour être complétées et que nous ne pouvons pas garantir et n'acceptons aucune responsabilité quant à l'exactitude complète de celles-ci. Nous fournirons bientôt une traduction complète pour de nombreuses langues. Si votre langue locale n'est pas disponible 
+vous pouvez nous aider à faire un échantillon de traduction ! En savoir plus
+
+Traduit avec www.DeepL.com/Translator (version gratuite)</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>Votre langue</value>
+  </data>
+  <data name="Microphone_AudioHelp_Description" xml:space="preserve">
+    <value>Si vous activez cette fonction, nous vous avertirons si nous ne pouvons pas détecter un microphone, si vous parlez même si vous êtes en sourdine ou si votre voix est coupée.</value>
+  </data>
+  <data name="Microphone_AudioHelp_Heading" xml:space="preserve">
+    <value>Aide audio</value>
+  </data>
+  <data name="Microphone_AudioOptimisation_Content" xml:space="preserve">
+    <value>Les bruits de fond et le sifflement sont supprimés pour assurer une bonne qualité audio.</value>
+  </data>
+  <data name="Microphone_AudioOptimisation_Heading" xml:space="preserve">
+    <value>Logiciel d'optimisation audio</value>
+  </data>
+  <data name="Microphone_AutomaticVoiceDetection_Description" xml:space="preserve">
+    <value>Vous voyez ci-dessus, lorsque votre microphone est activé</value>
+  </data>
+  <data name="Microphone_AutomaticVoiceDetection_Heading" xml:space="preserve">
+    <value>Déterminer automatiquement la sensibilité du microphone</value>
+  </data>
+  <data name="Microphone_Heading" xml:space="preserve">
+    <value>Activation du microphone</value>
+  </data>
+  <data name="Microphone_HeadsetName" xml:space="preserve">
+    <value>Intervenant (NOM)</value>
+  </data>
+  <data name="Microphone_InputText" xml:space="preserve">
+    <value>Volume d'entrée</value>
+  </data>
+  <data name="Microphone_MicrophoneName" xml:space="preserve">
+    <value>Microphone (NOM)</value>
+  </data>
+  <data name="Microphone_OutputText" xml:space="preserve">
+    <value>Volume de production</value>
+  </data>
+  <data name="Microphone_VoiceActivation_Description" xml:space="preserve">
+    <value>Si l'activation vocale est désactivée, utilisez la fonction "Push to Talk" (modifiable sous "Hotkeys")</value>
+  </data>
+  <data name="Microphone_VoiceActivation_Heading" xml:space="preserve">
+    <value>Activation vocale</value>
+  </data>
+  <data name="Notification_Description" xml:space="preserve">
+    <value>Quelles notifications devons-nous afficher</value>
+  </data>
+  <data name="Notification_DescropSecurityNotification_Description" xml:space="preserve">
+    <value>Les notifications de sécurité via le bureau sont importantes s'il s'agit d'une urgence et si quelqu'un essaie d'accéder à votre compte, par exemple</value>
+  </data>
+  <data name="Notification_DescropSecurityNotification_Heading" xml:space="preserve">
+    <value>Notifications de sécurité des ordinateurs de bureau</value>
+  </data>
+  <data name="Notification_DesktopNotification_Description" xml:space="preserve">
+    <value>Si vous désactivez cette fonction, vous ne recevrez aucune notification !</value>
+  </data>
+  <data name="Notification_DesktopNotification_Heading" xml:space="preserve">
+    <value>Notifications de bureau</value>
+  </data>
+  <data name="Notification_EmailNotification_Description" xml:space="preserve">
+    <value>Vous recevrez toujours des e-mails sur la sécurité des comptes, les confirmations de paiement et d'autres sujets importants !</value>
+  </data>
+  <data name="Notification_EmailNotification_Heading" xml:space="preserve">
+    <value>Notifications par courrier électronique</value>
+  </data>
+  <data name="Notification_EmailNotification_PrimeEmail_Description" xml:space="preserve">
+    <value>Nous vous informerons s'il y a quelque chose de spécial</value>
+  </data>
+  <data name="Notification_EmailNotification_PrimeEmail_Heading" xml:space="preserve">
+    <value>E-mails concernant les offres Premium et spéciales</value>
+  </data>
+  <data name="Notification_EmailNotification_ShopCardEmail_Description" xml:space="preserve">
+    <value>Nous vous informerons de la disponibilité de jeux et d'applications basés sur votre 
+Les listes de souhaits sont</value>
+  </data>
+  <data name="Notification_EmailNotification_ShopCardEmail_Heading" xml:space="preserve">
+    <value>Emails à ma liste de souhaits</value>
+  </data>
+  <data name="Notification_EmailNotification_StoreEmail_Description" xml:space="preserve">
+    <value>Nous vous informons des nouvelles applications et des nouveaux jeux qui pourraient vous intéresser</value>
+  </data>
+  <data name="Notification_EmailNotification_StoreEmail_Heading" xml:space="preserve">
+    <value>Courriers électroniques sur le contenu et les offres des magasins</value>
+  </data>
+  <data name="Notification_EmailNotification_UpdateEmail_Heading" xml:space="preserve">
+    <value>Emails sur les mises à jour</value>
+  </data>
+  <data name="Notification_Heading" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Notification_ShowFriendOnline_Heading" xml:space="preserve">
+    <value>Afficher quand un ami est en ligne</value>
+  </data>
+  <data name="Notification_ShowTextNotification_Description" xml:space="preserve">
+    <value>Voyez qui vous écrit. Vous pouvez mettre en sourdine les contacts individuels et les groupes</value>
+  </data>
+  <data name="Notification_ShowTextNotification_Heading" xml:space="preserve">
+    <value>Afficher les SMS</value>
+  </data>
+  <data name="Notification_SystemNotification_Description" xml:space="preserve">
+    <value>En cas de problème, nous vous informerons</value>
+  </data>
+  <data name="Notification_SystemNotification_Heading" xml:space="preserve">
+    <value>Notifications du système</value>
+  </data>
+  <data name="Payments_AddPayment" xml:space="preserve">
+    <value>Ajouter un mode de paiement</value>
+  </data>
+  <data name="Payments_Payments_Info" xml:space="preserve">
+    <value>Ajoutez un compte et effectuez des paiements sur l'ensemble de la plate-forme de manière simple et sécurisée en un seul clic. Suivez vos achats grâce aux paiements, annulez vos abonnements instantanément et obtenez facilement des</value>
+  </data>
+  <data name="Payments_Payments_InfoHeading" xml:space="preserve">
+    <value>Vos comptes et paiements chez nous</value>
+  </data>
+  <data name="Payments_QuickPay_Description" xml:space="preserve">
+    <value>Utilisez le paiement rapide pour pouvoir payer plus vite</value>
+  </data>
+  <data name="Payments_QuickPay_Heading" xml:space="preserve">
+    <value>Paiement rapide</value>
+  </data>
+  <data name="Payments_QuickPay_QuickPayContent" xml:space="preserve">
+    <value>Lorsque le paiement rapide est activé, vous payez automatiquement avec votre mode de paiement préféré et vous sautez la procédure de confirmation</value>
+  </data>
+  <data name="Payments_QuickPay_QuickPayHeading" xml:space="preserve">
+    <value>Activer le paiement rapide</value>
+  </data>
+  <data name="Payments_SecurePay_Content" xml:space="preserve">
+    <value>Paiement sécurisé</value>
+  </data>
+  <data name="Payments_SecurePay_Description" xml:space="preserve">
+    <value>Dein Kontopasswort wird vor dem Bestellvorgang abgefragt, um unautorisierte Bestellungen zu verhindern</value>
+  </data>
+  <data name="Payments_SecurePay_Heading" xml:space="preserve">
+    <value>Sichere Bezahlunng</value>
+  </data>
+  <data name="Payments_YourPayments" xml:space="preserve">
+    <value>Vos modes de paiement</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Everybody_Label" xml:space="preserve">
+    <value>Tout le monde</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Friends_Label" xml:space="preserve">
+    <value>Les amis des amis</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Heading" xml:space="preserve">
+    <value>Qui peut vous ajouter comme ami ?</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Request_Label" xml:space="preserve">
+    <value>Seules les enquêtes mutuelles</value>
+  </data>
+  <data name="Privacy_Chat_Content" xml:space="preserve">
+    <value>D'autres peuvent voir quelle application vous utilisez. Que vous jouiez à un jeu, que vous écoutiez de la musique ou que vous fassiez autre chose. Ces paramètres n'affectent pas le fait qu'on vous montre ou non que vous êtes dans un canal. Réglez ces paramètres sous Ma chaîne.</value>
+  </data>
+  <data name="Privacy_Chat_Heading" xml:space="preserve">
+    <value>Confidentialité générale</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Everybody_Label" xml:space="preserve">
+    <value>Tout le monde</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Friends_Label" xml:space="preserve">
+    <value>Seulement des amis</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Heading" xml:space="preserve">
+    <value>Dernière mise en ligne</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Nobody_Label" xml:space="preserve">
+    <value>Personne</value>
+  </data>
+  <data name="Privacy_Chat_Privacy_Content" xml:space="preserve">
+    <value>Les personnes qui ne sont pas autorisées à vous contacter directement vous enverront une demande avec le premier message, que vous devez accepter. Personne ne peut voir les paramètres que vous avez définis.</value>
+  </data>
+  <data name="Privacy_Chat_Privacy_Heading" xml:space="preserve">
+    <value>La vie privée dans le chat</value>
+  </data>
+  <data name="Privacy_Chat_ShowStatus_Heading" xml:space="preserve">
+    <value>Apps affichées en statut</value>
+  </data>
+  <data name="Privacy_Chat_Status_Everybody_Label" xml:space="preserve">
+    <value>Tout le monde</value>
+  </data>
+  <data name="Privacy_Chat_Status_Friends_Label" xml:space="preserve">
+    <value>Seulement des amis</value>
+  </data>
+  <data name="Privacy_Chat_Status_Label_Label" xml:space="preserve">
+    <value>Personne</value>
+  </data>
+  <data name="Privacy_Chat_WritingPermission_Heading" xml:space="preserve">
+    <value>Qui voit votre statut</value>
+  </data>
+  <data name="Privacy_Infotext1" xml:space="preserve">
+    <value>Si vous réglez votre statut sur invisible, personne ne verra votre activité et ne saura si vous êtes en ligne. Votre chaîne sera également invisible pour tout le monde.</value>
+  </data>
+  <data name="Privacy_Infotext2" xml:space="preserve">
+    <value>En cas de demandes mutuelles, les deux personnes doivent envoyer une demande d'ami. Si c'est le cas, vous deviendrez automatiquement des amis.</value>
+  </data>
+  <data name="Privacy_Status_addApp" xml:space="preserve">
+    <value>Cliquez ici pour ajouter un programme</value>
+  </data>
+  <data name="ResetSettings_Description" xml:space="preserve">
+    <value>Vous pouvez ici modifier des zones individuelles ou l'ensemble des paramètres pour 
+Réinitialisation des paramètres d'usine</value>
+  </data>
+  <data name="ResetSettings_Heading" xml:space="preserve">
+    <value>Réinitialisation des paramètres</value>
+  </data>
+  <data name="ResetSettings_Options_AllSettings" xml:space="preserve">
+    <value>Tous les paramètres</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>Fermer (CES)</value>
+  </data>
+  <data name="Security_AccountRecoveryHeading" xml:space="preserve">
+    <value>Courrier électronique de recouvrement de compte</value>
+  </data>
+  <data name="Security_AllAktivities" xml:space="preserve">
+    <value>Voir toutes les activités</value>
+  </data>
+  <data name="Security_BackupCode_Description" xml:space="preserve">
+    <value>Avec chaque code de sauvegarde, vous pouvez vous connecter à votre compte une</value>
+  </data>
+  <data name="Security_BackupCode_Disable" xml:space="preserve">
+    <value>Désactiver</value>
+  </data>
+  <data name="Security_BackupCode_Download" xml:space="preserve">
+    <value>Voir</value>
+  </data>
+  <data name="Security_BackupCode_Enable" xml:space="preserve">
+    <value>Activer</value>
+  </data>
+  <data name="Security_BackupCode_Heading" xml:space="preserve">
+    <value>les codes de sauvegarde</value>
+  </data>
+  <data name="Security_BackupCode_View" xml:space="preserve">
+    <value>fois !</value>
+  </data>
+  <data name="Security_ConnectedEmailHeading" xml:space="preserve">
+    <value>Compte de courrier électronique connecté</value>
+  </data>
+  <data name="Security_ConnectedEmailInfo" xml:space="preserve">
+    <value>L'inscription au compte s'effectue par courrier électronique, numéro de téléphone ou identifiant</value>
+  </data>
+  <data name="Security_ConnectedEmail_ChangeAccount" xml:space="preserve">
+    <value>Modifier le compte</value>
+  </data>
+  <data name="Security_ConnectedEmail_Check" xml:space="preserve">
+    <value>dernier contrôle sur %date%%.</value>
+  </data>
+  <data name="Security_ConnectedEmail_Heading" xml:space="preserve">
+    <value>Votre compte de courrier électronique lié</value>
+  </data>
+  <data name="Security_ConnectedEmail_ViewAccount" xml:space="preserve">
+    <value>Voir le compte</value>
+  </data>
+  <data name="Security_LastActivity" xml:space="preserve">
+    <value>Activités du dernier compte</value>
+  </data>
+  <data name="Security_NotSecure" xml:space="preserve">
+    <value>Mal protégé</value>
+  </data>
+  <data name="Security_RecoveryEmail_ChangeAccount" xml:space="preserve">
+    <value>Modifier le compte</value>
+  </data>
+  <data name="Security_RecoveryEmail_Check" xml:space="preserve">
+    <value>dernier contrôle sur %date%%.</value>
+  </data>
+  <data name="Security_RecoveryEmail_Heading" xml:space="preserve">
+    <value>Compte de courrier électronique pour le recouvrement des comptes</value>
+  </data>
+  <data name="Security_RecoveryEmail_ViewAccount" xml:space="preserve">
+    <value>Voir le compte</value>
+  </data>
+  <data name="Security_Secure" xml:space="preserve">
+    <value>Bien protégé</value>
+  </data>
+  <data name="Security_SecureBoxInfo_1" xml:space="preserve">
+    <value>Regardez votre indice de sécurité. Si nous constatons que votre compte n'est pas suffisamment protégé, nous vous en informerons immédiatement</value>
+  </data>
+  <data name="Security_SecureBoxInfo_2" xml:space="preserve">
+    <value>Votre compte de messagerie électronique connecté a la plus haute priorité. Toute personne ayant accès à ce compte peut également avoir accès à vos autres comptes
+2 Facteur d'authentification</value>
+  </data>
+  <data name="Security_TwoFactorHeading" xml:space="preserve">
+    <value>2 Faktor Authentifizierung</value>
+  </data>
+  <data name="Security_TwoFaktor_ChangeNumber" xml:space="preserve">
+    <value>Changer de numéro de téléphone</value>
+  </data>
+  <data name="Security_TwoFaktor_Check" xml:space="preserve">
+    <value>dernier contrôle sur %date%%.</value>
+  </data>
+  <data name="Security_TwoFaktor_DisableTwoFaktor" xml:space="preserve">
+    <value>2FA deaktivieren</value>
+  </data>
+  <data name="Security_TwoFaktor_EnambleTwoFaktor" xml:space="preserve">
+    <value>Activer la 2FA</value>
+  </data>
+  <data name="Security_TwoFaktor_Heading" xml:space="preserve">
+    <value>Authentification à 2 facteurs par SMS</value>
+  </data>
+  <data name="Security_YourAccountActivity" xml:space="preserve">
+    <value>L'activité de votre compte</value>
+  </data>
+  <data name="Security_YourSecurityStatusHeading" xml:space="preserve">
+    <value>Votre indice de sécurité</value>
+  </data>
+  <data name="Security_YourSecurityStatusInfo" xml:space="preserve">
+    <value>Fixez des niveaux de priorité pour les appareils ! Activez les restrictions pour les nouveaux appareils !</value>
+  </data>
+  <data name="SettingsHeading" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Description" xml:space="preserve">
+    <value>Vous recevrez une notification et pourrez décider d'installer la mise à jour immédiatement ou ultérieurement</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Description1" xml:space="preserve">
+    <value>Vous recevrez une notification et pourrez décider d'installer la mise à jour immédiatement ou ultérieurement</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Heading" xml:space="preserve">
+    <value>Empêcher les mises à jour automatiques lorsque je suis occupé</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Heading1" xml:space="preserve">
+    <value>Empêcher les mises à jour automatiques lorsque je suis occupé</value>
+  </data>
+  <data name="Updates_AutoUpdate_Description" xml:space="preserve">
+    <value>Lorsque le programme est ouvert, les mises à jour sont lancées automatiquement</value>
+  </data>
+  <data name="Updates_AutoUpdate_Description1" xml:space="preserve">
+    <value>Lorsque le programme est ouvert, les mises à jour sont lancées automatiquement</value>
+  </data>
+  <data name="Updates_AutoUpdate_Heading" xml:space="preserve">
+    <value>Mises à jour automatiques</value>
+  </data>
+  <data name="Updates_AutoUpdate_Heading1" xml:space="preserve">
+    <value>Mises à jour automatiques</value>
+  </data>
+  <data name="Updates_Description_1" xml:space="preserve">
+    <value>Les mises à jour sont toujours téléchargées automatiquement lorsque vous redémarrez l'application</value>
+  </data>
+  <data name="Updates_Description_11" xml:space="preserve">
+    <value>Les mises à jour sont toujours téléchargées automatiquement lorsque vous redémarrez l'application</value>
+  </data>
+  <data name="Updates_Description_2" xml:space="preserve">
+    <value>En fonction de l'importance d'une mise à jour, nous vous donnerons la possibilité de l'installer à une date ultérieure. Par exemple, si nous devons combler d'urgence une faille de sécurité par une mise à jour, celle-ci sera installée immédiatement pour des raisons de sécurité, même si elle interrompt votre activité.</value>
+  </data>
+  <data name="Updates_Description_21" xml:space="preserve">
+    <value>En fonction de l'importance d'une mise à jour, nous vous donnerons la possibilité de l'installer à une date ultérieure. Par exemple, si nous devons combler d'urgence une faille de sécurité par une mise à jour, celle-ci sera installée immédiatement pour des raisons de sécurité, même si elle interrompt votre activité.</value>
+  </data>
+  <data name="Updates_Heading" xml:space="preserve">
+    <value>Mises à jour</value>
+  </data>
+  <data name="Updates_Heading1" xml:space="preserve">
+    <value>Mises à jour</value>
+  </data>
+</root>

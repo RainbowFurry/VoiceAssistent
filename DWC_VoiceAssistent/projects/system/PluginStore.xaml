@@ -1,0 +1,74 @@
+﻿<Window x:Name="DWC_Window" x:Class="DWC_VoiceAssistent.projects.system.PluginStore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.system"
+        mc:Ignorable="d"
+        Title="PluginStore-Title" Height="900" Width="1600" WindowStartupLocation="CenterOwner" WindowStyle="None" WindowState="Maximized">
+
+    <!-- 
+    No Window Border:
+    https://stackoverflow.com/questions/611298/how-to-create-a-wpf-window-without-a-border-that-can-be-resized-via-a-grip-only
+    -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="4"
+        ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="BackgroundImage" Background="#FF313136">
+        <Grid x:Name="HeaderBar" Height="120" VerticalAlignment="Top" Background="#FF17191A" Margin="3,34,0,0">
+            <Label x:Name="Welcome_Text" Content="Willkommen im Plugin Store" HorizontalAlignment="Left" Margin="30,24,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24"/>
+            <Label x:Name="Plugins_ForYou" Content="Für dich bestimmt" HorizontalAlignment="Left" Margin="77,79,0,0" VerticalAlignment="Top" Foreground="#FF1466B7" BorderThickness="0,0,0,4" BorderBrush="#FF1466B7" FontSize="20" Panel.ZIndex="1"/>
+            <Label x:Name="Plugins_Original" Content="Original von uns" HorizontalAlignment="Left" Margin="266,79,0,0" VerticalAlignment="Top" Foreground="#FF78797A" BorderThickness="0" BorderBrush="#FF1466B7" FontSize="20" Panel.ZIndex="1"/>
+            <Label x:Name="Plugins_Charts" Content="Top Charts" HorizontalAlignment="Left" Margin="433,79,0,0" VerticalAlignment="Top" Foreground="#FF78797A" BorderThickness="0" BorderBrush="#FF1466B7" FontSize="20" Panel.ZIndex="1"/>
+            <Label x:Name="Plugins_Games" Content="Spiele" HorizontalAlignment="Left" Margin="545,79,0,0" VerticalAlignment="Top" Foreground="#FF78797A" BorderThickness="0" BorderBrush="#FF1466B7" FontSize="20" Panel.ZIndex="1"/>
+            <Label x:Name="Plugins_Apps" Content="Apps" HorizontalAlignment="Left" Margin="614,79,0,0" VerticalAlignment="Top" Foreground="#FF78797A" BorderThickness="0" BorderBrush="#FF1466B7" FontSize="20" Panel.ZIndex="1"/>
+            <Rectangle x:Name="Search" Fill="#222425" HorizontalAlignment="Right" Height="32" Margin="0,24,33,0" Stroke="{x:Null}" VerticalAlignment="Top" Width="268" RadiusY="8.5" RadiusX="8.5"/>
+            <TextBox BorderThickness="0" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" x:Name="Search_Text" HorizontalAlignment="Right" Margin="0,30,33,0" TextWrapping="Wrap" Text="Tippe zum suchen ..." VerticalAlignment="Top" Width="250" Height="26" FontSize="14" Foreground="#FF1466B7"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="78" Margin="223,155,0,0" VerticalAlignment="Top" Width="1369">
+            <Label x:Name="LookAround_Text" Content="Schaue dich ein wenig um" HorizontalAlignment="Left" Margin="29,17,0,0" VerticalAlignment="Top" Foreground="#FF1466B7" FontSize="24"/>
+        </Grid>
+        <ScrollViewer Margin="222,233,0,0" BorderThickness="0" VerticalScrollBarVisibility="Visible">
+            <StackPanel x:Name="Menu_ForYou"/>
+        </ScrollViewer>
+
+        <Rectangle x:Name="DWC_ActionBar" Fill="#FF1C1E20" Height="31" VerticalAlignment="Top" Uid="DWC_IgnoreRounding" Margin="0,3,0,0"/>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Panel.ZIndex="1" Height="25" Margin="0,3,5,0">
+            <Image x:Name="Window_Close" Height="15" Margin="60,0,5,1" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/close_white.png"/>
+            <Image x:Name="Window_State" Height="15" Margin="32,0,30,0" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/windowstate_white.png" RenderTransformOrigin="-0.407,0.52"/>
+            <Image x:Name="Window_Minimize" Height="15" Margin="6,0,59,3" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/minimize_white.png" RenderTransformOrigin="-0.407,0.52" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Grid x:Name="MainWindow_QuieckAccess" Margin="3,154,0,91" Background="#FF2B2B2B" HorizontalAlignment="Left" Width="217">
+            <ScrollViewer HorizontalAlignment="Left" Height="647" VerticalAlignment="Top" Width="218" VerticalScrollBarVisibility="Hidden" Margin="0,0,-1,0">
+                <StackPanel Height="656" Width="216"/>
+            </ScrollViewer>
+
+        </Grid>
+
+        <Grid x:Name="PluginInformation" HorizontalAlignment="Left" Height="737" Margin="220,155,0,0" VerticalAlignment="Top" Width="1372" Panel.ZIndex="1" Visibility="Hidden">
+            <Image x:Name="PluginPresentationImage" HorizontalAlignment="Left" Height="228" Margin="62,131,0,0" VerticalAlignment="Top" Width="432"/>
+            <Label x:Name="PluginView" Content="Plugin Vorschau" HorizontalAlignment="Left" Margin="62,364,0,0" VerticalAlignment="Top" Foreground="#FF78797A" FontSize="10"/>
+            <Image x:Name="PluginImage" HorizontalAlignment="Left" Height="120" Margin="602,131,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="PluginName" Content="Plugin Name" HorizontalAlignment="Left" Margin="741,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="72"/>
+            <Label x:Name="PluginCreator" Content="Creator" HorizontalAlignment="Left" Margin="1179,187,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24"/>
+            <Label x:Name="PluginVersion" Content="Version 1.0.0.0" HorizontalAlignment="Left" Margin="1179,162,0,0" VerticalAlignment="Top" Foreground="#FF78797A" FontSize="14"/>
+            <TextBlock x:Name="PluginDescription" HorizontalAlignment="Left" Margin="741,272,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="135" Width="599" ScrollViewer.VerticalScrollBarVisibility="Hidden" Foreground="White"/>
+            <Grid HorizontalAlignment="Left" Height="100" Margin="741,456,0,0" VerticalAlignment="Top" Width="283">
+                <Rectangle HorizontalAlignment="Left" Height="78" Stroke="{x:Null}" StrokeThickness="0" VerticalAlignment="Top" Width="283" RadiusY="11.333" RadiusX="11.333" Fill="#FF2C8FF0"/>
+                <Label Content="Aktiv" HorizontalAlignment="Center" Margin="111,19,109,0" VerticalAlignment="Top" Foreground="White" FontSize="24"/>
+            </Grid>
+            <Grid x:Name="PluginAktivityState_Grid" HorizontalAlignment="Left" Height="100" Margin="741,456,0,0" VerticalAlignment="Top" Width="283">
+                <Rectangle x:Name="PluginAktivityState_Rectangle" HorizontalAlignment="Left" Height="78" Stroke="{x:Null}" StrokeThickness="0" VerticalAlignment="Top" Width="283" RadiusY="11.333" RadiusX="11.333" Fill="#FF2C8FF0"/>
+                <Label x:Name="PluginAktivityState_Text" Content="Aktiv" HorizontalAlignment="Center" Margin="111,19,109,0" VerticalAlignment="Top" Foreground="White" FontSize="24"/>
+            </Grid>
+            <Grid x:Name="PluginAktivityInstallation_Grid" HorizontalAlignment="Left" Height="100" Margin="1066,456,0,0" VerticalAlignment="Top" Width="283">
+                <Rectangle x:Name="PluginAktivityInstallation_Rectangle" HorizontalAlignment="Left" Height="78" Stroke="{x:Null}" StrokeThickness="0" VerticalAlignment="Top" Width="283" RadiusY="11.333" RadiusX="11.333" Fill="#FF2C8FF0"/>
+                <Label x:Name="PluginAktivityInstallation_Text" Content="Herunterladen" HorizontalAlignment="Center" Margin="59,18,45,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Width="179"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

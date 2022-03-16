@@ -1,0 +1,53 @@
+﻿<Window x:Class="DWC_VoiceAssistent.projects.windows.Rating"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.windows"
+        mc:Ignorable="d"
+        Title="Rating" Height="597" Width="603" WindowStyle="None" WindowStartupLocation="CenterScreen" MinWidth="603" MinHeight="597" MaxWidth="603" MaxHeight="597" ResizeMode="NoResize">
+    <!-- 
+    No Window Border:
+    https://stackoverflow.com/questions/611298/how-to-create-a-wpf-window-without-a-border-that-can-be-resized-via-a-grip-only
+    -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="4"
+        ResizeBorderThickness="5"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="RatingWindow" Background="#FF1C1E20">
+
+        <Grid x:Name="Rating_Grid" HorizontalAlignment="Left" Height="83" Margin="125,225,0,0" VerticalAlignment="Top" Width="357">
+            <Image x:Name="Rating_1_L" HorizontalAlignment="Left" Height="64" Margin="6,9,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_L.png"/>
+            <Image x:Name="Rating_1_R" HorizontalAlignment="Left" Height="64" Margin="38,9,0,0" VerticalAlignment="Top" Width="36" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_R.png"/>
+            <Image x:Name="Rating_2_L" HorizontalAlignment="Left" Height="64" Margin="79,10,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_L.png"/>
+            <Image x:Name="Rating_2_R" HorizontalAlignment="Left" Height="64" Margin="111,10,0,0" VerticalAlignment="Top" Width="35" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_R.png"/>
+            <Image x:Name="Rating_3_L" HorizontalAlignment="Left" Height="64" Margin="148,10,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_L.png"/>
+            <Image x:Name="Rating_3_R" HorizontalAlignment="Left" Height="64" Margin="180,10,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_R.png"/>
+            <Image x:Name="Rating_4_L" HorizontalAlignment="Left" Height="64" Margin="217,10,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_L.png"/>
+            <Image x:Name="Rating_4_R" HorizontalAlignment="Left" Height="64" Margin="249,10,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_R.png"/>
+            <Image x:Name="Rating_5_L" HorizontalAlignment="Left" Height="64" Margin="286,10,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_L.png"/>
+            <Image x:Name="Rating_5_R" HorizontalAlignment="Left" Height="64" Margin="318,9,0,0" VerticalAlignment="Top" Width="32" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/RatingStarSelect_R.png"/>
+
+        </Grid>
+
+        <Rectangle x:Name="Rating_Rectangle" Fill="#FF37363F" HorizontalAlignment="Left" Height="83" VerticalAlignment="Top" Width="357" Panel.ZIndex="-1" RadiusY="21" RadiusX="21" Margin="125,225,0,0"/>
+
+        <Label x:Name="Rating_Heading" Content="Bewertung" HorizontalAlignment="Left" Margin="61,32,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22"/>
+        <Border x:Name="Rating_Heading_Line" BorderBrush="#FF0F7FEE" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="69,71,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="Rating_Info_Text" HorizontalAlignment="Left" Margin="108,105,0,0" TextWrapping="Wrap" Text="Bitte hinterlasse uns doch eine Bewertung" VerticalAlignment="Top" Foreground="White" Height="76" Width="392"/>
+        <TextBox x:Name="YourRating_Text" HorizontalAlignment="Left" Height="95" Margin="140,357,0,0" TextWrapping="Wrap" Text="Deine Bewertung" VerticalAlignment="Top" Width="322" BorderThickness="0" Background="{x:Null}" Foreground="White" Panel.ZIndex="1" ScrollViewer.CanContentScroll="True"/>
+        <Rectangle x:Name="UserRating_Rectangle" Fill="#FF37363F" HorizontalAlignment="Left" Height="120" Margin="125,346,0,0" RadiusY="21" RadiusX="21" VerticalAlignment="Top" Width="357"/>
+        <Rectangle x:Name="Rating_Info_Rectangle" Fill="#FF37363F" HorizontalAlignment="Left" Height="96" Margin="91,95,0,0" RadiusY="21" RadiusX="21" VerticalAlignment="Top" Width="420" Panel.ZIndex="-1"/>
+        <Grid x:Name="Close_Button" HorizontalAlignment="Left" Height="69" Margin="319,488,0,0" VerticalAlignment="Top" Width="181">
+            <Rectangle x:Name="NotSend_Rectangle" Fill="#FF37363F" HorizontalAlignment="Left" Height="54" Margin="-1,8,-15,0" RadiusY="21" RadiusX="21" VerticalAlignment="Top" Width="177"/>
+            <Label x:Name="NotSend_Text" Content="Nein Danke" HorizontalAlignment="Left" Margin="46,20,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+        </Grid>
+        <Grid x:Name="Send_Button" HorizontalAlignment="Left" Height="75" Margin="125,488,0,0" VerticalAlignment="Top" Width="181">
+            <Rectangle x:Name="Send_Rectangle" Fill="#FF37363F" HorizontalAlignment="Left" Height="54" Margin="2,9,0,0" RadiusY="21" RadiusX="21" VerticalAlignment="Top" Width="177"/>
+            <Label x:Name="Send_Text" Content="Senden" HorizontalAlignment="Left" Margin="60,21,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+        </Grid>
+
+    </Grid>
+</Window>

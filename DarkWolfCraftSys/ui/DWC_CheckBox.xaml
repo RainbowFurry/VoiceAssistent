@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="DarkWolfCraftSys.ui.DWC_CheckBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DarkWolfCraftSys.ui"
+             mc:Ignorable="d" Height="147" Width="245">
+    <Grid x:Name="DWC_CheckBox_Grid" Margin="0,0,127,21">
+        <!-- FallBackValue -->
+        <Rectangle x:Name="Checked_Rectangle" Fill="{Binding CheckBoxFill, FallbackValue=#333, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}}" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" Stroke="{Binding CheckBoxBorderFill, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}}" VerticalAlignment="Top" Width="100" RadiusY="{Binding Rounding, FallbackValue=7.75, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}}" RadiusX="{Binding Rounding, FallbackValue=7.75, Mode=TwoWay, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}}"/>
+        <Image x:Name="Checked_Image" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/colored/checked.png" Panel.ZIndex="1"/>
+    </Grid>
+</UserControl>

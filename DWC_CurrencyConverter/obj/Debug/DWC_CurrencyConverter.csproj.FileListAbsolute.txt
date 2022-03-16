@@ -1,0 +1,17 @@
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\bin\Debug\DWC_CurrencyConverter.exe.config
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\bin\Debug\DWC_CurrencyConverter.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\bin\Debug\DWC_CurrencyConverter.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\bin\Debug\DarkWolfCraftSys.dll
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\bin\Debug\DarkWolfCraftSys.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\MainWindow.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\App.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter_MarkupCompile.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter_MarkupCompile.lref
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\MainWindow.baml
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter.g.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter.Properties.Resources.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter.csproj.GenerateResource.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter.csproj.CopyComplete
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_CurrencyConverter\obj\Debug\DWC_CurrencyConverter.pdb

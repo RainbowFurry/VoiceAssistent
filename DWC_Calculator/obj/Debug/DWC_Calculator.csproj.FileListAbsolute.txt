@@ -1,0 +1,17 @@
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator.csprojAssemblyReference.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\MainWindow.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\App.g.cs
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator_MarkupCompile.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator_MarkupCompile.lref
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\bin\Debug\DWC_Calculator.exe.config
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\bin\Debug\DWC_Calculator.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\bin\Debug\DWC_Calculator.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\MainWindow.baml
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator.g.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator.Properties.Resources.resources
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator.csproj.GenerateResource.cache
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator.exe
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\bin\Debug\DarkWolfCraftSys.dll
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\bin\Debug\DarkWolfCraftSys.pdb
+C:\Users\DarkS\source\repos\DWC_VoiceAssistent\DWC_Calculator\obj\Debug\DWC_Calculator.csproj.CopyComplete

@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_Birthday_Text" xml:space="preserve">
+    <value>你的出生日期</value>
+  </data>
+  <data name="Account_ChangeNickname" xml:space="preserve">
+    <value>更改昵称</value>
+  </data>
+  <data name="Account_ChangeNickname_Info" xml:space="preserve">
+    <value>一年只能换一次昵称!</value>
+  </data>
+  <data name="Account_City_Text" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="Account_Cuntry_Text" xml:space="preserve">
+    <value>你的国家</value>
+  </data>
+  <data name="Account_DataInfo_Text" xml:space="preserve">
+    <value>没有人能看到你的真实姓名和地址等个人信息。只显示您的昵称，您的个人资料图片和活动状态的选项</value>
+  </data>
+  <data name="Account_EditAddress" xml:space="preserve">
+    <value>编辑地址数据</value>
+  </data>
+  <data name="Account_EditPersonalData" xml:space="preserve">
+    <value>编辑个人数据</value>
+  </data>
+  <data name="Account_EditProfilePicture" xml:space="preserve">
+    <value>替换个人资料图片</value>
+  </data>
+  <data name="Account_Email_Text" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="Account_FirstName_Text" xml:space="preserve">
+    <value>你的名字</value>
+  </data>
+  <data name="Account_Gender_Text" xml:space="preserve">
+    <value>你的性别</value>
+  </data>
+  <data name="Account_HouseNumber_Text" xml:space="preserve">
+    <value>房号</value>
+  </data>
+  <data name="Account_InfoText" xml:space="preserve">
+    <value>没有人能看到你的真实姓名和地址等个人信息。只显示您的昵称、个人资料图片和活动状态。                                                                                                                            
+要编辑你的昵称和你的公开资料，请转到%path%。</value>
+  </data>
+  <data name="Account_PartOfUs_Text" xml:space="preserve">
+    <value>你已经是我们的一员了</value>
+  </data>
+  <data name="Account_PersonalData_Text" xml:space="preserve">
+    <value>您的个人数据</value>
+  </data>
+  <data name="Account_PhoneNumber_Text" xml:space="preserve">
+    <value>电话号</value>
+  </data>
+  <data name="Account_PLZ_Text" xml:space="preserve">
+    <value>郵遞區號</value>
+  </data>
+  <data name="Account_ResetProfilePicture" xml:space="preserve">
+    <value>重置个人资料图片</value>
+  </data>
+  <data name="Account_SecondName_Text" xml:space="preserve">
+    <value>你的姓</value>
+  </data>
+  <data name="Account_Street_Text" xml:space="preserve">
+    <value>街道</value>
+  </data>
+  <data name="ButtonText_AddAcount" xml:space="preserve">
+    <value>添加账户</value>
+  </data>
+  <data name="ButtonText_Change" xml:space="preserve">
+    <value>变化</value>
+  </data>
+  <data name="ButtonText_Show" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="ClientStart_Autostart" xml:space="preserve">
+    <value>当您启动电脑时，应用程序会自动启动。</value>
+  </data>
+  <data name="ClientStart_Heading" xml:space="preserve">
+    <value>应用启动</value>
+  </data>
+  <data name="ClientStart_MinimizedStart" xml:space="preserve">
+    <value>开始应用最小化</value>
+  </data>
+  <data name="ConnectedAccounts_AddAccountInfo" xml:space="preserve">
+    <value>增加邮件账户、社交媒体和游戏服务</value>
+  </data>
+  <data name="ConnectedAccounts_AddAccounts_Info" xml:space="preserve">
+    <value>添加其他服务的账户。这将使您可以在一个程序中使用外部服务并管理它们。</value>
+  </data>
+  <data name="ConnectedAccounts_AddNewAccount" xml:space="preserve">
+    <value>添加一个新账户</value>
+  </data>
+  <data name="ConnectedAccounts_ConnectedAccounts" xml:space="preserve">
+    <value>相关账户</value>
+  </data>
+  <data name="ConnectedAccounts_ConnectedMainEmail" xml:space="preserve">
+    <value>已连接的电子邮件账户</value>
+  </data>
+  <data name="ConnectedAccounts_MainEmail_Info" xml:space="preserve">
+    <value>你的连接电子邮件账户具有最高优先级。无论谁有这个账户的访问权限，也可以访问其他 账户。</value>
+  </data>
+  <data name="Design_BrightDesign_Content" xml:space="preserve">
+    <value>让自己被这个设计所迷惑</value>
+  </data>
+  <data name="Design_BrightDesign_Heading" xml:space="preserve">
+    <value>明亮的设计</value>
+  </data>
+  <data name="Design_Color_Custom_Description" xml:space="preserve">
+    <value>选择你自己的颜色</value>
+  </data>
+  <data name="Design_Color_Custom_Heading" xml:space="preserve">
+    <value>自己的颜色</value>
+  </data>
+  <data name="Design_Color_Default_Description" xml:space="preserve">
+    <value>美丽的蓝色</value>
+  </data>
+  <data name="Design_Color_Default_Heading" xml:space="preserve">
+    <value>标准蓝</value>
+  </data>
+  <data name="Design_Color_Description" xml:space="preserve">
+    <value>所选颜色用于某些表面、按钮和文本字段。</value>
+  </data>
+  <data name="Design_Color_Heading" xml:space="preserve">
+    <value>颜色方案</value>
+  </data>
+  <data name="Design_DarkDesign_Content" xml:space="preserve">
+    <value>美丽宜人的暗色设计</value>
+  </data>
+  <data name="Design_DarkDesign_Heading" xml:space="preserve">
+    <value>深色设计</value>
+  </data>
+  <data name="Design_Description" xml:space="preserve">
+    <value>你想用哪种设计？</value>
+  </data>
+  <data name="Design_Font_Custom_Description" xml:space="preserve">
+    <value>载入或创建一个自定义字体（.ttf文件），在这个文件上点击两次，然后点击安装。那么你可以在这里选择并使用它</value>
+  </data>
+  <data name="Design_Font_Custom_Heading" xml:space="preserve">
+    <value>自己的字体</value>
+  </data>
+  <data name="Design_Font_Default_Heading" xml:space="preserve">
+    <value>标准字体</value>
+  </data>
+  <data name="Design_Font_Description" xml:space="preserve">
+    <value>我们使用这种字体显示的大部分内容。</value>
+  </data>
+  <data name="Design_Font_Heading" xml:space="preserve">
+    <value>使用的字体</value>
+  </data>
+  <data name="Design_OwnBackgrouond" xml:space="preserve">
+    <value>设计</value>
+  </data>
+  <data name="Design_RatingBackground" xml:space="preserve">
+    <value>评估并发送背景图</value>
+  </data>
+  <data name="Design_Rounding_Description" xml:space="preserve">
+    <value>我们用这个设置来关闭对象</value>
+  </data>
+  <data name="Design_Rounding_Heading" xml:space="preserve">
+    <value>四舍五入</value>
+  </data>
+  <data name="Design_Rounding_MaximalRounding" xml:space="preserve">
+    <value>最大四舍五入</value>
+  </data>
+  <data name="Design_Rounding_MinimalRounding" xml:space="preserve">
+    <value>标准光曲线</value>
+  </data>
+  <data name="Design_Rounding_NoRounding" xml:space="preserve">
+    <value>无四舍五入</value>
+  </data>
+  <data name="Design_Shaddow_Description" xml:space="preserve">
+    <value>阴影赋予表面和物体以深度</value>
+  </data>
+  <data name="Design_Shaddow_Heading" xml:space="preserve">
+    <value>赋予物体以阴影</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Art" xml:space="preserve">
+    <value>艺术设计</value>
+  </data>
+  <data name="Design_TransparentDesignImage_City" xml:space="preserve">
+    <value>城市设计</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Custom" xml:space="preserve">
+    <value>定制设计</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Description" xml:space="preserve">
+    <value>默认情况下，背景是预先定义的，你可以从中选择。但你也可以添加自己的背景。最好使用至少全高清分辨率的图片，以获得良好的前景对比度。</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Gaming" xml:space="preserve">
+    <value>游戏设计</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Heading" xml:space="preserve">
+    <value>透明的设计</value>
+  </data>
+  <data name="Design_TransparentDesignImage_Landscape" xml:space="preserve">
+    <value>景观设计</value>
+  </data>
+  <data name="Design_TransparentDesign_Content" xml:space="preserve">
+    <value>透明、美观，保证独一无二</value>
+  </data>
+  <data name="Design_TransparentDesign_Heading" xml:space="preserve">
+    <value>透明设计</value>
+  </data>
+  <data name="Devices_ConnectedDevicesButton_CurrentDevice" xml:space="preserve">
+    <value>当前设备</value>
+  </data>
+  <data name="Devices_ConnectedDevicesHeading" xml:space="preserve">
+    <value>连接到您的账户的设备</value>
+  </data>
+  <data name="Devices_ConnectedDevicesInfo" xml:space="preserve">
+    <value>如果设备似乎不熟悉，请单击 "查看 "并从您的帐户中删除设备。</value>
+  </data>
+  <data name="DWC_Menu_Account_Text" xml:space="preserve">
+    <value>您的账户</value>
+  </data>
+  <data name="DWC_Menu_ConnectedAccount_Text" xml:space="preserve">
+    <value>相关账户</value>
+  </data>
+  <data name="DWC_Menu_Design_Text" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="DWC_Menu_Devices_Text" xml:space="preserve">
+    <value>连接设备</value>
+  </data>
+  <data name="DWC_Menu_EditorsMode_Text" xml:space="preserve">
+    <value>开发者模式</value>
+  </data>
+  <data name="DWC_Menu_HotKeys_Text" xml:space="preserve">
+    <value>热键</value>
+  </data>
+  <data name="DWC_Menu_InGameOverlay_Text" xml:space="preserve">
+    <value>游戏内叠加</value>
+  </data>
+  <data name="DWC_Menu_Language_Text" xml:space="preserve">
+    <value>语系</value>
+  </data>
+  <data name="DWC_Menu_Messages_Text" xml:space="preserve">
+    <value>通知书</value>
+  </data>
+  <data name="DWC_Menu_PaymentMethodes_Text" xml:space="preserve">
+    <value>付款方式</value>
+  </data>
+  <data name="DWC_Menu_Privacy_Text" xml:space="preserve">
+    <value>隐私政策</value>
+  </data>
+  <data name="DWC_Menu_ProgrammFunctions_Text" xml:space="preserve">
+    <value>应用功能。</value>
+  </data>
+  <data name="DWC_Menu_ProgrammStart_Text" xml:space="preserve">
+    <value>应用启动</value>
+  </data>
+  <data name="DWC_Menu_ProgrammView_Text" xml:space="preserve">
+    <value>用户界面</value>
+  </data>
+  <data name="DWC_Menu_Security_Text" xml:space="preserve">
+    <value>安全性</value>
+  </data>
+  <data name="DWC_Menu_Updates_Text" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="DWC_Menu_UserMode_Text" xml:space="preserve">
+    <value>用户模式</value>
+  </data>
+  <data name="DWC_Menu_VideoAndAudio_Text" xml:space="preserve">
+    <value>麦克风和视频</value>
+  </data>
+  <data name="DWC_Menu_YourPaments_Text" xml:space="preserve">
+    <value>您的付款方式</value>
+  </data>
+  <data name="DWC_Settings_Age_Selection_Adult" xml:space="preserve">
+    <value>成人</value>
+  </data>
+  <data name="DWC_Settings_Age_Selection_Child" xml:space="preserve">
+    <value>儿童</value>
+  </data>
+  <data name="DWC_Settings_Buttons_Active" xml:space="preserve">
+    <value>激活的</value>
+  </data>
+  <data name="DWC_Settings_Buttons_EveryOne" xml:space="preserve">
+    <value>大家好</value>
+  </data>
+  <data name="DWC_Settings_Buttons_InActive" xml:space="preserve">
+    <value>残障人士</value>
+  </data>
+  <data name="DWC_Settings_Buttons_OnlyFriends" xml:space="preserve">
+    <value>只有朋友</value>
+  </data>
+  <data name="DWC_Settings_Button_OnlyVerifyUsers" xml:space="preserve">
+    <value>仅限验证过的用户</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Color" xml:space="preserve">
+    <value>颜色选择</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Design_BackgroundImage_Path" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Design_BackgroundImage_Text" xml:space="preserve">
+    <value>墙纸</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_AutoStart_Text" xml:space="preserve">
+    <value>自动启动</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_KeepWindowAlife_Text" xml:space="preserve">
+    <value>尽量减少关闭时的窗口</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_Message_Text" xml:space="preserve">
+    <value>通知书</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_RoundedDesighn_Text" xml:space="preserve">
+    <value>圆形设计</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Generell_WelcomeMessage_Text" xml:space="preserve">
+    <value>欢迎致辞</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System" xml:space="preserve">
+    <value>系统设置</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_Language_Text" xml:space="preserve">
+    <value>语系</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_ListenName_Text" xml:space="preserve">
+    <value>语音回复命令</value>
+  </data>
+  <data name="DWC_Settings_Chapter_System_UserName_Text" xml:space="preserve">
+    <value>用户名称</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Theme" xml:space="preserve">
+    <value>主题选择</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice" xml:space="preserve">
+    <value>语音选项</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Age_Text" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Gender_Text" xml:space="preserve">
+    <value>性别问题</value>
+  </data>
+  <data name="DWC_Settings_Chapter_Voice_Volum_Text" xml:space="preserve">
+    <value>体积</value>
+  </data>
+  <data name="DWC_Settings_Menu_Accounts" xml:space="preserve">
+    <value>相关账户</value>
+  </data>
+  <data name="DWC_Settings_Menu_Assistent" xml:space="preserve">
+    <value>语文助理</value>
+  </data>
+  <data name="DWC_Settings_Menu_Desighn" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="DWC_Settings_Menu_Eula" xml:space="preserve">
+    <value>隐私政策</value>
+  </data>
+  <data name="DWC_Settings_Menu_Extention" xml:space="preserve">
+    <value>延长线</value>
+  </data>
+  <data name="DWC_Settings_Menu_Friends" xml:space="preserve">
+    <value>朋友设置</value>
+  </data>
+  <data name="DWC_Settings_Menu_Heading" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="DWC_Settings_Menu_HotKey" xml:space="preserve">
+    <value>按钮组合</value>
+  </data>
+  <data name="DWC_Settings_Menu_Language" xml:space="preserve">
+    <value>语系</value>
+  </data>
+  <data name="DWC_Settings_Menu_Logout" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="DWC_Settings_Menu_Microphone" xml:space="preserve">
+    <value>音频</value>
+  </data>
+  <data name="DWC_Settings_Menu_Privacy" xml:space="preserve">
+    <value>隐私设置</value>
+  </data>
+  <data name="DWC_Settings_Menu_Program" xml:space="preserve">
+    <value>申请书</value>
+  </data>
+  <data name="DWC_Settings_Menu_Reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="DWC_Settings_Menu_Security" xml:space="preserve">
+    <value>安全性</value>
+  </data>
+  <data name="DWC_Settings_SaveButton_SaveDescription_Text" xml:space="preserve">
+    <value>并关闭(逃逸)</value>
+  </data>
+  <data name="DWC_Settings_SaveButton_Save_Text" xml:space="preserve">
+    <value>保存设置</value>
+  </data>
+  <data name="DWC_Settings_SaveMessage" xml:space="preserve">
+    <value>您的设置已成功应用</value>
+  </data>
+  <data name="DWC_Settings_SaveMessageHeading" xml:space="preserve">
+    <value>DarkWolfCraft - 设置</value>
+  </data>
+  <data name="DWC_Settings_Voice_Selection_Female" xml:space="preserve">
+    <value>女士</value>
+  </data>
+  <data name="DWC_Settings_Voice_Selection_Male" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="EditorsMode_Description" xml:space="preserve">
+    <value>有人喜欢比较详细，也有人喜欢简单。你的选择对程序的功能没有任何影响。根据这一点，我们会给出额外的信息或定制选项!</value>
+  </data>
+  <data name="EditorsMode_DeveloperMode_Description" xml:space="preserve">
+    <value>你是开发商？我们将向您展示更多的信息，并为您提供更多的服务发展情况。让自己受到启发，帮助我们发现安全漏洞和BUG。</value>
+  </data>
+  <data name="EditorsMode_DeveloperMode_Heading" xml:space="preserve">
+    <value>开发商时尚</value>
+  </data>
+  <data name="EditorsMode_EditorsMode_Description" xml:space="preserve">
+    <value>在设计和界面设计方面，你有先进的功能。定制程序，让你的创意自由发挥。</value>
+  </data>
+  <data name="EditorsMode_EditorsMode_Heading" xml:space="preserve">
+    <value>编辑模式</value>
+  </data>
+  <data name="EditorsMode_Heading" xml:space="preserve">
+    <value>用户模式</value>
+  </data>
+  <data name="EditorsMode_InfoDescription" xml:space="preserve">
+    <value>我们尽量取悦所有用户，即使他们的兴趣爱好完全不同，我们也会尽量取悦他们。通过我们的优化模块，我们尽量为每一个用户量身定制最优质的服务。您提供的信息越多，我们就能更好地对您的兴趣进行分类!</value>
+  </data>
+  <data name="EditorsMode_InfoHeading" xml:space="preserve">
+    <value>适应性</value>
+  </data>
+  <data name="EditorsMode_NormalMode_Description" xml:space="preserve">
+    <value>你可以期待所有的功能都是完整的，我们在设计和界面设计方面为你做了大部分的工作，你不用担心。</value>
+  </data>
+  <data name="EditorsMode_NormalMode_Heading" xml:space="preserve">
+    <value>普通模式</value>
+  </data>
+  <data name="HotKeys_CreateNewHotKey" xml:space="preserve">
+    <value>创建一个新的热键</value>
+  </data>
+  <data name="HotKeys_EnableAllHotkeys" xml:space="preserve">
+    <value>禁用所有热键</value>
+  </data>
+  <data name="HotKeys_EnableOwnHotkeys" xml:space="preserve">
+    <value>禁用所有热键</value>
+  </data>
+  <data name="HotKeys_Heading" xml:space="preserve">
+    <value>热键</value>
+  </data>
+  <data name="HotKeys_Info" xml:space="preserve">
+    <value>要更改热键，请按组合键并输入新的组合键。按ESC键取消操作。</value>
+  </data>
+  <data name="HotKeys_Option_Musikbot" xml:space="preserve">
+    <value>激活/停用musicbot</value>
+  </data>
+  <data name="HotKeys_Option_Mute" xml:space="preserve">
+    <value>静音开/关</value>
+  </data>
+  <data name="HotKeys_Option_PushToTalk" xml:space="preserve">
+    <value>推入式对话</value>
+  </data>
+  <data name="HotKeys_Option_VoiceAssistent" xml:space="preserve">
+    <value>触发器语音助手</value>
+  </data>
+  <data name="HotKeys_ResetAllHotKeys" xml:space="preserve">
+    <value>重置所有热键</value>
+  </data>
+  <data name="InGameOverlay_AktivateIngameOverlay" xml:space="preserve">
+    <value>在游戏覆盖中激活</value>
+  </data>
+  <data name="InGameOverlay_Description" xml:space="preserve">
+    <value>准备好一起玩了吗？</value>
+  </data>
+  <data name="InGameOverlay_Heading" xml:space="preserve">
+    <value>游戏内叠加</value>
+  </data>
+  <data name="InGameOverlay_ShowMusik_Content" xml:space="preserve">
+    <value>音乐机器人会显示，你可以看到你正在听哪一首歌。</value>
+  </data>
+  <data name="InGameOverlay_ShowMusik_Heading" xml:space="preserve">
+    <value>显示musicbot</value>
+  </data>
+  <data name="InGameOverlay_ShowProfilePicture_Content" xml:space="preserve">
+    <value>如果激活了这个功能，你只能看到其他的名字。</value>
+  </data>
+  <data name="InGameOverlay_ShowProfilePicture_Heading" xml:space="preserve">
+    <value>隐藏个人资料图片</value>
+  </data>
+  <data name="InGameOverlay_ShowWhileTalking_Content" xml:space="preserve">
+    <value>如果激活了这个功能，当没有人说话时，覆盖层就会被隐藏。</value>
+  </data>
+  <data name="InGameOverlay_ShowWhileTalking_Heading" xml:space="preserve">
+    <value>只有当有人说话时才显示叠加</value>
+  </data>
+  <data name="InGameOverlay_Show_Heading" xml:space="preserve">
+    <value>叠加在某一点上显示的是</value>
+  </data>
+  <data name="Landschaft Design" xml:space="preserve">
+    <value>选择你自己的背景</value>
+  </data>
+  <data name="Language_AutogeneratedInfo" xml:space="preserve">
+    <value>(自动生成)</value>
+  </data>
+  <data name="Language_Description" xml:space="preserve">
+    <value>选择你的语言! 请注意，有些语言是自动翻译完成的，我们不能保证也不承担任何责任。我们很快就会提供多种语言的综合翻译。如果您当地语言不通 
+你可以帮我们做一个翻译样本! 了解更多</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>您的语言</value>
+  </data>
+  <data name="Microphone_AudioHelp_Description" xml:space="preserve">
+    <value>如果您启用了这个功能，如果我们无法检测到麦克风，即使您正在说话，或者您的声音被切断，我们也会通知您。</value>
+  </data>
+  <data name="Microphone_AudioHelp_Heading" xml:space="preserve">
+    <value>音频帮助</value>
+  </data>
+  <data name="Microphone_AudioOptimisation_Content" xml:space="preserve">
+    <value>背景噪音和杂音被压制，提供了良好的音频质量。</value>
+  </data>
+  <data name="Microphone_AudioOptimisation_Heading" xml:space="preserve">
+    <value>音频优化软件</value>
+  </data>
+  <data name="Microphone_AutomaticVoiceDetection_Description" xml:space="preserve">
+    <value>你看上面，当你的麦克风被激活时</value>
+  </data>
+  <data name="Microphone_AutomaticVoiceDetection_Heading" xml:space="preserve">
+    <value>自动确定麦克风的灵敏度</value>
+  </data>
+  <data name="Microphone_Heading" xml:space="preserve">
+    <value>话筒启动</value>
+  </data>
+  <data name="Microphone_HeadsetName" xml:space="preserve">
+    <value>发言人（姓名）</value>
+  </data>
+  <data name="Microphone_InputText" xml:space="preserve">
+    <value>输入量</value>
+  </data>
+  <data name="Microphone_MicrophoneName" xml:space="preserve">
+    <value>麦克风（名称）</value>
+  </data>
+  <data name="Microphone_OutputText" xml:space="preserve">
+    <value>输出量</value>
+  </data>
+  <data name="Microphone_VoiceActivation_Description" xml:space="preserve">
+    <value>如果语音激活被停用，请使用 "推送通话"（可在热键下编辑）。</value>
+  </data>
+  <data name="Microphone_VoiceActivation_Heading" xml:space="preserve">
+    <value>语音激活</value>
+  </data>
+  <data name="Notification_Description" xml:space="preserve">
+    <value>我们应该显示哪些通知</value>
+  </data>
+  <data name="Notification_DescropSecurityNotification_Description" xml:space="preserve">
+    <value>通过桌面的安全通知是很重要的，如果情况紧急，有人试图访问您的账户，例如</value>
+  </data>
+  <data name="Notification_DescropSecurityNotification_Heading" xml:space="preserve">
+    <value>桌面安全通知</value>
+  </data>
+  <data name="Notification_DesktopNotification_Description" xml:space="preserve">
+    <value>如果您禁用此功能，您将不会收到任何通知!</value>
+  </data>
+  <data name="Notification_DesktopNotification_Heading" xml:space="preserve">
+    <value>桌面通知</value>
+  </data>
+  <data name="Notification_EmailNotification_Description" xml:space="preserve">
+    <value>您将随时收到关于账户安全、付款确认和其他重要事项的邮件！您将会收到关于账户安全、付款确认和其他重要事项的邮件</value>
+  </data>
+  <data name="Notification_EmailNotification_Heading" xml:space="preserve">
+    <value>电子邮件通知</value>
+  </data>
+  <data name="Notification_EmailNotification_PrimeEmail_Description" xml:space="preserve">
+    <value>如果有特殊情况，我们会通知您</value>
+  </data>
+  <data name="Notification_EmailNotification_PrimeEmail_Heading" xml:space="preserve">
+    <value>关于Premium和特别优惠的电子邮件</value>
+  </data>
+  <data name="Notification_EmailNotification_ShopCardEmail_Description" xml:space="preserve">
+    <value>当有基于您的游戏和应用程序可用时，我们会通知您。
+愿望清单是</value>
+  </data>
+  <data name="Notification_EmailNotification_ShopCardEmail_Heading" xml:space="preserve">
+    <value>发送邮件到我的愿望清单</value>
+  </data>
+  <data name="Notification_EmailNotification_StoreEmail_Description" xml:space="preserve">
+    <value>我们为您提供您可能会喜欢的新应用和游戏的信息。</value>
+  </data>
+  <data name="Notification_EmailNotification_StoreEmail_Heading" xml:space="preserve">
+    <value>关于商店内容和优惠的电子邮件</value>
+  </data>
+  <data name="Notification_EmailNotification_UpdateEmail_Heading" xml:space="preserve">
+    <value>关于更新的电子邮件</value>
+  </data>
+  <data name="Notification_Heading" xml:space="preserve">
+    <value>通知书</value>
+  </data>
+  <data name="Notification_ShowFriendOnline_Heading" xml:space="preserve">
+    <value>当朋友在线时显示</value>
+  </data>
+  <data name="Notification_ShowTextNotification_Description" xml:space="preserve">
+    <value>看谁给你写信。您可以将单个联系人和组别静音</value>
+  </data>
+  <data name="Notification_ShowTextNotification_Heading" xml:space="preserve">
+    <value>显示文本信息</value>
+  </data>
+  <data name="Notification_SystemNotification_Description" xml:space="preserve">
+    <value>如果有任何问题，我们会通知您。</value>
+  </data>
+  <data name="Notification_SystemNotification_Heading" xml:space="preserve">
+    <value>系统通知</value>
+  </data>
+  <data name="Payments_AddPayment" xml:space="preserve">
+    <value>添加支付方式</value>
+  </data>
+  <data name="Payments_Payments_Info" xml:space="preserve">
+    <value>添加一个账户，只需一键即可轻松安全地进行全平台支付。通过支付方式追踪您的消费，即时取消订阅并轻松获得退款。</value>
+  </data>
+  <data name="Payments_Payments_InfoHeading" xml:space="preserve">
+    <value>您在我们这里的账户和付款</value>
+  </data>
+  <data name="Payments_QuickPay_Description" xml:space="preserve">
+    <value>使用快捷支付，能够更快的支付</value>
+  </data>
+  <data name="Payments_QuickPay_Heading" xml:space="preserve">
+    <value>快速付款</value>
+  </data>
+  <data name="Payments_QuickPay_QuickPayContent" xml:space="preserve">
+    <value>激活快速支付后，您可以用您喜欢的付款方式自动付款，并跳过确认过程。</value>
+  </data>
+  <data name="Payments_QuickPay_QuickPayHeading" xml:space="preserve">
+    <value>激活快速支付</value>
+  </data>
+  <data name="Payments_SecurePay_Content" xml:space="preserve">
+    <value>激活安全支付</value>
+  </data>
+  <data name="Payments_SecurePay_Description" xml:space="preserve">
+    <value>在订购过程中，我们会在订购前申请您的账户密码，以防止未经授权的订单。</value>
+  </data>
+  <data name="Payments_SecurePay_Heading" xml:space="preserve">
+    <value>安全支付</value>
+  </data>
+  <data name="Payments_YourPayments" xml:space="preserve">
+    <value>您的付款方式</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Everybody_Label" xml:space="preserve">
+    <value>大家好</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Friends_Label" xml:space="preserve">
+    <value>朋友们的朋友</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Heading" xml:space="preserve">
+    <value>谁能加你为好友？</value>
+  </data>
+  <data name="Privacy_Chat_AddFriendPermission_Request_Label" xml:space="preserve">
+    <value>只有相互询问</value>
+  </data>
+  <data name="Privacy_Chat_Content" xml:space="preserve">
+    <value>其他人可以看到你正在运行的应用程序。无论你是在打游戏，听音乐，还是做其他事情。这些设置并不影响你是否显示你在一个频道中。在 "我的频道 "下设置这些设置。</value>
+  </data>
+  <data name="Privacy_Chat_Heading" xml:space="preserve">
+    <value>一般隐私</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Everybody_Label" xml:space="preserve">
+    <value>大家好</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Friends_Label" xml:space="preserve">
+    <value>只有朋友</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Heading" xml:space="preserve">
+    <value>最后一次在线</value>
+  </data>
+  <data name="Privacy_Chat_LastOnline_Nobody_Label" xml:space="preserve">
+    <value>没有人</value>
+  </data>
+  <data name="Privacy_Chat_Privacy_Content" xml:space="preserve">
+    <value>不允许直接联系你的人，会在第一条信息中给你发送请求，你必须同意。没有人可以看到你设置了什么设置。</value>
+  </data>
+  <data name="Privacy_Chat_Privacy_Heading" xml:space="preserve">
+    <value>聊天中的隐私</value>
+  </data>
+  <data name="Privacy_Chat_ShowStatus_Heading" xml:space="preserve">
+    <value>显示在状态中的应用程序</value>
+  </data>
+  <data name="Privacy_Chat_Status_Everybody_Label" xml:space="preserve">
+    <value>大家好</value>
+  </data>
+  <data name="Privacy_Chat_Status_Friends_Label" xml:space="preserve">
+    <value>只有朋友</value>
+  </data>
+  <data name="Privacy_Chat_Status_Label_Label" xml:space="preserve">
+    <value>没有人</value>
+  </data>
+  <data name="Privacy_Chat_WritingPermission_Heading" xml:space="preserve">
+    <value>谁能看到你的状态</value>
+  </data>
+  <data name="Privacy_Infotext1" xml:space="preserve">
+    <value>如果你将状态设置为隐身，没有人会看到你的活动和是否在线。你的渠道也会被大家所忽视。</value>
+  </data>
+  <data name="Privacy_Infotext2" xml:space="preserve">
+    <value>如果是相互请求，两个人都必须发送好友请求。如果是这种情况，就会自动成为好友。</value>
+  </data>
+  <data name="Privacy_Status_addApp" xml:space="preserve">
+    <value>点击这里添加节目</value>
+  </data>
+  <data name="ResetSettings_Description" xml:space="preserve">
+    <value>在这里，您可以更改单个区域或整个设置，以达到以下目的 
+重置出厂设置</value>
+  </data>
+  <data name="ResetSettings_Heading" xml:space="preserve">
+    <value>重置设置</value>
+  </data>
+  <data name="ResetSettings_Options_AllSettings" xml:space="preserve">
+    <value>所有设置</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>关闭(ESC)</value>
+  </data>
+  <data name="Security_AccountRecoveryHeading" xml:space="preserve">
+    <value>帐户恢复电子邮件</value>
+  </data>
+  <data name="Security_AllAktivities" xml:space="preserve">
+    <value>查看所有活动</value>
+  </data>
+  <data name="Security_BackupCode_Description" xml:space="preserve">
+    <value>每一个备份代码，您就可以登录一次您的账户!</value>
+  </data>
+  <data name="Security_BackupCode_Disable" xml:space="preserve">
+    <value>残障人士</value>
+  </data>
+  <data name="Security_BackupCode_Download" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="Security_BackupCode_Enable" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="Security_BackupCode_Heading" xml:space="preserve">
+    <value>备份码</value>
+  </data>
+  <data name="Security_BackupCode_View" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="Security_ConnectedEmailHeading" xml:space="preserve">
+    <value>已连接的电子邮件账户</value>
+  </data>
+  <data name="Security_ConnectedEmailInfo" xml:space="preserve">
+    <value>通过电子邮件、电话号码或用户ID进行注册。</value>
+  </data>
+  <data name="Security_ConnectedEmail_ChangeAccount" xml:space="preserve">
+    <value>更改账户</value>
+  </data>
+  <data name="Security_ConnectedEmail_Check" xml:space="preserve">
+    <value>最后一次检查日期%</value>
+  </data>
+  <data name="Security_ConnectedEmail_Heading" xml:space="preserve">
+    <value>您的链接电子邮件账户</value>
+  </data>
+  <data name="Security_ConnectedEmail_ViewAccount" xml:space="preserve">
+    <value>查看账户</value>
+  </data>
+  <data name="Security_LastActivity" xml:space="preserve">
+    <value>最后的账户活动</value>
+  </data>
+  <data name="Security_NotSecure" xml:space="preserve">
+    <value>受到严重保护</value>
+  </data>
+  <data name="Security_RecoveryEmail_ChangeAccount" xml:space="preserve">
+    <value>更改账户</value>
+  </data>
+  <data name="Security_RecoveryEmail_Check" xml:space="preserve">
+    <value>最后一次检查日期%</value>
+  </data>
+  <data name="Security_RecoveryEmail_Heading" xml:space="preserve">
+    <value>帐户恢复的电子邮件帐户</value>
+  </data>
+  <data name="Security_RecoveryEmail_ViewAccount" xml:space="preserve">
+    <value>查看账户</value>
+  </data>
+  <data name="Security_Secure" xml:space="preserve">
+    <value>保护得好</value>
+  </data>
+  <data name="Security_SecureBoxInfo_1" xml:space="preserve">
+    <value>看看你的安全指数。如果我们确定您的账户没有得到足够的保护，我们将立即通知您。</value>
+  </data>
+  <data name="Security_SecureBoxInfo_2" xml:space="preserve">
+    <value>你的连接电子邮件账户具有最高优先级。无论谁能访问这个账户，也可以访问你的其他账户。</value>
+  </data>
+  <data name="Security_TwoFactorHeading" xml:space="preserve">
+    <value>2 认证系数</value>
+  </data>
+  <data name="Security_TwoFaktor_ChangeNumber" xml:space="preserve">
+    <value>更改电话号码</value>
+  </data>
+  <data name="Security_TwoFaktor_Check" xml:space="preserve">
+    <value>最后一次检查日期%</value>
+  </data>
+  <data name="Security_TwoFaktor_DisableTwoFaktor" xml:space="preserve">
+    <value>2FA停用</value>
+  </data>
+  <data name="Security_TwoFaktor_EnambleTwoFaktor" xml:space="preserve">
+    <value>激活2FA</value>
+  </data>
+  <data name="Security_TwoFaktor_Heading" xml:space="preserve">
+    <value>通过短信进行双因素认证</value>
+  </data>
+  <data name="Security_YourAccountActivity" xml:space="preserve">
+    <value>您的账户活动</value>
+  </data>
+  <data name="Security_YourSecurityStatusHeading" xml:space="preserve">
+    <value>您的安全指数</value>
+  </data>
+  <data name="Security_YourSecurityStatusInfo" xml:space="preserve">
+    <value>为设备设置优先级! 激活新设备的限制!</value>
+  </data>
+  <data name="SettingsHeading" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Description" xml:space="preserve">
+    <value>您将收到通知，并可以决定是否立即或稍后安装更新。</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Description1" xml:space="preserve">
+    <value>您将收到通知，并可以决定是否立即或稍后安装更新。</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Heading" xml:space="preserve">
+    <value>当我很忙时，防止自动更新</value>
+  </data>
+  <data name="Updates_AutoUpdateBlock_Heading1" xml:space="preserve">
+    <value>当我很忙时，防止自动更新</value>
+  </data>
+  <data name="Updates_AutoUpdate_Description" xml:space="preserve">
+    <value>当程序打开时，更新会自动启动。</value>
+  </data>
+  <data name="Updates_AutoUpdate_Description1" xml:space="preserve">
+    <value>当程序打开时，更新会自动启动。</value>
+  </data>
+  <data name="Updates_AutoUpdate_Heading" xml:space="preserve">
+    <value>自动更新</value>
+  </data>
+  <data name="Updates_AutoUpdate_Heading1" xml:space="preserve">
+    <value>自动更新</value>
+  </data>
+  <data name="Updates_Description_1" xml:space="preserve">
+    <value>当您重新启动应用程序时，更新总是自动下载。</value>
+  </data>
+  <data name="Updates_Description_11" xml:space="preserve">
+    <value>当您重新启动应用程序时，更新总是自动下载。</value>
+  </data>
+  <data name="Updates_Description_2" xml:space="preserve">
+    <value>根据更新的重要程度，我们会在以后给您安装的机会。比如说，如果我们急需用更新来关闭一个安全漏洞，出于安全考虑，即使是中断了你的活动，也会立即安装更新。</value>
+  </data>
+  <data name="Updates_Description_21" xml:space="preserve">
+    <value>根据更新的重要程度，我们会在以后给您安装的机会。比如说，如果我们急需用更新来关闭一个安全漏洞，出于安全考虑，即使是中断了你的活动，也会立即安装更新。</value>
+  </data>
+  <data name="Updates_Heading" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="Updates_Heading1" xml:space="preserve">
+    <value>更新</value>
+  </data>
+</root>

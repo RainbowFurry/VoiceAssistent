@@ -1,0 +1,706 @@
+﻿<Window x:Name="DWC_Window" x:Class="DWC_VoiceAssistent.projects.system.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.system"
+        mc:Ignorable="d"
+        Title="Login" Height="900" Width="1600" WindowStyle="None">
+
+    <!-- 
+    No Window Border:
+    https://stackoverflow.com/questions/611298/how-to-create-a-wpf-window-without-a-border-that-can-be-resized-via-a-grip-only
+    -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="4"
+        ResizeBorderThickness="5"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid Background="#FF1C1E20">
+
+        <!-- Login -->
+        <Grid x:Name="DWC_Login">
+            <Grid HorizontalAlignment="Center" Height="511" Margin="552,184,498,174" VerticalAlignment="Center" Width="542">
+                <Rectangle Fill="#FF222425" HorizontalAlignment="Left" Height="229" Margin="102,135,0,0" Stroke="{x:Null}" VerticalAlignment="Top" Width="353" RadiusY="12.697" RadiusX="12.697"/>
+                <Label x:Name="Login_Text" Content="Bitte melde dich an" HorizontalAlignment="Center" Margin="208,78,188,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="146"/>
+                <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="37" Margin="141,166,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0.653"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0.49"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="37" Margin="141,223,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0.653"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0.49"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Grid Margin="149,169,133,311">
+                    <TextBox Text="Benutzername, Email"
+                             
+                        Foreground="LightGray"
+                        Focusable="False"
+                        BorderThickness="0"
+                        SelectionBrush="#FF4CF3F3"
+                        Background="{x:Null}" FontSize="16" Margin="3,4,0,0"/>
+                    <TextBox x:Name="Login_Email" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="16" Margin="3,2,0,4" Background="#FF313136" Foreground="LightGray" TabIndex="1">
+                        <TextBox.Style>
+                            <Style TargetType="{x:Type TextBox}">
+                                <Setter Property="Opacity"
+                                    Value="1" />
+                                <Style.Triggers>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsFocused"
+                                                Value="False" />
+                                            <Condition Property="Text"
+                                                Value="" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Opacity"
+                                            Value="0" />
+                                    </MultiTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                </Grid>
+                <PasswordBox BorderThickness="0" x:Name="Login_Password" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" SelectionTextBrush="{x:Null}" HorizontalAlignment="Left" Margin="152,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.25,0.528" Width="254" Height="28" Foreground="#FF555557" Password="Jason" FontSize="20" TabIndex="2"/>
+                <Grid Cursor="Hand" x:Name="Login_Button" HorizontalAlignment="Left" Height="34" Margin="203,283,0,0" VerticalAlignment="Top" Width="156">
+                    <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="32" Margin="1,1,-55,0" RadiusY="12.697" RadiusX="12.697" Stroke="#FF1472D0" VerticalAlignment="Top" Width="154"/>
+                    <Label x:Name="Login_Text_Button" Content="Anmelden" HorizontalAlignment="Left" Margin="47,4,0,0" VerticalAlignment="Top" Foreground="#FF1472D0"/>
+
+                </Grid>
+                <TextBlock x:Name="Register" HorizontalAlignment="Center" Margin="203,396,177,0" TextWrapping="Wrap" Text="Erstelle einen neuen Account" VerticalAlignment="Top" TextDecorations="Underline" Foreground="#FF555557" Cursor="Hand" Width="162" Height="19" />
+
+            </Grid>
+        </Grid>
+
+        <!-- Registration -->
+        <Grid x:Name="DWC_Register" Visibility="Hidden">
+
+            <!-- Registration Step 1 -->
+            <Grid x:Name="Register_Step1" Margin="524,156,351,114" HorizontalAlignment="Center" VerticalAlignment="Center" Width="717" Height="622">
+                <Label x:Name="Email_Alert" Content="Das ist keine Gültige E-mail Adresse" HorizontalAlignment="Left" Margin="573,131,-118,0" VerticalAlignment="Top" Width="262" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+                <Rectangle x:Name="PasswordSecurity" Fill="#FFF97406" HorizontalAlignment="Left" Height="12" Margin="573,294,0,0" RadiusY="5.333" RadiusX="5.333" Stroke="{x:Null}" VerticalAlignment="Top" Width="131" Visibility="Hidden"/>
+                <Label x:Name="PasswordEqual_Alert" Content="Die beiden Passwörter stimmen nicht überein" HorizontalAlignment="Left" Margin="573,361,-171,0" VerticalAlignment="Top" Width="315" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+                <Label x:Name="Password_Alert" Content="Das Passwort ist zu kurz" HorizontalAlignment="Left" Margin="573,286,-171,0" VerticalAlignment="Top" Width="315" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+                <Rectangle Fill="#FF222425" HorizontalAlignment="Left" Height="413" Margin="133,86,0,0" Stroke="{x:Null}" VerticalAlignment="Top" Width="353" RadiusY="12.697" RadiusX="12.697"/>
+                <Label x:Name="CreateAccount_Text" Content="Los gehts!" HorizontalAlignment="Left" Margin="243,22,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22"/>
+                <Grid Margin="164,101,261,452">
+                    <Label x:Name="Email_Description" Content="Deine Email Adresse" HorizontalAlignment="Left" Margin="11,-3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="196"/>
+                    <Rectangle x:Name="Email_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="36" Margin="6,26,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Grid Margin="11,28,20,10">
+                        <TextBox Text="Email"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="16" Margin="3,4,0,0"/>
+                        <TextBox x:Name="Email_Register" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="16" Margin="3,2,10,-2" Background="#FF313136" Foreground="LightGray" TabIndex="1">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+
+
+                </Grid>
+                <Grid x:Name="Next_Step" HorizontalAlignment="Left" Height="34" Margin="228,447,0,0" VerticalAlignment="Top" Width="156" Cursor="Hand">
+                    <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="32" Margin="27,0,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="106"/>
+                    <Label x:Name="NextStep_Text" Content="Weiter" HorizontalAlignment="Left" Margin="59,3,0,0" VerticalAlignment="Top" Foreground="#FF1472D0"/>
+
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="164,170,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="UserName_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="37" Margin="6,32,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="#FF1472D0" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <Grid Margin="11,34,14,10">
+                        <TextBox Text="Einzigartiger Benutzername"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="16" Margin="5,4,34,0"/>
+                        <TextBox x:Name="Username" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="16" Margin="5,2,34,-2" Background="#FF313136" Foreground="LightGray" TabIndex="2">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                        <Image x:Name="UserNameImage" Source="/DarkWolfCraftSys;component/src/icons/own/Info.png" HorizontalAlignment="Left" Height="22" Margin="238,5,0,0" VerticalAlignment="Top" Width="22"/>
+                    </Grid>
+
+                    <Label x:Name="UserName_Description" Content="Wähle einen einzigartigen Nutzernamen" HorizontalAlignment="Left" Margin="36,6,0,0" VerticalAlignment="Top" Foreground="#FF1472D0" Width="225"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="164,325,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="PasswordEqual_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="37" Margin="5,32,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <PasswordBox x:Name="User_PasswordEqual" BorderThickness="0" BorderBrush="{x:Null}" SelectionBrush="#FF222425" Background="{x:Null}" SelectionTextBrush="{x:Null}" HorizontalAlignment="Left" Margin="16,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.25,0.528" Width="228" Height="28" Foreground="#FF555557" Password="0000" FontSize="20" TabIndex="4"/>
+                    <Label x:Name="PasswordEqual_Description" Content="Überleg dir ein sicheres Passwort" HorizontalAlignment="Left" Margin="17,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="196"/>
+                    <Image x:Name="Show_SecondPassword" Source="/DarkWolfCraftSys;component/src/icons/own/Visible.png" HorizontalAlignment="Left" Height="22" Margin="249,43,0,0" VerticalAlignment="Top" Width="22"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="164,250,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="Password_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="37" Margin="5,32,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <PasswordBox x:Name="User_Password" BorderThickness="0" BorderBrush="{x:Null}" SelectionBrush="#FF222425" Background="{x:Null}" SelectionTextBrush="{x:Null}" HorizontalAlignment="Left" Margin="16,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.25,0.528" Width="227" Height="28" Foreground="#FF555557" FontSize="20" Password="0000" TabIndex="3"/>
+                    <Label x:Name="Password_Description" Content="Überleg dir ein sicheres Passwort" HorizontalAlignment="Left" Margin="17,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="196"/>
+                    <Image x:Name="Show_FirstPassword" Source="/DarkWolfCraftSys;component/src/icons/own/Visible.png" HorizontalAlignment="Left" Height="22" Margin="248,43,0,0" VerticalAlignment="Top" Width="22"/>
+                </Grid>
+                <Label x:Name="Wish_Text" Content="Wir wünschen dir viel Spaß!" HorizontalAlignment="Left" Margin="219,514,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="Cancel_Registration" HorizontalAlignment="Left" Margin="243,548,0,0" TextWrapping="Wrap" Text="Registrierung abbrechen" VerticalAlignment="Top" TextDecorations="Underline" Foreground="#FF696A6C" Cursor="Hand"/>
+                <Image x:Name="PasswordInfo" Source="/DarkWolfCraftSys;component/src/icons/own/Info.png" HorizontalAlignment="Left" Height="18" Margin="364,417,0,0" VerticalAlignment="Top" Width="18"/>
+                <Label x:Name="Password_StatusText" Content="Gebe ein Passwort ein" HorizontalAlignment="Left" Margin="234,412,0,0" VerticalAlignment="Top" Foreground="#FF47E424"/>
+
+            </Grid>
+
+            <!-- Registration Step 2 -->
+            <Grid x:Name="Register_Step2" Margin="40,48,10,48" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1542" Height="796" Visibility="Hidden">
+                <Label x:Name="Email_Alert1" Content="Das ist keine Gültige E-mail Adresse" HorizontalAlignment="Left" Margin="573,131,-118,0" VerticalAlignment="Top" Width="262" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+                <Rectangle x:Name="PasswordSecurity1" Fill="#FFF97406" HorizontalAlignment="Left" Height="12" Margin="573,294,0,0" RadiusY="5.333" RadiusX="5.333" Stroke="{x:Null}" VerticalAlignment="Top" Width="131" Visibility="Hidden"/>
+                <Label x:Name="PasswordEqual_Alert1" Content="Die beiden Passwörter stimmen nicht überein" HorizontalAlignment="Left" Margin="573,361,-171,0" VerticalAlignment="Top" Width="315" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+                <Label x:Name="Password_Alert1" Content="Das Passwort ist zu kurz" HorizontalAlignment="Left" Margin="573,286,-171,0" VerticalAlignment="Top" Width="315" Foreground="Red" FontSize="14" Visibility="Hidden"/>
+                <Rectangle Fill="#FF222425" HorizontalAlignment="Left" Height="446" Margin="553,179,0,0" Stroke="{x:Null}" VerticalAlignment="Top" Width="353" RadiusY="12.697" RadiusX="12.697"/>
+                <Label x:Name="CreateAccount_Text1" Content="Du kannst jetzt ein Konto bei uns erstellen" HorizontalAlignment="Left" Margin="519,114,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22"/>
+                <Grid Margin="584,194,672,538">
+                    <Label x:Name="FirstName_description" Content="Vor Name" HorizontalAlignment="Left" Margin="11,-3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="196"/>
+                    <Rectangle x:Name="FirstName_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <Grid Margin="10,28,26,16">
+                        <TextBox Text="Vor Name"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="0,1,3,3"/>
+                        <TextBox Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" x:Name="Register_Name" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" TabIndex="1" Margin="0,0,5,0">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+
+
+                </Grid>
+                <Grid x:Name="Create_Account" HorizontalAlignment="Left" Height="34" Margin="648,569,0,0" VerticalAlignment="Top" Width="156" Cursor="Hand">
+                    <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="32" Margin="1,1,-55,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="154"/>
+                    <Label x:Name="Create_Account_Text" Content="Konto erstellen" HorizontalAlignment="Left" Margin="33,4,0,0" VerticalAlignment="Top" Foreground="#FF1472D0"/>
+
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="584,248,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="UserName_Background1" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <Grid Margin="11,23,14,28">
+                        <TextBox Text="NachName"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="0,4,18,0"/>
+                        <TextBox Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF4CF3F3" FontSize="14" Margin="0,4,14,0">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+
+                    <Label x:Name="SecondName_Description" Content="Nach Name" HorizontalAlignment="Left" Margin="11,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="225"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="584,357,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="Land_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Grid Margin="10,28,23,16">
+                        <TextBox Text="Land"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="0,1,7,13"/>
+                        <TextBox x:Name="Register_Land" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" Margin="0,0,7,13" TabIndex="4">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                    <Label x:Name="Cuntry_Description" Content="Land" HorizontalAlignment="Left" Margin="12,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="196"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="72" Margin="584,302,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="PhoneNumber_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Grid Margin="10,28,23,16">
+                        <TextBox Text="Telefon Nummer"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="0,1,7,10"/>
+                        <TextBox x:Name="Register_Telefon" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" Margin="0,0,7,10" TabIndex="3">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+
+                    <Label x:Name="PhoneNumber_Description" Content="Telefon Nummer" HorizontalAlignment="Left" Margin="11,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="196"/>
+                </Grid>
+                <Label x:Name="Wish_Text1" Content="Wir wünschen dir viel Spaß!" HorizontalAlignment="Left" Margin="639,651,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="Cancel_Registration1" HorizontalAlignment="Left" Margin="663,685,0,0" TextWrapping="Wrap" Text="Registrierung abbrechen" VerticalAlignment="Top" TextDecorations="Underline" Foreground="#FF696A6C" Cursor="Hand"/>
+                <CheckBox x:Name="AGB_Confirmation" Content="Ich akzeptiere die AGB Vereinbarrung" HorizontalAlignment="Left" Margin="614,534,0,0" VerticalAlignment="Top" Width="242" Foreground="White" TabIndex="9"/>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="584,411,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="Place_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Grid Margin="10,28,116,16">
+                        <TextBox Text="Stadt"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="0,1,0,13"/>
+                        <TextBox x:Name="Register_Stadt" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" Margin="0,0,0,13" TabIndex="5">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                    <Grid Margin="188,28,27,16" Panel.ZIndex="1">
+                        <TextBox Text="PLZ"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="2,0,3,14"/>
+                        <TextBox x:Name="Register_PLZ" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" Margin="2,-1,3,14" TabIndex="6">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                    <Label x:Name="City_Description" Content="Stadt" HorizontalAlignment="Left" Margin="12,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="163"/>
+                    <Rectangle x:Name="PLZ_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="185,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Label x:Name="PLZ_Description" Content="PLZ" HorizontalAlignment="Left" Margin="185,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="80"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="584,462,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="Street_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Grid Margin="10,28,116,16">
+                        <TextBox Text="Straße"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="0,1,0,13"/>
+                        <TextBox x:Name="Register_Street" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" Margin="0,0,0,13" TabIndex="7">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                    <Label x:Name="Street_Description" Content="Straße" HorizontalAlignment="Left" Margin="12,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="161"/>
+                    <Rectangle x:Name="HouseNumber_Background" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="185,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Grid Margin="188,28,27,16" Panel.ZIndex="1">
+                        <TextBox Text="Nr."
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="2,0,3,14"/>
+                        <TextBox x:Name="Register_HouseNumber" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" Margin="2,-1,3,14" TabIndex="8">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                    <Label x:Name="HouseNumber_Description" Content="Haus Nummer" HorizontalAlignment="Left" Margin="185,3,0,0" VerticalAlignment="Top" Foreground="#FF555557" Width="87"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="75" Margin="584,248,0,0" VerticalAlignment="Top" Width="292">
+                    <Rectangle x:Name="UserName_Background2" Fill="#FF313136" HorizontalAlignment="Left" Height="23" Margin="6,26,0,0" RadiusY="8.227" RadiusX="8.227" Stroke="{x:Null}" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.653"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.49"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+
+                    <Grid Margin="10,28,31,15">
+                        <TextBox Text="Nach Name"
+                            Foreground="LightGray"
+                            Focusable="False"
+                            BorderThickness="0"
+                            SelectionBrush="#FF4CF3F3"
+                            Background="{x:Null}" FontSize="14" Margin="0,1,0,14"/>
+                        <TextBox x:Name="Register_NachName" Text="{Binding TextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Focusable="True" BorderThickness="0" SelectionBrush="#FF0F7FEE" FontSize="12" Background="#FF313136" Foreground="#FFD3D3D3" Margin="0,0,10,12" TabIndex="2">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Opacity"
+                                        Value="1" />
+                                    <Style.Triggers>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsFocused"
+                                                    Value="False" />
+                                                <Condition Property="Text"
+                                                    Value="" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Opacity"
+                                                Value="0" />
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+
+                </Grid>
+                <Image x:Name="StepBack" HorizontalAlignment="Left" Height="26" Margin="563,189,0,0" VerticalAlignment="Top" Width="26" Source="/DarkWolfCraftSys;component/src/old/icons/light/dropdown_white_up.png" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-89.773"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Grid HorizontalAlignment="Left" Height="212" Margin="10,46,0,0" VerticalAlignment="Top" Width="479">
+                    <Label x:Name="LastStep" Content="Das ist der letzte Schritt" HorizontalAlignment="Left" Margin="50,32,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22"/>
+                    <TextBlock x:Name="LastStep_Info" HorizontalAlignment="Left" Margin="50,76,0,0" TextWrapping="Wrap" Text="Fülle nur aus was du möchtest, du kannst deine Angaben später ändern" VerticalAlignment="Top" Foreground="#FF5B5B5C" Width="268" FontSize="14"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="324" Margin="1104,238,0,0" VerticalAlignment="Top" Width="382">
+                    <Label x:Name="YourData" Content="Deine Daten" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White"/>
+                    <Rectangle StrokeThickness="0" Fill="#FF222425" HorizontalAlignment="Left" Height="202" Margin="18,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="256" RadiusY="8.5" RadiusX="8.5"/>
+                    <Image x:Name="YourDataImage" Source="pack://application:,,,/DarkWolfCraftSys;component/src/icons/own/Lock.png" HorizontalAlignment="Left" Height="22" Margin="172,18,0,0" VerticalAlignment="Top" Width="22"/>
+                    <TextBlock x:Name="YourData_Info" HorizontalAlignment="Left" Margin="30,62,0,0" TextWrapping="Wrap" Text="Wir benutzen deine Daten, um bestimmte Inhalte bereit stellen zu können, wie du später noch sehen wirst. Du kannst deine Angaben später vervollständigen wenn du möchtest. Wir passen gut auf eine Daten auf, niemand außer ims bekommt deine Daten zu sehen. Deine Daten Werden unter keinen Umständen Dretten ausgehändigt!" VerticalAlignment="Top" Foreground="#FF5B5B5C" FontSize="10" Width="231" Height="138"/>
+                    <Label x:Name="EndText" Content="Wir danken Dir für dein Vertrauen" HorizontalAlignment="Left" Margin="30,218,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Label x:Name="Developer" Content="Das Entwicklerteam" HorizontalAlignment="Left" Margin="87,288,0,0" VerticalAlignment="Top" Foreground="#FF1472D0"/>
+                </Grid>
+
+            </Grid>
+
+            <Label Content="Das Passwort benötigt mindestens 8 Zeichen" HorizontalAlignment="Left" Margin="1097,420,0,0" VerticalAlignment="Top" Foreground="White" FontSize="6" Visibility="Hidden"/>
+
+        </Grid>
+
+        <!-- Confirm Registration -->
+        <Grid x:Name="DWC_ConfirmRegister" Visibility="Hidden">
+            <Rectangle Fill="#FF222425" HorizontalAlignment="Left" Height="263" Margin="617,301,0,0" Stroke="{x:Null}" VerticalAlignment="Top" Width="353" RadiusY="12.697" RadiusX="12.697"/>
+            <Label x:Name="RegisterConfirm_Text" Content="Das dauert nicht lange" HorizontalAlignment="Left" Margin="714,247,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+            <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="37" Margin="656,332,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.653"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.49"/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="37" Margin="655,442,0,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.653"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.49"/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <TextBox Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"  HorizontalAlignment="Left" Height="32" Margin="661,336,0,0" TextWrapping="Wrap" Text="Gib deine E-Mail ein" VerticalAlignment="Top" Width="266" FontSize="18" Foreground="#FF555557"/>
+            <Grid Cursor="Hand" x:Name="Confirm_Button" HorizontalAlignment="Left" Height="34" Margin="716,515,0,0" VerticalAlignment="Top" Width="156">
+                <Rectangle Fill="#FF313136" HorizontalAlignment="Left" Height="32" Margin="1,1,-55,0" RadiusY="12.697" RadiusX="12.697" Stroke="{x:Null}" VerticalAlignment="Top" Width="154"/>
+                <Label x:Name="Confirm_ButtonText" Content="Bestätigen" HorizontalAlignment="Left" Margin="46,4,-10,0" VerticalAlignment="Top" Foreground="#FF1472D0"/>
+
+            </Grid>
+
+            <TextBlock Cursor="Hand" x:Name="CancelRegistration" HorizontalAlignment="Left" Margin="639,614,0,0" TextWrapping="Wrap" Text="Registrierung abbrechen" VerticalAlignment="Top" TextDecorations="Underline" Foreground="#FF555557"/>
+            <Label x:Name="Code_Info" Content="Wir senden dir einen 8-stelligen Code an diese E-Mail" HorizontalAlignment="Left" Margin="661,393,0,0" VerticalAlignment="Top" Foreground="#FF1472D0" FontSize="11"/>
+            <TextBox x:Name="Code" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"  HorizontalAlignment="Left" Height="32" Margin="661,447,0,0" TextWrapping="Wrap" Text="8-stelligen Code eingeben" VerticalAlignment="Top" Width="266" FontSize="18" Foreground="#FF555557"/>
+            <Label x:Name="Email_Info" Content="Diese E-Mail wird mit deinem Konto bei uns verknüpft" HorizontalAlignment="Left" Margin="592,575,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="406"/>
+            <TextBlock Cursor="Hand" x:Name="ResendCode" HorizontalAlignment="Left" Margin="813,614,0,0" TextWrapping="Wrap" Text="Code erneut senden" VerticalAlignment="Top" TextDecorations="Underline" Foreground="#FF555557"/>
+
+        </Grid>
+
+        <!-- Top Bar -->
+        <Rectangle x:Name="DWC_ActionBar" Fill="#FF1C1E20" Height="32" VerticalAlignment="Top" Uid="DWC_IgnoreRounding"/>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Panel.ZIndex="1" Height="25" Margin="0,3,5,0">
+            <Image x:Name="Window_Close" Height="15" Margin="60,0,5,1" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/close_white.png"/>
+            <Image x:Name="Window_State" Height="15" Margin="32,0,30,0" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/windowstate_white.png" RenderTransformOrigin="-0.407,0.52"/>
+            <Image x:Name="Window_Minimize" Height="15" Margin="6,0,59,3" Width="15" Source="pack://application:,,,/DarkWolfCraftSys;component/src/old/icons/light/minimize_white.png" RenderTransformOrigin="-0.407,0.52" VerticalAlignment="Bottom"/>
+        </Grid>
+
+    </Grid>
+</Window>

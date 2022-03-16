@@ -1,0 +1,97 @@
+OpenFileDialog opnFileDlg = new OpenFileDialog();
+           opnFileDlg.Multiselect = true;
+           opnFileDlg.Filter = "(mp3,wav,mp4,mov,wmv,mpg,avi,3gp,flv)|*.mp3;*.wav;*.mp4;*.3gp;*.avi;*.mov;*.flv;*.wmv;*.mpg|all files|*.*";
+
+           ----------------------------
+                Process p = new Process();
+            ProcessStartInfo psi = new ProcessStartInfo(@"D:\Installiert\Notepad++\notepad++.exe");
+            p.StartInfo = psi;
+            p.Start();
+
+            ---------------------
+            Alles von dwc@gmail.com -> dwc.outlook.de
+
+            - neue AD Lib auf Arbeits PC + zuvor azure ad integrieren + Main die kugt ob local oder cloud ad und ob permission und dann true returnt
+
+            Pilot neu installieren und login umändern
+            kugen ob login geht. wenn ja komm ich an groups?
+            wenn das geht dann local ad mit integrieren.
+            --------------------------------
+             <Grid x:Name="Design" HorizontalAlignment="Left" Height="862" Margin="553,0,0,0" VerticalAlignment="Top" Width="1042">
+                <ScrollViewer Margin="0,0,139,0" VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Height="859" Width="1040">
+                        <Grid Height="100">
+                            <Label Content="Design" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+                            <Border BorderBrush="#FF0F7FEE" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="33,73,0,0" VerticalAlignment="Top" Width="660" RenderTransformOrigin="0.5,0.5">
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleY="0.005"/>
+                                        <RotateTransform/>
+                                        <TranslateTransform Y="0.01"/>
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                            </Border>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label x:Name="DWC_Design_Theme_Text" Content="Theme" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="580,18,0,0" VerticalAlignment="Top" Width="113">
+                                <Rectangle x:Name="DWC_ThemeColor_Click" Fill="Black" HorizontalAlignment="Left" Height="30" Margin="0,1,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="113" Stroke="#FF6B6B6B"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label x:Name="DWC_Design_BackgroundImage_Text" Content="Hintergrundbild" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Label x:Name="DWC_Design_BackgroundImage_Path" Content="-" HorizontalAlignment="Left" Margin="287,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18" Width="408"/>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label x:Name="DWC_Design_MainColor_Text" Content="Haupt Farbe" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="580,18,0,0" VerticalAlignment="Top" Width="113">
+                                <Rectangle x:Name="DWC_ColorPicker_Click" Fill="#FF0F7FEE" HorizontalAlignment="Left" Height="30" Margin="0,1,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="113" Stroke="#FF6B6B6B"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label x:Name="DWC_RoundedDesighn_Text" Content="Rundung" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="580,18,0,0" VerticalAlignment="Top" Width="113">
+                                <Rectangle x:Name="Rounding_Click" Fill="#FF333333" HorizontalAlignment="Left" Height="30" Margin="0,1,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="113" Stroke="#FF6B6B6B"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label x:Name="DWC_Shadow_Text" Content="Shadow" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Grid HorizontalAlignment="Left" Height="34" Margin="580,18,0,0" VerticalAlignment="Top" Width="113">
+                                <Rectangle x:Name="Shadow_Click" Fill="#FF333333" HorizontalAlignment="Left" Height="30" Margin="0,1,0,0" RadiusY="7" RadiusX="7" VerticalAlignment="Top" Width="113" Stroke="#FF6B6B6B"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="67">
+                            <Label Content="Schriftart" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Image x:Name="Font_Back" HorizontalAlignment="Left" Height="32" Margin="527,18,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.5,0.5"/>
+                            <Image x:Name="Font_Next" HorizontalAlignment="Left" Height="33" Margin="728,51,0,-17" VerticalAlignment="Top" Width="32">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-179.768"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                            <Label x:Name="Font_Text" Content="Beispiel Text" HorizontalAlignment="Left" Margin="564,18,0,0" VerticalAlignment="Top" Width="149" Foreground="White" FontSize="16"/>
+
+                        </Grid>
+                        <Grid Height="67">
+                            <Label Content="Mauszeiger" HorizontalAlignment="Left" Margin="63,18,0,0" VerticalAlignment="Top" Foreground="#FFC1C1C3" FontSize="18"/>
+                            <Image x:Name="Cursor_Next" HorizontalAlignment="Left" Height="32" Margin="727,53,0,-18" VerticalAlignment="Top" Width="32">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-179.768"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                            <Image x:Name="Cursor_Back" HorizontalAlignment="Left" Height="32" Margin="529,23,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.5,0.5"/>
+                            <Label x:Name="Cursor_Text" Content="Beispiel Text" HorizontalAlignment="Left" Margin="560,18,0,0" VerticalAlignment="Top" Width="149" Foreground="White" FontSize="16"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>

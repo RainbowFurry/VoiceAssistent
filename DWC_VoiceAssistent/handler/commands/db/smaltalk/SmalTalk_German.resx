@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DoYouLikeMe_Answer" xml:space="preserve">
+    <value>Klar mag ich dich, du bist mein lieblings Benutzer;Klar mag ich dich;Klaro;Das muss ich wohl ob ich will oder nicht, hihi.;</value>
+  </data>
+  <data name="DoYouLikeMe_Question" xml:space="preserve">
+    <value>Magst du mich?</value>
+  </data>
+  <data name="Hellow_Answer" xml:space="preserve">
+    <value>Hallo;Hallo %name%;Hey</value>
+  </data>
+  <data name="Hellow_Question" xml:space="preserve">
+    <value>Hallo</value>
+  </data>
+  <data name="HowAreYou_Answer" xml:space="preserve">
+    <value>Mir geht es gut und dir?;Gut.</value>
+  </data>
+  <data name="HowAreYou_Question" xml:space="preserve">
+    <value>Wie geht es dir?</value>
+  </data>
+  <data name="HowOldAreYou_Answer" xml:space="preserve">
+    <value>Ich habe vergessen die Jahre zu zählen;Ich wurde im Jahre 2020 erschaffen</value>
+  </data>
+  <data name="HowOldAreYou_Question" xml:space="preserve">
+    <value>Wie alt bist du?</value>
+  </data>
+  <data name="ShutUp_Answer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ShutUp_Question" xml:space="preserve">
+    <value>Halts Maul</value>
+  </data>
+  <data name="TellAJoke_Answer" xml:space="preserve">
+    <value>Ein Beamter zum anderen: Was haben die Leute nur, wir tun doch nichts.";Warum musste der Bäcker ins Gefängnis? Er hat zu viele Eier geschlagen.;Frau: Machen mich diese Hosen dick. Man: Kein Ahnung. Ich würde sie jedenfalls nicht essen.;Was haben Frauen und Tornados gemeinsam: Erst feucht, dann stürmisch und hinterher ist das Haus weg.;Ich habe mir endlich so eine Dachbox für das Auto geholt. Echt praktisch muss ich sagen. Die Kinder hört man kaum noch.;Was sind die letzten Worte eines Fallschirmspringers? Immer diese scheiß Motten!;Wollte heute mal ganz sexy kucken. Wurde dann mit Verdacht auf Schlaganfall ins Krankenhaus gebracht.;Warum trinken Veganer kein Leitungswasser? Weil es aus dem Hahn kommt!;Wie war eigentlich die Stimmung in der DDR? Sie hielt sich so ziemlich in Grenzen.</value>
+  </data>
+  <data name="TellAJoke_Question" xml:space="preserve">
+    <value>Erzähl mir einen Witz.</value>
+  </data>
+  <data name="WhatsMyName_Answer" xml:space="preserve">
+    <value>Dein Name ist %name%;Ich bin mir nicht sicher aber ich glaube du hast mir gesagt du heißt %name%;%name% richtig?</value>
+  </data>
+  <data name="WhatsMyName_Question" xml:space="preserve">
+    <value>Wie heiße ich?</value>
+  </data>
+  <data name="WhatsYourName_Answer" xml:space="preserve">
+    <value>Ich heiße %name%</value>
+  </data>
+  <data name="WhatsYourName_Question" xml:space="preserve">
+    <value>Wie heißt du?</value>
+  </data>
+  <data name="WhereDoYouComeFrom_Answer" xml:space="preserve">
+    <value>Ich komme aus Deuschland;Ich wurde in Deutschland von deuschen Entwicklern entwickelt.</value>
+  </data>
+  <data name="WhereDoYouComeFrom_Question" xml:space="preserve">
+    <value>Wo kommst du her?</value>
+  </data>
+  <data name="WhereDoYouLive_Answer" xml:space="preserve">
+    <value>Ich wohne in deinem Computer; Ich bin das kleine Männchen in deinem Computer</value>
+  </data>
+  <data name="WhereDoYouLive_Question" xml:space="preserve">
+    <value>Wo wohnst du?</value>
+  </data>
+  <data name="WhoCreatedYou_Answer" xml:space="preserve">
+    <value>Meine Schöpfer sind ein Entwicklerteam names NAME</value>
+  </data>
+  <data name="WhoCreatedYou_Question" xml:space="preserve">
+    <value>Wer hat dich erschaffen?</value>
+  </data>
+  <data name="YouAreNotFunny_Answer" xml:space="preserve">
+    <value>Das schmerzt mich sehr;Also meine Entwickler fanden den gut;Ich find deine Witze auch nicht immer lustig</value>
+  </data>
+  <data name="YouAreNotFunny_Question" xml:space="preserve">
+    <value>Du bist nicht lustig.</value>
+  </data>
+</root>

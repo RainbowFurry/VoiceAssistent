@@ -1,0 +1,33 @@
+﻿<Window x:Class="DWC_VoiceAssistent.projects.system.HudOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DWC_VoiceAssistent.projects.system"
+        mc:Ignorable="d"
+        Title="Hud" Height="814" Width="1510"  Background="Transparent" WindowState="Maximized" WindowStyle="None" Topmost="True" AllowsTransparency="True" Focusable="False" ShowInTaskbar="False">
+
+    <Grid>
+
+        <Grid Margin="0,0,10,751" HorizontalAlignment="Right">
+            <Label x:Name="User_Profile_Name" Content="DarkSide_Wolf" HorizontalAlignment="Left" Margin="50,16,0,0" VerticalAlignment="Top" Foreground="White" Width="105" FontSize="14"/>
+            <Rectangle x:Name="User_Profile_OnlineStatus" Fill="#FF46FF00" HorizontalAlignment="Left" Height="12" Margin="36,39,0,0" VerticalAlignment="Top" Width="12" RadiusY="8" RadiusX="8" Uid="DWC_IgnoreRounding" Panel.ZIndex="1"/>
+            <Rectangle x:Name="User_Profile_Pricture" HorizontalAlignment="Left" Height="38" Margin="10,15,0,0" VerticalAlignment="Top" Width="40" RadiusY="19.5" RadiusX="19.5">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/DarkWolfCraftSys;component/src/icon.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+        
+        <Grid Margin="0,68,10,683" HorizontalAlignment="Right">
+            <Label x:Name="User_Profile_Name1" Content="DarkSide_Wolf" HorizontalAlignment="Left" Margin="50,16,0,0" VerticalAlignment="Top" Foreground="White" Width="105" FontSize="14"/>
+            <Rectangle x:Name="User_Profile_OnlineStatus1" Fill="#FF46FF00" HorizontalAlignment="Left" Height="12" Margin="36,39,0,0" VerticalAlignment="Top" Width="12" RadiusY="8" RadiusX="8" Uid="DWC_IgnoreRounding" Panel.ZIndex="1"/>
+            <Rectangle x:Name="User_Profile_Pricture1" HorizontalAlignment="Left" Height="38" Margin="10,15,0,0" VerticalAlignment="Top" Width="40" RadiusY="19.5" RadiusX="19.5">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/DarkWolfCraftSys;component/src/icon.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+
+    </Grid>
+</Window>
